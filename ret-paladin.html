@@ -126,7 +126,7 @@
       <li><span class="tn">灰烬觉醒：</span>基础 30 秒 CD，14 码扇形，回 3 圣能，对恶魔/亡灵附带 5 秒眩晕。施放后<strong>按键变形为圣光之锤 20 秒</strong>。</li>
       <li><span class="tn">圣光之锤：</span>灰烬后立刻按（消耗 3 圣能，部分数据源写 5，以游戏内为准）；Empyrean Hammer 会攒 Light's Deliverance 层数（约 50~60 层，两个数据源有出入），攒满后在灰烬不可用期间白送一发<strong>免费</strong>圣光之锤——可以短暂捏着等翅膀，但绝不能让它过期。</li>
       <li><span class="tn">神圣钟鸣：</span>基础 60 秒；惩戒点 Quickened Invocation 减 30 秒 → <strong>30 秒 CD</strong>，对至多 5 目标丢 150% 审判并回能。与灰烬双 30 秒完美同轮。</li>
-      <li><span class="tn">愤怒之锤：</span>仅在目标 &lt;20% 血量或复仇之怒期间可用，回 1 圣能——斩杀阶段升格为高频循环技。</li>
+      <li><span class="tn">愤怒之锤：</span>审判的按键变形——目标 &lt;20% 血量或复仇之怒期间自动替换审判按键，回 1 圣能，斩杀阶段升格为高频循环技。不占独立键位。</li>
       <li><span class="tn">处决宣判：</span>60 秒 CD，炸完 10 秒后主目标额外吃你这期间对被炸目标总伤害的 20%——窗口内火力全开。</li>
     </ul>
   </section>
@@ -170,13 +170,13 @@
       <tr><th>键</th><th>功能规则</th><th>惩戒圣骑士</th><th>说明</th></tr>
       <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>清算之手</td><td>远程点名拉施法怪；全骑士专精同键</td></tr>
       <tr><td><kbd>1</kbd></td><td>高频①</td><td>公正之刃</td><td>5.1 CPM，战争艺术触发也按它</td></tr>
-      <tr><td><kbd>2</kbd></td><td>高频②</td><td>审判</td><td>4.9 CPM；与防骑同键</td></tr>
-      <tr><td><kbd>3</kbd></td><td>高频③</td><td>愤怒之锤</td><td>斩杀期/翅膀期高频</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>审判（含愤怒之锤）</td><td>4.9+3.1 CPM；愤怒之锤是审判在斩杀期/翅膀期的按键变形，同一个键；与防骑同键</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>奉献</td><td>与防骑同键</td></tr>
       <tr><td><kbd>4</kbd></td><td>AOE 终结技</td><td>神圣风暴</td><td>9.0 CPM，全表第一</td></tr>
-      <tr><td><kbd>Q</kbd></td><td>高频瞬发（远程优先）</td><td>奉献（弹性位）</td><td>惩戒的远程瞬发已被其他规则键占用，此位自选</td></tr>
-      <tr><td><kbd>E</kbd></td><td>主打断</td><td>责难</td><td>15 秒 CD；配 mouseover 宏</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发（远程优先）</td><td>（弹性位）</td><td>惩戒的远程瞬发已被其他规则键占用，此位自选</td></tr>
+      <tr><td><kbd>E</kbd></td><td>主打断 + 治疗整合</td><td>责难 / 荣耀圣言</td><td>三分支宏：对敌打断、对友治疗、Ctrl 自疗</td></tr>
       <tr><td><kbd>R</kbd></td><td>单体终结技</td><td>最终裁决</td><td>8.9 CPM</td></tr>
-      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>荣耀圣言</td><td>花 3 圣能，掉血才按（与输出抢资源）</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>荣耀圣言</td><td>与 Ctrl+E 功能重叠，按习惯留一个即可</td></tr>
       <tr><td><kbd>Shift+F</kbd></td><td>急救回血</td><td>圣疗术</td><td>满血急救，注意自律 debuff</td></tr>
       <tr><td><kbd>5</kbd></td><td>次级爆发（30 秒轮）</td><td>灰烬觉醒 → 圣光之锤</td><td>裸技能：按键自动变形，免费触发也按 5</td></tr>
       <tr><td><kbd>Shift+5</kbd></td><td>第二次级爆发</td><td>神圣钟鸣</td><td>30 秒 CD 与灰烬同轮：5、5、Shift+5 三连</td></tr>
@@ -196,9 +196,9 @@
 
     <h3>配套宏</h3>
     <div class="codeblock macroblock">
-      <span class="lbl">E · 打断（指向优先）</span>
+      <span class="lbl">E · 打断/治疗三分支（对敌打断、对友治疗、Ctrl 自疗）</span>
       <pre>#showtooltip
-/cast [@mouseover,harm,nodead][harm] 责难</pre>
+/cast [mod:ctrl,@player] 荣耀圣言; [@mouseover,harm,nodead][harm] 责难; [help,nodead] 荣耀圣言</pre>
       <button type="button" onclick="cp(this)">复制</button>
     </div>
     <div class="codeblock macroblock">
