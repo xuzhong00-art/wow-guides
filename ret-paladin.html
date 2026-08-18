@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>惩戒圣骑士 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--paladin); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a></p>
+    <h1>惩戒圣骑士</h1>
+    <p class="sub">主推英雄天赋：圣殿骑士（Templar）。近战爆发型输出，30 秒一轮的爆发节奏，自带免疫、驱散和强力自愈，是上手门槛低、容错率高的近战入门首选。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服（2026-08-12~17 更新）</span>
+    <span class="pill">archon 数据：12.1 PTR 大秘境日志</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#talents">天赋</a>
+    <a href="#rotation">输出循环</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p><strong>圣殿骑士（Templar）</strong>：单体更强、短窗口爆发更猛（单体和 AOE 都是）、防御更硬——Wowhead 三种场景全部标记为 Best，新手直接选它。<strong>太阳先驱（Herald of the Sun）</strong>：持续顺劈/AOE 更好、长窗口爆发更强——archon PTR 大秘境人口 73.6% 在玩它（注意 PTR 样本小，别当平衡结论）。两套手法框架相同，先练圣殿骑士，熟了再试太阳先驱。</p>
+
+    <h3>导入码 · 圣殿骑士（推荐）</h3>
+    <div class="codeblock">
+      <span class="lbl">团本 Raid（Best）</span>
+      <pre>CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAANbbzMzywMDAAAAAAzUGzwMjtxsNMz2MGjZGmxCbDAAIzMtNzsNDAYDwAgxMMDmxY2w2MYYMjBD</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">大秘境 M+（Best）</span>
+      <pre>CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAwoZbbmZWGzMzAAAAAAYmyYGmZsNmthZ2mxYMGmxGbAAAZmptZmtZAAbAGAMmhBmxMzGWmBDjZMYA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">地下堡 Delves（Best）</span>
+      <pre>CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAwoZbbmZWGjZmBAAAAAYmyYGMjtZmthZ2mxYMzwM2YDAAIzMtNzsNDAYDwAAmhBmxM2wyMYMjZMYA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>导入码 · 太阳先驱（备选）</h3>
+    <div class="codeblock">
+      <span class="lbl">团本 Raid</span>
+      <pre>CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAANbbzMzywMDAAAAAAzUGzwMjtxsNMz2MGjxwMWYbAYWmtZmZrBBAAsAYAwYGmBzYmZDYmZYMjBD</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">大秘境 M+</span>
+      <pre>CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAwoZbbmZWGzMzAAAAAAYmyYGmZsNmthZ2mxYMGmxCbAYWmtZmZrBBAAsAYAwYGGYGzMbAzMDjZMYA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">地下堡 Delves</span>
+      <pre>CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAwoZbbmZWGjZmBAAAAAYmyYGMjtZmthZ2mxYMzwMWYDAzysNzMbNIAAgFADAYGGYGzYDYmZMjZMYA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">archon PTR 大秘境实战构建（太阳先驱，48.1% 使用率）</span>
+      <pre>CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAwoZZbmZWGzYGAAAAAAzUmlZYmx2Y2GmZbGjxYYGLsBgZb2mZmtGAAAYBwAAGbjBzYmZDYmZYMjBD</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">团本 vs 大秘境：</span>M+ 构建把收益最低的单体点换成 AOE（Tempest of the Lightbringer、Blade of Vengeance、Blessed Champion）；两者单体差距"极小"，打有小怪的团本战直接用 M+ 构建也行。</li>
+      <li><span class="tn">Delve 构建的核心思路：</span>围绕"主要冷却 30 秒一轮而不是 60 秒"设计，贴合短战斗节奏；打高层长战斗直接换 M+ 构建。</li>
+      <li><span class="tn">常见换点：</span>要更多 AOE → Sanctify 换掉 Jurisdiction；嫌按键多/CD 不齐 → Radiant Glory 替代处决宣判——它会删掉复仇之怒按钮，改为每次灰烬觉醒自动触发 8 秒小翅膀（30 秒一轮，非常适合新手减负）。</li>
+      <li><span class="tn">别找十字军打击：</span>推荐构建点了 Crusading Strikes，十字军打击并入普通攻击自动施放，手上少一个键。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>输出循环</h2>
+
+    <h3>三条核心规则</h3>
+    <ul class="tools">
+      <li><span class="tn">圣能经济：</span>攒圣能、花圣能占你伤害的大头。5 圣能必花，绝不溢出。</li>
+      <li><span class="tn">吃触发：</span>战争艺术触发（公正之刃重置）尽快用掉（可存 2 层，有一点缓冲）。</li>
+      <li><span class="tn">CD 就按：</span>爆发技能基本 CD 就用，只在等大波小怪/对齐 CD 时稍微留手。</li>
+    </ul>
+
+    <h3>单体优先级（圣殿骑士）</h3>
+    <ol class="prio">
+      <li><strong>复仇之怒</strong>（点了 Radiant Glory 则无此按钮，自动触发）</li>
+      <li><strong>处决宣判</strong></li>
+      <li>灰烬觉醒后接 <strong>圣光之锤</strong>（按键变形，立刻按）</li>
+      <li>有 Light's Deliverance 免费触发的 <strong>圣光之锤</strong>：翅膀/宣判快结束时、没有 Undisputed Ruling 急速 buff 且翅膀 5 秒内不回来时、或触发快过期时打出</li>
+      <li>5 圣能 <strong>最终裁决</strong></li>
+      <li><strong>灰烬觉醒</strong></li>
+      <li><strong>神圣钟鸣</strong></li>
+      <li>2 层战争艺术的 <strong>公正之刃</strong></li>
+      <li><strong>最终裁决</strong></li>
+      <li><strong>公正之刃</strong></li>
+      <li><strong>愤怒之锤</strong>（目标 20% 血以下或翅膀期间可用）</li>
+      <li><strong>审判</strong></li>
+    </ol>
+
+    <h3>AOE 优先级（圣殿骑士，2 目标起）</h3>
+    <ol class="prio">
+      <li><strong>复仇之怒</strong> → <strong>处决宣判</strong>（宣判炸到的目标都计入 10 秒后的结算，持续 AOE）</li>
+      <li>灰烬觉醒后接 <strong>圣光之锤</strong>；免费触发的圣光之锤同单体条件</li>
+      <li>2–4 目标：有 Divine Arbiter 触发时用 <strong>最终裁决</strong>；5+ 目标无视触发继续风暴</li>
+      <li>5 圣能 <strong>神圣风暴</strong></li>
+      <li><strong>灰烬觉醒</strong> → <strong>神圣钟鸣</strong></li>
+      <li>2 层战争艺术的 <strong>公正之刃</strong></li>
+      <li><strong>神圣风暴</strong> → <strong>公正之刃</strong> → <strong>愤怒之锤</strong> → <strong>审判</strong></li>
+    </ol>
+
+    <h3>开手</h3>
+    <p><strong>标准（有翅膀/宣判按钮）：</strong>公正之刃 → 复仇之怒 → 爆发药水+主动饰品 → 处决宣判 → 灰烬觉醒 → 圣光之锤 → 神圣钟鸣 → 进循环。<br>
+    <strong>Radiant Glory 构建：</strong>公正之刃 → 药水+饰品 → 灰烬觉醒 → 圣光之锤 → 神圣钟鸣 → 进循环。</p>
+
+    <h3>关键机制卡片（12.1 实测数值）</h3>
+    <ul class="tools">
+      <li><span class="tn">灰烬觉醒：</span>基础 30 秒 CD，14 码扇形，回 3 圣能，对恶魔/亡灵附带 5 秒眩晕。施放后<strong>按键变形为圣光之锤 20 秒</strong>。</li>
+      <li><span class="tn">圣光之锤：</span>灰烬后立刻按（消耗 3 圣能，部分数据源写 5，以游戏内为准）；Empyrean Hammer 会攒 Light's Deliverance 层数（约 50~60 层，两个数据源有出入），攒满后在灰烬不可用期间白送一发<strong>免费</strong>圣光之锤——可以短暂捏着等翅膀，但绝不能让它过期。</li>
+      <li><span class="tn">神圣钟鸣：</span>基础 60 秒；惩戒点 Quickened Invocation 减 30 秒 → <strong>30 秒 CD</strong>，对至多 5 目标丢 150% 审判并回能。与灰烬双 30 秒完美同轮。</li>
+      <li><span class="tn">愤怒之锤：</span>仅在目标 &lt;20% 血量或复仇之怒期间可用，回 1 圣能——斩杀阶段升格为高频循环技。</li>
+      <li><span class="tn">处决宣判：</span>60 秒 CD，炸完 10 秒后主目标额外吃你这期间对被炸目标总伤害的 20%——窗口内火力全开。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">力量 <span class="gt">&gt;</span> 精通 <span class="gt">&gt;</span> 急速 <span class="gt">&gt;</span> 暴击 <span class="gt">&gt;</span> 全能</p>
+    <p>两个英雄天赋通用，单体/AOE 基本不变。精通（大领主的审判）加成全部神圣伤害；急速压缩循环手感最好。收益递减节点（超过后每档降 10%）：暴击 1380 / 急速 1320 / 精通 1380 / 全能 1620 评级。</p>
+    <p class="note"><strong>差异注：</strong>archon PTR 实测装备是 暴击(912) &gt; 精通(771) &gt; 急速(489)，与 Wowhead 顺序不同——archon 自己标注可能受"掉什么穿什么"偏差影响。装等优先，认真抠配装用 Raidbots Top Gear 跑个人模拟。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>推荐</th></tr>
+      <tr><td>武器附魔</td><td><strong>Enchant Weapon - Arcane Mastery</strong>（奥术精通；其他副属性武器附魔差距不大）</td></tr>
+      <tr><td>头部</td><td>Empowered Rune of Avoidance</td></tr>
+      <tr><td>肩部</td><td>Amirdrassil's Grace</td></tr>
+      <tr><td>胸甲</td><td>Mark of the Worldsoul</td></tr>
+      <tr><td>腿部</td><td>Forest Hunter's Armor Kit（护甲片）</td></tr>
+      <tr><td>脚部</td><td>Lynx's Dexterity</td></tr>
+      <tr><td>戒指</td><td>Eyes of the Eagle</td></tr>
+      <tr><td>大宝石（永歌钻石槽）</td><td><strong>Indecipherable Eversong Diamond</strong></td></tr>
+      <tr><td>其余宝石槽</td><td><strong>Flawless Masterful Peridot</strong> 全插（带 Loa Worshiper's Band 时所有普通槽必须全 Peridot）</td></tr>
+      <tr><td>合剂</td><td>Flask of the Magisters</td></tr>
+      <tr><td>爆发药水</td><td><strong>Potion of Recklessness</strong>（要求暴击或精通是你最高副属性；急速最高则改用 Light's Potential）</td></tr>
+      <tr><td>治疗药水</td><td>Concentrated Silvermoon Health Potion</td></tr>
+      <tr><td>武器油</td><td><strong>Thalassian Phoenix Oil</strong>（常备）</td></tr>
+      <tr><td>增强符文</td><td>Void-Touched Augment Rune</td></tr>
+      <tr><td>食物</td><td>力量食物：Royal Roast 或 Harandar Celebration</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>分配。施放频率取自 archon 12.1 PTR 大秘境日志（Murder Row，+7~+20，11 条记录，约 33 分钟/场——样本小，看相对高低即可）：神圣风暴 9.0 / 最终裁决 8.9 / 公正之刃 5.1 / 审判 4.9 / 愤怒之锤 3.1 / 灰烬觉醒 1.4 / 处决宣判 0.7 CPM；防御技能约每场圣盾术 3 次、眩目圣光 4 次、责难 2 次。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>惩戒圣骑士</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>清算之手</td><td>远程点名拉施法怪；全骑士专精同键</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>公正之刃</td><td>5.1 CPM，战争艺术触发也按它</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>审判</td><td>4.9 CPM；与防骑同键</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>愤怒之锤</td><td>斩杀期/翅膀期高频</td></tr>
+      <tr><td><kbd>4</kbd></td><td>AOE 终结技</td><td>神圣风暴</td><td>9.0 CPM，全表第一</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发（远程优先）</td><td>奉献（弹性位）</td><td>惩戒的远程瞬发已被其他规则键占用，此位自选</td></tr>
+      <tr><td><kbd>E</kbd></td><td>主打断</td><td>责难</td><td>15 秒 CD；配 mouseover 宏</td></tr>
+      <tr><td><kbd>R</kbd></td><td>单体终结技</td><td>最终裁决</td><td>8.9 CPM</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>荣耀圣言</td><td>花 3 圣能，掉血才按（与输出抢资源）</td></tr>
+      <tr><td><kbd>Shift+F</kbd></td><td>急救回血</td><td>圣疗术</td><td>满血急救，注意自律 debuff</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发（30 秒轮）</td><td>灰烬觉醒 → 圣光之锤</td><td>裸技能：按键自动变形，免费触发也按 5</td></tr>
+      <tr><td><kbd>Shift+5</kbd></td><td>第二次级爆发</td><td>神圣钟鸣</td><td>30 秒 CD 与灰烬同轮：5、5、Shift+5 三连</td></tr>
+      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>复仇之怒 + 饰品宏</td><td>Radiant Glory 构建无此按钮</td></tr>
+      <tr><td><kbd>Shift+6</kbd></td><td>第二大爆发</td><td>处决宣判</td><td>60 秒 CD，可并入 6 键宏一键双发</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>圣佑术/复仇之盾</td><td>1 分钟 CD，-20% 承伤，可在眩晕中按</td></tr>
+      <tr><td><kbd>Shift+7</kbd></td><td>第二短CD减伤</td><td>牺牲祝福</td><td>组队救人用</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>圣盾术</td><td>与防骑同键（无敌）</td></tr>
+      <tr><td><kbd>Shift+C</kbd></td><td>底牌对外版本</td><td>保护祝福</td><td>mouseover 宏给队友物理免疫</td></tr>
+      <tr><td><kbd>X</kbd></td><td>驱散/净化</td><td>净化毒素</td><td>驱毒/疾病</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制</td><td>眩目圣光</td><td>PTR 日志每场约 4 次，用得很勤</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>单体控制</td><td>制裁之锤</td><td>6 秒眩晕</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>神圣战马</td><td>—</td></tr>
+      <tr><td><kbd>T</kbd></td><td>第二位移/解控</td><td>自由祝福</td><td>解减速/定身</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">E · 打断（指向优先）</span>
+      <pre>#showtooltip
+/cast [@mouseover,harm,nodead][harm] 责难</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">6 · 大爆发一键（复仇之怒不占GCD，饰品同步）</span>
+      <pre>#showtooltip 复仇之怒
+/use 13
+/use 14
+/cast 复仇之怒
+/cast 处决宣判</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">Shift+C · 保护祝福（对外）</span>
+      <pre>#showtooltip
+/cast [@mouseover,help,nodead][help][@player] 保护祝福</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">F · 自愈（默认奶自己）</span>
+      <pre>#showtooltip
+/cast [@mouseover,help,nodead][help][@player] 荣耀圣言</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <p class="note"><strong>为什么 5 键不用序列宏：</strong>圣光之锤是灰烬觉醒的按键变形，游戏自己会切换技能；而 Light's Deliverance 的免费触发发生在窗口之外，castsequence 的指针看不见触发、会被打乱。裸技能 + 按键变形永远比宏模拟的序列可靠。</p>
+  </section>
+
+  <footer>
+    <p>数据来源：Wowhead 惩戒骑职业指南（Patch 12.1.0 / Midnight Season 2，2026-08-12~17 更新）；archon.gg 惩戒骑 PTR 大秘境版块（12.1 PTR 日志，样本较小仅供参考）。数据存在的已知分歧（圣光之锤耗能 3/5、免费触发层数 50/60、精通与暴击排序）以游戏内实测为准。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
