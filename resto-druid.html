@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>恢复德鲁伊 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--druid); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a> · 同职业：<a href="feral-druid.html">野性</a> · <a href="guardian-druid.html">守护</a> · <a href="balance-druid.html">平衡</a></p>
+    <h1>恢复德鲁伊</h1>
+    <p class="sub">主推英雄天赋：荒野追猎者（Wildstalker，三种场景全 Best，S2 实战 90.1%）。治疗，玩法是"HOT 铺场 + 富足愈合连发"：生命绽放常驻、5 个回春激活富足、然后用又便宜又必暴击的愈合当主炮。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服（2026-08-12~18 更新）</span>
+    <span class="pill">archon 数据：S2 正式服大秘境（8/19–22，43,520 条）</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#starter">第一小时</a>
+    <a href="#talents">天赋</a>
+    <a href="#rotation">治疗循环</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="starter">
+    <h2>第一小时：最小技能集</h2>
+    <p>恢复德的本质一句话：<strong>伤害没来先种树，伤害来了按愈合</strong>。治疗键全部套 mouseover 宏（鼠标悬停团队框架直接奶，不用切目标）。按阶梯练：</p>
+    <h3>3 键版（前 20 分钟）</h3>
+    <ul class="tools">
+      <li><span class="tn">2 常驻：</span><strong>生命绽放</strong>挂在坦克身上<strong>永远不断</strong>（最后 4.5 秒内刷新可白拿一次绽放）；</li>
+      <li><span class="tn">1 铺场：</span><strong>回春术</strong>给要掉血的人预挂，保持场上 5 个（激活"富足"）；</li>
+      <li><span class="tn">3 转 CD：</span><strong>迅捷治愈</strong> 15 秒 CD 就按——哪怕满血（触发大德鲁伊之力送 2 个免费回春）。</li>
+    </ul>
+    <h3>6 键版（第一个晚上）</h3>
+    <ul class="tools">
+      <li><span class="tn">+R 愈合：</span>有人掉血就读愈合——富足激活时它便宜 60%、暴击 +60%，是你的主炮（顶级日志 7.5 次/分）；</li>
+      <li><span class="tn">+4 野性成长：</span>群体掉血按一发（也是耗蓝大户，缺蓝先砍它）；</li>
+      <li><span class="tn">+E 应急：</span>自然迅捷+愈合一键宏——有人要死了按这个（瞬发大奶）；</li>
+      <li><span class="tn">+6 万灵齐唤：</span>2 分钟 CD 转着用别攒着（顶级玩家近乎 CD 就按）。</li>
+    </ul>
+    <p><strong>毕业标准</strong>：3 分钟假人/低层实战——生命绽放覆盖 90% 以上、迅捷治愈 CD 不空转、富足（5 回春）在需要奶的时段常亮、空闲 GCD 会去补月火/阳炎打输出。达标后再读团本引擎和猫形态输出。</p>
+  </section>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p><strong>荒野追猎者</strong>：团本/M+/Delve 三 Best（与顶尖天赋"永久绽放"联动，生命绽放目标叠治疗增幅），S2 实战 90.1%。<strong>丛林守护者</strong>：能玩，但野性成长涨价拖累树人产出。选荒野追猎者。</p>
+
+    <h3>导入码 · 荒野追猎者</h3>
+    <div class="codeblock">
+      <span class="lbl">大秘境 M+（Best）</span>
+      <pre>CkGAAAAAAAAAAAAAAAAAAAAAAMMmZZMjZmxsN8AMzsMjNbzAAAAAAAAAAglBNbGmmZMDmFzMzMLzwDMDAAAAAAAGAACAAY2mZrZbmFbMmZgZWANDAwMDADA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">团本 Raid（Best）</span>
+      <pre>CkGAAAAAAAAAAAAAAAAAAAAAAMjxMLzMjZmxsNMYmNjNmBAAAAAAAAAAbDa2YMNzY4BMLzMzMDDzAAAAAAAAAAIAAgZbmlmtZ2sxYmZYmBGNDAwMDADA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">地下堡 Delves（Best）</span>
+      <pre>CkGAAAAAAAAAAAAAAAAAAAAAAMMmZZMjZmxsNzMgFzsZbGAAAAAAAAAAsNoZzw0MmZMmFzMzMLzwYAAAAAAAwAAQAAAzyMbNLzsYDm5BwMWANDAwMDADA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">archon S2 实战构建（21% 使用率，最高 +15）</span>
+      <pre>CkGAAAAAAAAAAAAAAAAAAAAAAMMmZZMjZmxsNMMzsMsZbGAAAAAAAAAAsMoZzw0MjZwsMzMzMLzwDYAAAAAAAwAAAAAgZbmtmtZWsxYmBmZB0MAAzMAMA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">万灵齐唤 vs 化身：生命之树：</span>万灵齐唤更爆发，是默认选择；高频走位战换化身树（移动中瞬发愈合）。</li>
+      <li><span class="tn">Liveliness vs Master Shapeshifter：</span>M+ 默认前者（DOT 大增伤）；对自己蓝量没信心/超长团本战选后者（愤怒回蓝）——这是你的主要回蓝手段，放弃前想清楚。</li>
+      <li><span class="tn">12.1 三个重做：</span><strong>富足</strong>：场上 ≥5 个回春时愈合暴击 +60%、耗蓝 −60%（本版本玩法的地基）；<strong>宁静</strong>：附带 60% 血量的护根吸收盾+击退免疫；<strong>繁盛已变成被动</strong>——宁静每跳延长全部 HOT 2 秒，没有独立按钮，别找。</li>
+      <li><span class="tn">Lifetreading：</span>百花齐放自动跟随生命绽放目标——想控制它落点就把生命绽放挂自己身上。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>治疗循环</h2>
+
+    <h3>三条核心规则</h3>
+    <ul class="tools">
+      <li><span class="tn">维护三件套：</span>生命绽放不断（88% 顶级覆盖）、百花齐放常在（自动跟随）、迅捷治愈 CD 就按——这是被动治疗引擎。</li>
+      <li><span class="tn">富足→愈合：</span>5 个回春激活富足后，愈合是最省蓝最高效的技能——"绝大多数玩家多按愈合就能涨治疗"。</li>
+      <li><span class="tn">蓝量三阀门：</span>缺蓝先砍野性成长 → 再降回春铺量 → 空闲用愤怒回蓝（Master Shapeshifter）。大 CD 也是省蓝工具，别攒。</li>
+    </ul>
+
+    <h3>大秘境治疗优先级</h3>
+    <ol class="prio">
+      <li><strong>生命绽放</strong>挂坦克（或自己）常驻；最后 4.5 秒刷新白拿绽放</li>
+      <li><strong>迅捷治愈</strong> CD 就按（满血也按：送免费回春+连锁绽放）</li>
+      <li>中等团伤：<strong>野性成长</strong>（GCD 效率最高，也是蓝量阀门）</li>
+      <li>预判伤害：<strong>回春术</strong>提前铺，维持 5 个（富足）</li>
+      <li>单体急救：<strong>自然迅捷+愈合</strong>（E 键宏）或直接读<strong>愈合</strong></li>
+      <li>大团伤：<strong>万灵齐唤</strong>（引导前先铺 HOT）；<strong>宁静</strong>反应式使用（自带护根盾）</li>
+      <li>空闲 GCD：<strong>打输出</strong>（见下）</li>
+    </ol>
+
+    <h3>团本节奏（两个引擎）</h3>
+    <p><strong>永久绽放引擎</strong>：生命绽放+双回春挂自己、迅捷治愈 CD 对自己按——绽放连锁泼全团。<strong>富足引擎</strong>：5 回春常驻 → 愈合连发（战斗结束时愈合施放数应远超回春）。大伤害前 15–20 秒开始铺垫：迅捷治愈 → 回春×3 → 愈合若干 → 野性成长 → <strong>宁静</strong>（每跳延长所有 HOT 2 秒＝白嫖 10 秒繁盛）。</p>
+
+    <h3>输出填充（12.1 的答案：法系为主）</h3>
+    <p>12.0.5 法系大加强后<strong>不再强制猫形态</strong>："高层建议练法系输出循环，其余层数玩你喜欢的"。法系键：月火、阳炎（AOE DOT）、愤怒（顺便回蓝）、星涌术（瞬发，不需要枭形态）。猫形态流（斜掠铺 DOT → 5 星撕扯 → 撕碎/横扫）配 <strong>Fluid Form</strong> 自动变形依然可玩，单体接近、AOE 落后。S2 顶级日志实际是混合打法：月火 13.6% / 撕扯+斜掠 18% / 愤怒 10.3%。记住原话："你的输出根本不重要，任何时候先保证队伍舒服。"</p>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">智力 <span class="gt">&gt;</span> 急速 <span class="gt">&gt;</span> 精通 <span class="gt">&gt;</span> 全能 <span class="gt">&gt;</span> 暴击</p>
+    <p>团本/M+ 通用（恢复德自带 +6% 免费急速，不占递减）。精通（和谐）按目标身上 HOT 数量加成。总体装等优先，插槽约值 5 装等。收益递减节点：急速 1320 / 精通 1380 / 暴击 1380 / 全能 1620 评级。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>推荐</th></tr>
+      <tr><td>武器附魔</td><td>Enchant Weapon - Berserker's Rage</td></tr>
+      <tr><td>头部</td><td>Empowered Hex of Leeching</td></tr>
+      <tr><td>肩部</td><td>Silvermoon's Mending</td></tr>
+      <tr><td>胸甲</td><td>Mark of the Worldsoul</td></tr>
+      <tr><td>腿部</td><td>Arcanoweave Spellthread</td></tr>
+      <tr><td>脚部</td><td>Shaladrassil's Roots</td></tr>
+      <tr><td>戒指</td><td>Silvermoon's Alacrity</td></tr>
+      <tr><td>加插槽</td><td><strong>Miasmic Jewelbinder</strong> ×3（头/腕/腰）</td></tr>
+      <tr><td>宝石</td><td>大宝石 <strong>Indecipherable Eversong Diamond</strong>；其余 Flawless Masterful Peridot 全插</td></tr>
+      <tr><td>合剂</td><td>Flask of the Blood Knights</td></tr>
+      <tr><td>爆发药水</td><td>Potion of Recklessness（当"半个爆发 CD"用，掐危险窗口喝）；团本缺蓝备 Lightfused Mana Potion</td></tr>
+      <tr><td>治疗药水</td><td>Concentrated Silvermoon Health Potion——原话"绑个键，常喝！"</td></tr>
+      <tr><td>武器油</td><td>Thalassian Phoenix Oil</td></tr>
+      <tr><td>增强符文 / 食物</td><td>Void-Touched Augment Rune；宴席 Harandar Celebration / 个人 Royal Roast</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>的<strong>治疗三原则</strong>分配：①所有治疗键套 <code>[@mouseover,help,nodead][help][@player]</code> 模板；②R/4 = 单体大奶/群奶；③Shift = 对外版本。施放频率取自 archon S2 顶级日志（毒牙祭坛，+12~13，24 条，8/19–22）：回春 11.8 / 愈合 7.5 / 生命绽放 4.0 / 迅捷治愈 3.7 / 野性成长 2.7 CPM；万灵齐唤约 18 次/场（近乎 CD 就用）、熊形态 364 次事件（高层的常态防御动作）。<strong>恢复德 12.1 没有打断</strong>——E 键改造成应急奶键。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>恢复德鲁伊</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>潜行（豹形态）</td><td>全德鲁伊统一</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>回春术</td><td>11.8 CPM 全表第一；维持 5 个激活富足</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>生命绽放</td><td>4.0 CPM；坦克常驻，88% 覆盖</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>迅捷治愈</td><td>3.7 CPM ≈ CD 就按</td></tr>
+      <tr><td><kbd>4</kbd></td><td>群奶（AOE 终结对）</td><td>野性成长</td><td>2.7 CPM；也是蓝量阀门</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发（远程优先）</td><td>月火术</td><td>输出填充第一键；全德鲁伊 Q=月火</td></tr>
+      <tr><td><kbd>E</kbd></td><td>应急反应键</td><td>自然迅捷 + 愈合 一键宏</td><td>恢复德无打断，E 改为"有人要死了"专用</td></tr>
+      <tr><td><kbd>R</kbd></td><td>单体大奶（终结对）</td><td>愈合</td><td>7.5 CPM；富足激活后的主炮</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>[@player] 愈合</td><td>兜底；治疗键模板本身无目标时也会奶自己</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发</td><td>化身：生命之树（若点）</td><td>万灵齐唤构建此位空置</td></tr>
+      <tr><td><kbd>6</kbd></td><td>治疗大招</td><td>万灵齐唤 + 饰品宏</td><td>2 分钟，转着用别攒</td></tr>
+      <tr><td><kbd>Shift+6</kbd></td><td>团队大招（对外版本）</td><td>宁静</td><td>3 分钟；自带护根盾+延长全部 HOT</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>树皮术</td><td>1 分钟，所有形态可用（12 次/场）</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>熊形态</td><td>S2 高层的真实保命动作（364 次事件）；低血自动触发免费狂暴回复</td></tr>
+      <tr><td><kbd>Shift+C</kbd></td><td>底牌对外版本</td><td>铁木树皮</td><td>1.5 分钟外部减伤，mouseover 宏</td></tr>
+      <tr><td><kbd>X</kbd></td><td>驱散</td><td>自然之愈</td><td>8 秒 CD，魔法+诅咒+毒全覆盖，主动驱散；Shift+X 安抚</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制</td><td>乌索尔旋风（@cursor）</td><td>M+ 页标记"必选"；配台风推回</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>第二控制</td><td>台风 / 夺魂咆哮</td><td>夺魂咆哮会变熊</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>旅行形态（环境宏）</td><td>—</td></tr>
+      <tr><td><kbd>T</kbd></td><td>第二位移/群加速</td><td>狂奔怒吼</td><td>⚠会变熊</td></tr>
+      <tr><td><kbd>Shift+1/2/3</kbd></td><td>输出填充层</td><td>阳炎 / 愤怒 / 星涌术</td><td>愤怒顺便回蓝；星涌不需要枭形态</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">治疗键通用模板（1/2/3/4/R 全部照此，换技能名即可）</span>
+      <pre>#showtooltip
+/cast [@mouseover,help,nodead][help][@player] 回春术</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">E · 应急一键（自然迅捷不占GCD，愈合瞬发出手）</span>
+      <pre>#showtooltip 愈合
+/cast 自然迅捷
+/cast [@mouseover,help,nodead][help][@player] 愈合</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">Shift+C · 铁木树皮对外</span>
+      <pre>#showtooltip
+/cast [@mouseover,help,nodead][help][@player] 铁木树皮</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">V · 乌索尔旋风落地</span>
+      <pre>#showtooltip
+/cast [@cursor] 乌索尔的旋风</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <p class="note"><strong>三个注意：</strong>①百花齐放不用手放——Lifetreading 让它自动跟随生命绽放目标；②<strong>激活</strong>一般留给自己，掐最贵的施法窗口用（3 分钟 CD，不能变形状态施放）；③开怪前把<strong>共生纽带</strong>挂给一个脆皮 DPS、全队野性印记，然后提前 2 秒铺回春。</p>
+  </section>
+
+  <footer>
+    <p>数据来源：Wowhead 恢复德鲁伊职业指南（Patch 12.1.0 / Midnight Season 2，2026-08-12~18 更新）；archon.gg 恢复德大秘境版块（正式服 S2 数据，2026-08-19~22，43,520 条 / 循环 24 条顶级样本）。技能中文名以游戏内为准。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

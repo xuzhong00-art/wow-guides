@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>守护德鲁伊 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--druid); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a> · 同职业：<a href="feral-druid.html">野性</a> · <a href="balance-druid.html">平衡</a> · <a href="resto-druid.html">恢复</a></p>
+    <h1>守护德鲁伊</h1>
+    <p class="sub">主推英雄天赋：艾露恩之眷（Elune's Chosen，M+/Delve；团本换利爪德鲁伊）。坦克，玩法是"两个 DOT 铺场 + 铁鬃举甲"，被动硬、自愈猛、AOE 清怪速度顶级，手法在坦克里最简单。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服（2026-08-12 更新）</span>
+    <span class="pill">archon 数据：S2 正式服大秘境（8/20–22，23,980 条）</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#starter">第一小时</a>
+    <a href="#talents">天赋</a>
+    <a href="#rotation">输出循环</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="starter">
+    <h2>第一小时：最小技能集</h2>
+    <p>守护德的本质一句话：<strong>DOT 全覆盖，挨打前有铁鬃</strong>。它没有连招，只有"该亮的东西一直亮着"。木桩上按阶梯练：</p>
+    <h3>3 键版（前 20 分钟）</h3>
+    <ul class="tools">
+      <li><span class="tn">Q 挂 DOT：</span><strong>月火术</strong>——每个新目标都点一下（顶级日志 16 次/分，全表第一）；</li>
+      <li><span class="tn">1 挂 DOT：</span><strong>痛击</strong> CD 就按，叠到 3–5 层维持住（占总伤害 53%）；</li>
+      <li><span class="tn">4 举甲：</span>要挨物理打之前按 <strong>铁鬃</strong>（不占 GCD、40 怒，可叠加）——怒气的默认去向。</li>
+    </ul>
+    <h3>6 键版（第一个晚上）</h3>
+    <ul class="tools">
+      <li><span class="tn">+2 裂伤：</span>CD 就按（回怒主力，S2 实战 8.6 次/分）；</li>
+      <li><span class="tn">+R 夷平/重殴：</span>不需要防御时把怒气花在输出上，80 怒以上按最好（新被动"驾驭之怒"）；</li>
+      <li><span class="tn">+7 树皮术：</span>1 分钟 CD 转着按削平伤害（顶级玩家几乎 CD 就用）；</li>
+      <li><span class="tn">+F 狂暴回复：</span>掉血就按（第一治疗来源）。</li>
+    </ul>
+    <p><strong>毕业标准</strong>：3 分钟木桩——痛击 5 层覆盖 90% 以上、月火不掉、怒气从不满格溢出、每次"预告伤害"前手里有铁鬃。达标后再读完整优先级和红月/月光束的窗口细节。</p>
+  </section>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p><strong>艾露恩之眷</strong>：Wowhead 标记 M+ 和 Delve 双 Best，"更硬、更简单、AOE 更强"；S2 实战占比 96.2%。<strong>利爪德鲁伊</strong>：团本 Best，单体略优但防御偏弱。日常内容闭眼选艾露恩之眷。</p>
+
+    <h3>导入码</h3>
+    <div class="codeblock">
+      <span class="lbl">archon S2 实战构建 · 艾露恩之眷 M+（16% 使用率，最高 +15）</span>
+      <pre>CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmZmFzMjZWmZxMPwMLLDMbmxoJyMzyYmZmlxMAAAAAAYsZGYZbmBjZZAMBAAAsZMzAsYMMwsYBgZGAA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">Wowhead · 艾露恩之眷 Delve 专用（AOE 速刷向）</span>
+      <pre>CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmxsMzMjZWMLGMWGY2MjRT0MzsYmZmxYGGAAAAAwwyMgltZGMmlBwUAAAgNMzDMgFzgBjNLbAmZAMA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">Wowhead · 利爪德鲁伊（团本向）</span>
+      <pre>CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmxsMmZMziZZGmZZZgZzwoJamZWmZmZmlxMMAAAAAgZsMDAAAA1MLzyMzMAAWwMPAwiZwA2sAAmZDG</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">红月 vs 双月火（同一选择节点）：</span>团本/单体构建围绕<strong>红月</strong>（30 秒 CD、裂伤延长它并回 8 怒）；<strong>M+ 构建选双月火</strong>（快速铺 DOT）——所以 3 号键按构建切换。</li>
+      <li><span class="tn">防御弹性点：</span>乌索克之怒（S2 日志占治疗 28.3% 的吸收核心）和艾露恩的青睐是"觉得脆就点"的两个点位，熟练后可换输出。</li>
+      <li><span class="tn">裂地咆哮：</span>1 分钟 CD，重置痛击并允许多叠 5 层——顶级玩家约 1/3 选取，爆发 AOE 场景好用。</li>
+      <li><span class="tn">夷平：</span>M+/Delve 必点，重殴变顺劈（同一个按键）。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>输出循环</h2>
+
+    <h3>三条核心规则</h3>
+    <ul class="tools">
+      <li><span class="tn">DOT 全覆盖：</span>月火+痛击是你 75% 的伤害，覆盖率就是输出（顶级日志双 94%）。</li>
+      <li><span class="tn">怒气二选一：</span>铁鬃（承伤）或夷平/重殴（输出），乱按铁鬃是最大 DPS 损失，但该按不按会死——这个平衡是守护德的全部功力。</li>
+      <li><span class="tn">CD 转着用：</span>树皮术、月光束、化身都不留手。</li>
+    </ul>
+
+    <h3>单体 / AOE 通用优先级</h3>
+    <ol class="prio">
+      <li>保持 <strong>月火术</strong> DOT（新目标即点；星界守护者免费触发照吃）</li>
+      <li>维持 3–5 层 <strong>痛击</strong></li>
+      <li><strong>红月</strong> CD 就按（团本单体构建；M+ 双月火构建无此技能）</li>
+      <li><strong>裂伤</strong> CD 就按（回怒；红月构建下还给红月续时间）</li>
+      <li><strong>痛击</strong> CD 就按</li>
+      <li>怒气：要挨打按 <strong>铁鬃</strong>，安全期按 <strong>夷平/重殴</strong>（80 怒以上）</li>
+      <li>掉血按 <strong>狂暴回复</strong></li>
+      <li><strong>月光束</strong>/<strong>树皮术</strong>/<strong>化身</strong> 转着用</li>
+      <li>没得按才 <strong>横扫</strong></li>
+    </ol>
+    <p><strong>开怪：</strong>狂奔怒吼进场 → 树皮术预开 → 痛击 → 铁鬃 → 逐个月火 → 月光束 → 化身（顶级日志的标准开场，前 75 秒铁鬃平均按 31 次——别吝啬）。</p>
+
+    <h3>关键机制卡片（12.1 实测数值）</h3>
+    <ul class="tools">
+      <li><span class="tn">铁鬃：</span>40 怒、7 秒、+124% 敏捷护甲可叠加，不占 GCD（0.5 秒内置间隔）。</li>
+      <li><span class="tn">红月：</span>30 秒 CD、占 GCD、8 秒 DOT；裂伤每次命中延长 1 秒并回 8 怒——单体构建的轴心。</li>
+      <li><span class="tn">月光束：</span>攻防一体（大量精通+治疗），29% 覆盖率，站里面打。</li>
+      <li><span class="tn">化身：乌索克的守护者：</span>顶级日志约 2.3 分钟一次（CDR 天赋），CD 就开。</li>
+      <li><span class="tn">狂暴回复：</span>S2 第一治疗来源（28.7%），2.2 次/分——它是常规按键不是保命大招。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">敏捷 <span class="gt">&gt;</span> 急速 <span class="gt">&gt;</span> 全能 <span class="gt">&gt;</span> 暴击 <span class="gt">&gt;</span> 精通</p>
+    <p>急速是最稳的第一副属性（更多 GCD、更顺的手感）；四个副属性差距不大，急速堆多了可以随意换。装等优先。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>Wowhead 推荐</th><th>archon S2 实战主流（参考）</th></tr>
+      <tr><td>武器附魔</td><td>Berserker's Rage</td><td>Acuity of the Ren'dorei（55.8%）</td></tr>
+      <tr><td>头部</td><td>Empowered Blessing of Speed</td><td>Empowered Hex of Leeching（42.2%）</td></tr>
+      <tr><td>肩部</td><td>Akil'zon's Swiftness</td><td>Silvermoon's Mending（41.4%）</td></tr>
+      <tr><td>胸甲</td><td colspan="2">Mark of the Worldsoul（一致，69.2%）</td></tr>
+      <tr><td>腿部</td><td colspan="2">Forest Hunter's Armor Kit（一致，60.0%）</td></tr>
+      <tr><td>脚部</td><td>Farstrider's Hunt</td><td>Shaladrassil's Roots（38.1%）</td></tr>
+      <tr><td>戒指</td><td colspan="2">Silvermoon's Alacrity（一致，44.8%）</td></tr>
+      <tr><td>加插槽</td><td colspan="2"><strong>Miasmic Jewelbinder</strong> ×3：头/腕/腰各加一槽</td></tr>
+      <tr><td>大宝石</td><td colspan="2"><strong>Indecipherable Eversong Diamond</strong>（一致，61.7%）</td></tr>
+      <tr><td>其余宝石</td><td colspan="2">Flawless Versatile Peridot 全插（一致，46.5%）</td></tr>
+      <tr><td>合剂</td><td colspan="2">Flask of the Blood Knights</td></tr>
+      <tr><td>爆发药水</td><td colspan="2">Draught of Rampant Abandon（掉毒圈嫌烦就换 Light's Potential）</td></tr>
+      <tr><td>治疗药水</td><td colspan="2">Concentrated Silvermoon Health Potion</td></tr>
+      <tr><td>武器油</td><td colspan="2">Thalassian Phoenix Oil（常备）</td></tr>
+      <tr><td>增强符文 / 食物</td><td colspan="2">Void-Touched Augment Rune；宴席 Silvermoon Parade / 个人 Harandar Celebration</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>分配。施放频率取自 archon S2 正式服顶级日志（毒牙祭坛，+14~16，25 条，8/20–21）：月火 16.0 / 痛击 12.9 / 裂伤 8.6 / 狂暴回复 2.2 / 月光束 1.3 / 树皮术 1.1 CPM；铁鬃无施放行但开场 75 秒平均 31 次——视同最高频防御键。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>守护德鲁伊</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>形态宏：熊=咆哮 / 豹=潜行</td><td>全德鲁伊 ` 潜行体系的守护德版本</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>痛击</td><td>12.9 CPM，53% 伤害</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>裂伤</td><td>8.6 CPM，回怒主力</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>红月（单体构建）</td><td>M+ 双月火构建此位空置/弹性</td></tr>
+      <tr><td><kbd>4</kbd></td><td>高频④（高频防御）</td><td>铁鬃</td><td>不占 GCD，最需要顺手的键</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发（远程优先）</td><td>月火术</td><td>16.0 CPM 全表第一；全德鲁伊 Q=月火</td></tr>
+      <tr><td><kbd>E</kbd></td><td>主打断</td><td>迎头痛击</td><td>⚠守护德 E 不加 [help] 治疗分支——愈合会把熊顶出形态</td></tr>
+      <tr><td><kbd>R</kbd></td><td>资源终结技</td><td>夷平 / 重殴</td><td>同一按键（夷平替换重殴）</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>狂暴回复</td><td>2.2 CPM，第一治疗来源</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发</td><td>月光束</td><td>攻防一体短 CD</td></tr>
+      <tr><td><kbd>Shift+5</kbd></td><td>第二次级爆发</td><td>裂地咆哮（若点）</td><td>1 分钟 CD，重置痛击</td></tr>
+      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>化身：乌索克的守护者 + 饰品宏</td><td>CD 就开</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>树皮术</td><td>1.1 CPM ≈ CD 就用，第一减伤来源（41%）</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>生存本能</td><td>50% 减伤，留给危险期</td></tr>
+      <tr><td><kbd>X</kbd></td><td>驱散/安抚</td><td>移除腐蚀 / 安抚</td><td>可做一键宏：[harm]安抚、[help/自身]移除腐蚀</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制</td><td>夺魂咆哮</td><td>AOE 昏迷</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>单体控制</td><td>缠绕</td><td>⚠熊形态施放会脱形态——只在豹/人形用</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>旅行形态（环境宏）</td><td>—</td></tr>
+      <tr><td><kbd>T</kbd></td><td>第二位移/群加速</td><td>狂奔怒吼</td><td>—</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">` · 仇恨开关形态宏（熊嘲讽/豹潜行）</span>
+      <pre>#showtooltip
+/cast [form:1] 咆哮; [form:2] 潜行; 潜行</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">6 · 大爆发一键</span>
+      <pre>#showtooltip
+/use 13
+/use 14
+/cast 化身：乌索克的守护者</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">X · 驱散/安抚一键</span>
+      <pre>#showtooltip
+/cast [@mouseover,harm,nodead][harm] 安抚; [@mouseover,help,nodead][help][@player] 移除腐蚀</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">Z · 旅行形态环境宏</span>
+      <pre>#showtooltip
+/cast [swimming] 水栖形态; [outdoors] 旅行形态; 猎豹形态</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>数据来源：Wowhead 守护德鲁伊职业指南（Patch 12.1.0 / Midnight Season 2，2026-08-12 更新）；archon.gg 守护德大秘境版块（正式服 S2 数据，2026-08-20~22，天赋 23,980 条 / 循环 25 条顶级样本）。技能中文名以游戏内为准。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

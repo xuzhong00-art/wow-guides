@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>平衡德鲁伊 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--druid); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a> · 同职业：<a href="feral-druid.html">野性</a> · <a href="guardian-druid.html">守护</a> · <a href="resto-druid.html">恢复</a></p>
+    <h1>平衡德鲁伊</h1>
+    <p class="sub">主推英雄天赋：艾露恩之眷（Elune's Chosen，S2 大秘境占比 98.8%）。远程法系输出，核心资源是星能：星火术攒、星涌/星落花，蚀星在午夜已变成 32 秒 CD 的主动爆发按钮。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服（2026-08-12~18 更新）</span>
+    <span class="pill">archon 数据：S2 正式服大秘境（8/20–22，53,431 条）</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#starter">第一小时</a>
+    <a href="#talents">天赋</a>
+    <a href="#rotation">输出循环</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="starter">
+    <h2>第一小时：最小技能集</h2>
+    <p>平衡德的本质一句话：<strong>星火攒星能、星涌花星能、DOT 一直挂着</strong>。蚀星/化身那些窗口先不管。木桩上按阶梯练（艾露恩之眷点了 Lunar Calling 后<strong>愤怒可以不上键</strong>，星火是唯一构造技）：</p>
+    <h3>3 键版（前 20 分钟）</h3>
+    <ul class="tools">
+      <li><span class="tn">1 攒能：</span><strong>星火术</strong>读条（12.7 CPM 主构造，自带 10 码顺劈）；</li>
+      <li><span class="tn">R 花能：</span>40 星能按 <strong>星涌术</strong>（瞬发，别让星能溢出）；</li>
+      <li><span class="tn">Q 挂 DOT：</span><strong>月火术</strong>每个目标点一下。</li>
+    </ul>
+    <h3>6 键版（第一个晚上）</h3>
+    <ul class="tools">
+      <li><span class="tn">+3 阳炎术：</span>怪聚堆后一发铺全场（AOE DOT）；</li>
+      <li><span class="tn">+5 蚀星：</span>32 秒 CD、2 充能——攒着星能进蚀，<strong>绝不让它躺满 2 层</strong>；</li>
+      <li><span class="tn">+4 星落：</span>2 目标起花能从 R 换成 4（瞬发，移动中也能打）；</li>
+      <li><span class="tn">+6 化身：</span>大爆发一键包，接在艾露恩之怒之后按。</li>
+    </ul>
+    <p><strong>毕业标准</strong>：3 分钟木桩——星能从不溢出、蚀星从不双充能干等、月火+阳炎覆盖 90%、移动时间全部用瞬发（星涌/星落）填满。达标后再读完整优先级和艾露恩之怒的窗口对齐。</p>
+  </section>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p><strong>艾露恩之眷</strong>：S2 两个场景的推荐答案（Wowhead 团本/M+ 双 Best，archon 实战 98.8%），围绕艾露恩之怒的光束窗口打集中 AOE。<strong>丛林守护者</strong>：树人流，散射多目标和定时出小怪的团本战仍有一席之地。新手直接艾露恩之眷。</p>
+
+    <h3>导入码 · 艾露恩之眷</h3>
+    <div class="codeblock">
+      <span class="lbl">大秘境 M+（Wowhead Best）</span>
+      <pre>CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMgxMLzsYmZswyMLjxMjNMAYstNzgxsNCMBAAAYhZmZGsZMjxAAwMDWGA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">团本 Raid（Wowhead Best）</span>
+      <pre>CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDwsMzMzMYYGjZWmhxMWYZmlZGjZ2wAgx2yMDGz2IwEAAAgFzMzMD2MMGzAAYmBLDA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">地下堡 Delves</span>
+      <pre>CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMgxMLzsYMzswyMLjxMjNMAYstNzgxsNCMBAAAYhZmZGsZMjxAAwMDWGA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">archon S2 实战构建（41.9% 使用率，最高 +16）</span>
+      <pre>CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzYhhhxMLzsYmZswyMLjxMjNMAYstNzgxsNAmAAAAswMzMD2MmxYAAYmBLDA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">备选 · 丛林守护者 M+</span>
+      <pre>CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMwDMbzsMWmxMWYZGjxMjFMAYAW2GLYamZZEAAAgNzMPwMD2MmxYGAzMAwA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">Lunar Calling（艾露恩之眷核心）：</span>放弃日蚀、星火 +100% 伤害——星火成为唯一构造技，<strong>愤怒可以从动作条撤下</strong>（S2 顶级日志里愤怒平均一场只按 9.7 次）。</li>
+      <li><span class="tn">Arcane Affinity vs Lunation：</span>团本/单体选前者（按 60 秒计划艾露恩之怒）；多目标选 <strong>Lunation</strong>（奥术施法缩它 CD → 艾露恩之怒 CD 就丢）。</li>
+      <li><span class="tn">化身 vs 万灵齐唤：</span>两边都基本自由选；万灵齐唤更爆发，记得先铺 DOT 再引导。</li>
+      <li><span class="tn">12.1 注意：</span>Warrior of Elune 已从天赋树移除；恒星耀斑不再是常驻 DOT（只作为 Orbital Strike 的附带效果存在）——别按老攻略找这两个键。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>输出循环</h2>
+
+    <h3>三条核心规则</h3>
+    <ul class="tools">
+      <li><span class="tn">星能不溢出：</span>星涌（单体）/星落（AOE）是瞬发——移动填充也靠它们，"Always Be Casting"。</li>
+      <li><span class="tn">蚀星当爆发按：</span>32 秒 CD、2 充能的主动按钮——攒好星能再进蚀，别让充能躺满；艾露恩之眷只会进月蚀。</li>
+      <li><span class="tn">DOT 覆盖：</span>月火+阳炎挂满所有目标（S2 覆盖率 90%/87%），流星雨触发全靠 DOT 跳数。</li>
+    </ul>
+
+    <h3>单体优先级（艾露恩之眷）</h3>
+    <ol class="prio">
+      <li>蚀星 2 充能时立刻进 <strong>月蚀</strong></li>
+      <li>月火/阳炎快掉且会落进爆发窗口的先补</li>
+      <li><strong>艾露恩之怒</strong>：攒有 2 发星涌的星能再放（Lunation 构建直接 CD 就丢）</li>
+      <li><strong>化身/天体列阵</strong>：接在艾露恩之怒后一个 GCD 开（配饰品）</li>
+      <li>蚀内：触发的 <strong>星落</strong>（Touch the Cosmos）→ <strong>星涌术</strong> 消耗星能/触发</li>
+      <li>蚀外：pandemic 窗口补 <strong>月火/阳炎</strong> → 防溢出 <strong>星涌</strong> → <strong>星火术</strong> 攒能</li>
+      <li>万灵齐唤（若点）：化身窗口内星能花完时引导</li>
+    </ol>
+
+    <h3>AOE 优先级（艾露恩之眷，2 目标起）</h3>
+    <ol class="prio">
+      <li>拉怪途中逐个 <strong>月火</strong>，聚好后一发 <strong>阳炎</strong></li>
+      <li>蚀星 2 充能立刻进 <strong>月蚀</strong>；<strong>艾露恩之怒</strong> CD 就丢（可为月蚀/化身稍留）</li>
+      <li><strong>化身</strong>在不会让蚀星憋满 2 充能的前提下开</li>
+      <li>攒有 2 层 Ascendant Eclipses 的星能进蚀</li>
+      <li>触发的 <strong>星涌</strong>（Weft）→ 触发的 <strong>星落</strong>（Warp/Touch the Cosmos）</li>
+      <li><strong>星落</strong> 防溢出/倾泻 → <strong>星火术</strong> 攒能</li>
+    </ol>
+    <p><strong>M+ 开怪（实战版）：</strong>开怪瞬间 化身+饰品（不占 GCD）→ 月火 → 阳炎 → 月蚀 → 艾露恩之怒 → 星落。团本开手提前 4 秒抢读条（详见 Wowhead 各变体）。</p>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">智力 <span class="gt">&gt;</span> 精通 <span class="gt">&gt;</span> 急速 <span class="gt">&gt;</span> 暴击 <span class="gt">&gt;</span> 全能</p>
+    <p>艾露恩之眷顺序（Lunation/星火让急速增值）；丛林守护者急速=暴击。精通（星界祈唤）对星界法术双重加成。收益递减节点：急速 1320 / 暴击 1380 / 精通 1380 / 全能 1620 评级。认真抠就 Raidbots 跑个人模拟。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>推荐</th></tr>
+      <tr><td>武器附魔</td><td>Enchant Weapon - Arcane Mastery</td></tr>
+      <tr><td>头部</td><td>Empowered Rune of Avoidance</td></tr>
+      <tr><td>肩部</td><td>Amirdrassil's Grace</td></tr>
+      <tr><td>胸甲</td><td>Mark of the Worldsoul</td></tr>
+      <tr><td>腿部</td><td>Sunfire Silk Spellthread（法系织线）</td></tr>
+      <tr><td>脚部</td><td>Lynx's Dexterity</td></tr>
+      <tr><td>戒指</td><td>Eyes of the Eagle</td></tr>
+      <tr><td>加插槽</td><td><strong>Miasmic Jewelbinder</strong> ×3（头/腕/腰；银月城功勋代币商人处 6 代币一个）</td></tr>
+      <tr><td>宝石</td><td>大宝石 <strong>Indecipherable Eversong Diamond</strong>；其余默认 Flawless Quick Amethyst，精通向 Masterful 系（Garnet/Peridot/Lapis）混插</td></tr>
+      <tr><td>合剂</td><td>Flask of the Magisters（四种副属性合剂差距小，可 sim）</td></tr>
+      <tr><td>爆发药水</td><td>Light's Potential 或 Potion of Recklessness（sim 定）</td></tr>
+      <tr><td>治疗药水</td><td>Concentrated Silvermoon Health Potion</td></tr>
+      <tr><td>武器油</td><td>Thalassian Phoenix Oil</td></tr>
+      <tr><td>增强符文 / 食物</td><td>Void-Touched Augment Rune；宴席 Impossibly Royal Roast / 个人 Champion's Bento（智力食物优先）</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>分配。施放频率取自 archon S2 正式服顶级日志（虚空疤竞技场，+14~16，24 条，8/20–21）：星火术 12.7 / 星涌术 7.9 / 星落 6.3 / 月火 5.0 / 阳炎 3.6 / 艾露恩之怒 1.9 / 愤怒 0.4 CPM。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>平衡德鲁伊</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>潜行（豹形态）</td><td>跳怪赶路；全德鲁伊统一</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>星火术</td><td>12.7 CPM 唯一构造技</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>愤怒（丛林守护者用）</td><td>艾露恩之眷 Lunar Calling 构建可空置</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>阳炎术</td><td>3.6 CPM，AOE DOT</td></tr>
+      <tr><td><kbd>4</kbd></td><td>AOE 终结技</td><td>星落</td><td>6.3 CPM；与 R 星涌成对</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发（远程优先）</td><td>月火术</td><td>5.0 CPM；全德鲁伊 Q=月火</td></tr>
+      <tr><td><kbd>E</kbd></td><td>主打断 + 治疗整合</td><td>日光术 / 愈合</td><td>三分支宏；日光术 1 分钟 CD，打断成功刷新（Light of the Sun）</td></tr>
+      <tr><td><kbd>R</kbd></td><td>单体终结技</td><td>星涌术</td><td>7.9 CPM，40 星能瞬发</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>愈合</td><td>@player；平衡形态可直接施放</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发（30 秒轮）</td><td>蚀星（月蚀）</td><td>32 秒 CD 双充能的主动爆发按钮</td></tr>
+      <tr><td><kbd>Shift+5</kbd></td><td>第二次级爆发</td><td>艾露恩之怒 / 自然之力</td><td>1.9 CPM；Lunation 构建 CD 就丢</td></tr>
+      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>化身/天体列阵 + 饰品宏</td><td>接在艾露恩之怒后一个 GCD</td></tr>
+      <tr><td><kbd>Shift+6</kbd></td><td>第二大爆发</td><td>万灵齐唤（若点）</td><td>先铺 DOT 再引导</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>树皮术</td><td>1 分钟 CD，任何形态可用</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>熊形态</td><td>+220% 护甲的应急按钮（低血自动触发免费狂暴回复）</td></tr>
+      <tr><td><kbd>X</kbd></td><td>驱散/安抚</td><td>移除腐蚀 / 安抚</td><td>一键宏同守护德</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制</td><td>台风</td><td>击退+减速；可推进旋风</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>单体/第二控制</td><td>蛮力猛击 或 群体缠绕/旋风</td><td>按构建选取</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>旅行形态（环境宏）</td><td>枭形态里野性冲锋=后跳撤离</td></tr>
+      <tr><td><kbd>T</kbd></td><td>第二位移/群加速</td><td>狂奔怒吼</td><td>⚠会变熊形态</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">E · 打断/治疗三分支</span>
+      <pre>#showtooltip
+/cast [mod:ctrl,@player] 愈合; [@mouseover,harm,nodead][harm] 日光术; [help,nodead] 愈合</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">6 · 大爆发一键</span>
+      <pre>#showtooltip
+/use 13
+/use 14
+/cast 化身：艾露恩之眷</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <p class="note"><strong>两个形态陷阱：</strong>①<strong>激活</strong>不能在变形状态下施放（给治疗前先脱形态，建议开怪前手动处理，不常驻键位）；②狂奔怒吼/夺魂咆哮会把你变成熊、疾奔变豹——枭形态输出中慎按。点了 <strong>Fluid Form</strong> 可以大幅缓解（技能自动切对应形态）。日光术是<strong>指向地面的沉默区域</strong>，打断后怪会走出光柱，配合旋风/缠绕控在里面收益翻倍。</p>
+  </section>
+
+  <footer>
+    <p>数据来源：Wowhead 平衡德鲁伊职业指南（Patch 12.1.0 / Midnight Season 2，2026-08-12~18 更新）；archon.gg 平衡德大秘境版块（正式服 S2 数据，2026-08-20~22，天赋 53,431 条 / 循环 24 条顶级样本）。Wowhead 各页对 M+ 英雄天赋推荐略有出入（天赋页推艾露恩之眷、循环页一处写丛林守护者），实战数据 98.8% 艾露恩之眷，本页从之。技能中文名以游戏内为准。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
