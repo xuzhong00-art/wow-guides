@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>元素萨满 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--shaman); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a> · 同职业：<a href="enh-shaman.html">增强</a> · <a href="resto-shaman.html">恢复</a></p>
+    <h1>元素萨满</h1>
+    <p class="sub">主推英雄天赋：先知（Farseer，全场景 Best，S2 实战 98.6%）。远程法系输出，核心是"烈焰震击目标的熔岩爆发必暴击"+ 漩涡能量攒放；12.1 的先祖之魂（自动跟你连锁闪电/熔岩爆发）占总伤害两成以上。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服（2026-08-12~21 更新）</span>
+    <span class="pill">archon 数据：S2 正式服大秘境（8/18–22，81,955 条）</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#starter">第一小时</a>
+    <a href="#talents">天赋</a>
+    <a href="#rotation">输出循环</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="starter">
+    <h2>第一小时：最小技能集</h2>
+    <p>元素的本质一句话：<strong>挂上烈焰震击 → 熔岩爆发必暴击 → 攒满漩涡倾泻</strong>。推荐构建里电光烈焰会自动给 6 个目标挂烈焰震击，手动补 DOT 的负担很小。木桩上按阶梯练：</p>
+    <h3>3 键版（前 20 分钟）</h3>
+    <ul class="tools">
+      <li><span class="tn">Q 挂 DOT：</span><strong>电光烈焰</strong> CD 就按（瞬发、必暴击、自动铺烈焰震击）；</li>
+      <li><span class="tn">1 主炮：</span><strong>熔岩爆发</strong>有充能/熔岩涌动亮了就按（对烈焰震击目标 100% 暴击）；</li>
+      <li><span class="tn">R 倾泻：</span>漩涡能量攒到 90 按 <strong>元素冲击</strong>（快满绝不溢出）。</li>
+    </ul>
+    <h3>6 键版（第一个晚上）</h3>
+    <ul class="tools">
+      <li><span class="tn">+2 闪电箭：</span>单体填充（吃"元素大师"增益）；</li>
+      <li><span class="tn">+3 闪电链：</span>2 目标起替换闪电箭；</li>
+      <li><span class="tn">+4 地震：</span>4 目标起倾泻从 R 换成 4（R/4 终结技对）；</li>
+      <li><span class="tn">+5/6 爆发：</span><strong>风暴看守</strong>约 1 分钟一轮 CD 就按，<strong>升腾</strong>紧跟其后开（火元素/风暴元素会自动跟着出来，不用找按钮）。</li>
+    </ul>
+    <p><strong>毕业标准</strong>：3 分钟木桩——漩涡能量从不溢出、熔岩爆发充能从不躺满、烈焰震击覆盖 60% 以上、风暴看守和升腾永远连着开。达标后再读完整优先级和先祖联动细节。</p>
+  </section>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p><strong>先知（Farseer）</strong>：Wowhead 团本/M+/Delve 三场景全 Best，archon 实战 98.6%。12.1 全面削弱了过载系伤害，直接把依赖过载的<strong>风暴使者</strong>砍出局；先知的先祖之魂是固定伤害不受影响，且 12.1 把先祖闪电链加强到 5 目标——闭眼选先知。</p>
+
+    <h3>导入码 · 先知</h3>
+    <div class="codeblock">
+      <span class="lbl">大秘境 M+（Best）</span>
+      <pre>CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbLzMGjZZZZMmhBAAAAsYmNYADY2YCZWAgZZmZGjtFTbMzYsMzMzYYZWMWmZGzMLAAzAgZGDDD</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">团本 Raid（Best）</span>
+      <pre>CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbLzMmZmZZbZMMjBAAAAsYmNYADY2YCZWAgZZmZGjtFTYmZZsMzMzYYZWmxiZGmZZAADAMzYYYA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">地下堡 Delves（Best）</span>
+      <pre>CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMLLzMmZmZbZZMmxMDAAAAsZmNYADY2YCZWAgZZmZGjtFTYmxYZmZmZmxiFjFMmZWAAGAYmxwwA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">archon S2 实战构建（24.8% 使用率，最高 +16）</span>
+      <pre>CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbLzMGjZZZZMmhBAAAAsYmNYADY2YCMLAwsMzMjx2ipNmZMWmZmZMsMLGLzMjZmFAgZAwMjhhB</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">元素冲击 → 元素冲击波：</span>推荐构建用元素冲击波（Elemental Blast）替换元素冲击：更贵（90 漩涡）但更痛，还送暴击/急速/精通增益——记得点 Swelling Maelstrom 把能量上限提到 150。</li>
+      <li><span class="tn">12.1 大改，别找这些按钮：</span><strong>原始之潮已删除</strong>；<strong>火元素/风暴元素不再是独立技能</strong>——升腾自动召火元素（Call of Fire）、风暴看守自动召风暴元素（Fury of the Storms）；石化护壁图腾和先祖指引也不在元素的天赋树里。</li>
+      <li><span class="tn">先祖联动：</span>你每次给目标挂烈焰震击（电光烈焰/升腾都算），先祖就补一发熔岩爆发——爆发窗口把这些对齐。</li>
+      <li><span class="tn">AOE 换点：</span>2 目标闪电链替换闪电箭；4+ 目标地震替换元素冲击波（≤3 目标保留冲击波）。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>输出循环</h2>
+
+    <h3>三条核心规则</h3>
+    <ul class="tools">
+      <li><span class="tn">烈焰震击=暴击开关：</span>熔岩爆发对有烈焰震击的目标必暴击（12.1 还随暴击率二次加成）——DOT 覆盖就是伤害。</li>
+      <li><span class="tn">漩涡能量不溢出：</span>90/150 快满必花；元素大师（Master of the Elements）让熔岩爆发强化下一个非火系技能，尽量"熔岩爆发→倾泻"成对打。</li>
+      <li><span class="tn">移动=星灵行者的恩泽：</span>元素是读条职业，移动战靠星灵行者的恩泽（边跑边读 15 秒）和瞬发（电光烈焰/熔岩涌动触发）救命。</li>
+    </ul>
+
+    <h3>单体优先级（先知）</h3>
+    <ol class="prio">
+      <li>移动事件用 <strong>星灵行者的恩泽 / 先祖迅捷</strong>兜底</li>
+      <li><strong>风暴看守</strong> CD 就按</li>
+      <li><strong>先祖迅捷</strong> CD 就按（瞬发+10% 增伤+召先祖）</li>
+      <li><strong>升腾</strong>基本 CD 就开，永远接在风暴看守后面</li>
+      <li>快满能量（差 15 以内）按 <strong>元素冲击波</strong>；有元素大师增益也按</li>
+      <li><strong>熔岩爆发</strong>（无元素大师增益时优先按，攒出增益）</li>
+      <li><strong>闪电箭</strong>消耗元素大师增益</li>
+      <li>pandemic 窗口（剩 30% 时长内）补 <strong>烈焰震击</strong></li>
+      <li><strong>闪电箭</strong>填充</li>
+    </ol>
+
+    <h3>AOE 优先级（先知，2 目标起）</h3>
+    <ol class="prio">
+      <li><strong>风暴看守</strong> → <strong>先祖迅捷</strong> → <strong>升腾</strong>（顺序同单体）</li>
+      <li>4+ 目标：<strong>地震</strong>倾泻；≤3 目标：<strong>元素冲击波</strong></li>
+      <li>有熔岩涌动触发 + 净化之焰窗口的 <strong>熔岩爆发</strong>（顺劈全部烈焰震击目标）</li>
+      <li><strong>电光烈焰</strong> CD 就按（铺 6 个烈焰震击 + 先祖跟熔岩爆发）</li>
+      <li><strong>闪电链</strong>填充</li>
+    </ol>
+    <p><strong>开手：</strong>风暴看守 → 熔岩爆发 → 升腾 → 先祖迅捷 → 熔岩爆发 → 闪电箭×2 → 进循环。开打前：确认武器注能（火舌，挂闪电之盾自动联动）、大地之盾/闪电之盾上身、给全队 <strong>天怒</strong>。</p>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">智力 <span class="gt">&gt;</span> 精通（堆到 1200 评级） <span class="gt">&gt;</span> 急速 <span class="gt">≈</span> 暴击 <span class="gt">&gt;</span> 全能</p>
+    <p>精通优先堆到约 1200 评级（≈72%，配合元素冲击波的增益接近实际上限），之后急速/暴击平堆——12.1 的暴击乘区天赋让暴击比以往值钱。尽量避开全能。收益递减节点：急速 1320 / 暴击 1380 / 精通 1380 / 全能 1620 评级。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>推荐</th></tr>
+      <tr><td>武器附魔</td><td>过渡期 <strong>Arcane Mastery</strong>；毕业后 Berserker's Rage 或 Jan'alai's Precision（装备精通 ≥1100 评级后更优）</td></tr>
+      <tr><td>盾牌</td><td>无附魔（雷霆守卫之盾是天赋注能，不是附魔）</td></tr>
+      <tr><td>头部</td><td>Empowered Rune of Avoidance</td></tr>
+      <tr><td>肩部</td><td>Amirdrassil's Grace</td></tr>
+      <tr><td>胸甲</td><td>Mark of the Worldsoul</td></tr>
+      <tr><td>腿部</td><td>Sunfire Silk Spellthread</td></tr>
+      <tr><td>脚部</td><td>Lynx's Dexterity</td></tr>
+      <tr><td>戒指</td><td>Eyes of the Eagle</td></tr>
+      <tr><td>宝石</td><td>大宝石 <strong>Powerful Eversong Diamond</strong>；其余四色各插一颗（Garnet/Amethyst/Peridot/Lapis 的 Flawless Masterful/Deadly 系），剩余槽补 Masterful Garnet 或 Deadly Amethyst</td></tr>
+      <tr><td>合剂</td><td>Flask of the Magisters（精通）；精通够了换 Shattered Sun</td></tr>
+      <tr><td>爆发药水</td><td>Light's Potential</td></tr>
+      <tr><td>治疗药水</td><td>Concentrated Silvermoon Health Potion</td></tr>
+      <tr><td>武器强化</td><td>点了火舌注能天赋<strong>不用油</strong>；没点才用 Thalassian Phoenix Oil（元素和增强不同，可以用油）</td></tr>
+      <tr><td>增强符文 / 食物</td><td>Void-Touched Augment Rune；宴席 Harandar Celebration</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>分配。施放频率取自 archon S2 正式服顶级日志（塞塔里斯神庙，22 条，8/22 更新）：闪电链 9.2 / 熔岩爆发 8.7 / 闪电箭 5.8 / 地震 5.4 / 电光烈焰 5.1 / 元素冲击波 2.2 CPM。先祖之魂（宠物）占总伤害 22.5% 第一，全自动无需按键。与增强萨同键的功能键：` 土元素、Q 电光烈焰、E 风剪、X 净化、V 电容图腾、7 星界转移、Z/T 位移。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>元素萨满</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>土元素</td><td>与增强/恢复同键</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>熔岩爆发</td><td>8.7 CPM，主炮</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>闪电箭</td><td>5.8 CPM 单体填充</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>闪电链</td><td>9.2 CPM，2目标起替换闪电箭</td></tr>
+      <tr><td><kbd>4</kbd></td><td>AOE 终结技</td><td>地震</td><td>5.4 CPM；建议点定向施放天赋或配 @cursor 宏</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发（远程优先）</td><td>电光烈焰</td><td>5.1 CPM；与增强同键</td></tr>
+      <tr><td><kbd>E</kbd></td><td>主打断 + 治疗整合</td><td>风剪 / 治疗涌动</td><td>三分支宏；元素风剪 30 秒 CD，还回 8 漩涡</td></tr>
+      <tr><td><kbd>R</kbd></td><td>单体终结技</td><td>元素冲击波（大地震击）</td><td>2.2 CPM，90 漩涡倾泻；单次伤害全表第一</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>治疗涌动</td><td>⚠元素的治疗涌动是 1.5 秒读条（无漩涡瞬发机制），掉血早点按</td></tr>
+      <tr><td><kbd>Shift+Q</kbd></td><td>DOT 手动维护</td><td>烈焰震击</td><td>电光烈焰会自动铺，此键补漏</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发（1 分钟轮）</td><td>风暴看守</td><td>自动召风暴元素</td></tr>
+      <tr><td><kbd>Shift+5</kbd></td><td>第二次级爆发</td><td>先祖迅捷</td><td>1 分钟；瞬发+10%增伤+召先祖</td></tr>
+      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>升腾 + 饰品宏</td><td>2 分钟（First Ascendant）；自动召火元素、铺 6 个烈焰震击</td></tr>
+      <tr><td><kbd>Shift+R</kbd></td><td>移动施法</td><td>星灵行者的恩泽</td><td>90 秒 CD，边跑边读 15 秒——元素的核心生存技术</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>星界转移</td><td>90 秒（位面旅者），-40% 承伤</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>—</td><td>元素无长CD主动保命；自然守护者被动兜底（掉到35%回25%血）</td></tr>
+      <tr><td><kbd>X</kbd></td><td>驱散/净化</td><td>净化术（强效净化）</td><td>成功偷驱回 8 漩涡（Inundate）</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制</td><td>电容图腾</td><td>45 秒（可缩至 25 秒）</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>单体控制</td><td>妖术</td><td>15 秒 CD（Voodoo Mastery）；雷霆风暴（击退）可放旁边</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>幽魂之狼</td><td>—</td></tr>
+      <tr><td><kbd>T</kbd></td><td>第二位移</td><td>灵魂行走 / 疾风之息</td><td>按选择节点</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">E · 打断/治疗三分支</span>
+      <pre>#showtooltip
+/cast [mod:ctrl,@player] 治疗涌动; [@mouseover,harm,nodead][harm] 风剪; [help,nodead] 治疗涌动</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">6 · 大爆发一键</span>
+      <pre>#showtooltip
+/use 13
+/use 14
+/cast 升腾</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">4 · 地震落地（未点定向天赋时）</span>
+      <pre>#showtooltip
+/cast [@cursor] 地震</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>数据来源：Wowhead 元素萨满职业指南（Patch 12.1.0 / Midnight Season 2，2026-08-12~21 更新）；archon.gg 元素萨大秘境版块（正式服 S2 数据，2026-08-18~22，天赋 81,955 条 / 循环 22 条顶级样本）。注：Wowhead 风暴使者团本码疑似页面 bug（与先知码相同），未收录。技能中文名以游戏内为准。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

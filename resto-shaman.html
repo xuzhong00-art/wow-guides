@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>恢复萨满 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--shaman); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a> · 同职业：<a href="enh-shaman.html">增强</a> · <a href="ele-shaman.html">元素</a></p>
+    <h1>恢复萨满</h1>
+    <p class="sub">主推英雄天赋：图腾大师（Totemic，三场景全 Best，S2 实战 96.8%）。治疗，<strong>S2 大秘境治疗榜 S 级第一</strong>：图腾铺场自动奶、酸雨躺着打伤害、全游戏唯一自带打断的治疗。玩法是"激流铺人 + 图腾常驻 + 治疗链收尾"。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服（2026-08-12~18 更新）</span>
+    <span class="pill">archon 数据：S2 正式服大秘境（8/18–22，97,376 条）</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#starter">第一小时</a>
+    <a href="#talents">天赋</a>
+    <a href="#rotation">治疗循环</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="starter">
+    <h2>第一小时：最小技能集</h2>
+    <p>恢复萨的本质一句话：<strong>激流铺人、图腾常驻，剩下交给治疗链</strong>。治疗键全套 mouseover 宏。开打前：自己挂水之盾+大地之盾+大地生命武器（点了 Instinctive Imbuements 挂水之盾自动联动全套）、坦克挂大地之盾、全队天怒。按阶梯练：</p>
+    <h3>3 键版（前 20 分钟）</h3>
+    <ul class="tools">
+      <li><span class="tn">1 铺场：</span><strong>激流</strong>双充能别躺满，见人就铺（瞬发 HOT，顶级日志 7.5 次/分全表第一）；</li>
+      <li><span class="tn">2 丢图腾：</span><strong>治疗之泉图腾</strong> CD 就丢（智能奶，风暴溪流触发时优先丢）；</li>
+      <li><span class="tn">4 群奶：</span>3 人以上掉血读 <strong>治疗链</strong>（智能跳人）。</li>
+    </ul>
+    <h3>6 键版（第一个晚上）</h3>
+    <ul class="tools">
+      <li><span class="tn">+3 涌动图腾：</span>维持不断（自动治疗之雨+酸雨伤害，可 @cursor 落地）；</li>
+      <li><span class="tn">+R 治疗波：</span>1–2 人掉血用它（便宜；激流后有潮汐涌动读条更快）——午夜没有治疗涌动按钮，单奶就是它；</li>
+      <li><span class="tn">+E 风剪：</span>你是全游戏唯一能打断的治疗——危险读条你也有责任踢（30 秒 CD）；</li>
+      <li><span class="tn">+6 治疗之潮图腾：</span>大团伤直接丢，最傻瓜的治疗大招。</li>
+    </ul>
+    <p><strong>毕业标准</strong>：3 分钟实战——激流充能不躺满、涌动图腾覆盖 90%、治疗之泉 CD 不空转、空闲 GCD 会挂烈焰震击+熔岩爆发（酸雨+填充占你伤害的大头，恢复萨的 DPS 是真实副本贡献）。达标后再读升腾/灵魂链接的进阶用法。</p>
+  </section>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p><strong>图腾大师</strong>：三场景全 Best、实战 96.8%——操作简单（图腾铺下去被动持续输出治疗）、免费瞬发治疗链、M+ 伤害贡献远超先知（酸雨）。<strong>先知</strong>：上限流——先祖随机返还激流充能需要高频决策、点名奶更强，但吃走位和熟练度。新手闭眼图腾大师。</p>
+
+    <h3>导入码 · 图腾大师</h3>
+    <div class="codeblock">
+      <span class="lbl">大秘境/Delve（Best，同一码）</span>
+      <pre>CgQAAAAAAAAAAAAAAAAAAAAAAAAAAgBAAAAzMzsstMzMzMjZGjZgFYDmxiGbDIzAbMzMY2mZMa2WmZ2MjZhFjZGDLzyAAAAzMDmZAgBzA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">团本 Raid（Best）</span>
+      <pre>CgQAAAAAAAAAAAAAAAAAAAAAAAAAAgBAAAAzMzsssNjZGjZGzMDjFYDmxiGbDIzAbmhZw2YMTz2yMzmZMLsYegZGzwsMAAAwMzgZGAYwM</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">archon S2 实战构建（21.8% 使用率，最高 +16）</span>
+      <pre>CgQAAAAAAAAAAAAAAAAAAAAAAAAAAgBAAAAzMzsstMzMzMjZGjZgFYDmxiGbDgZgNmZGMbzMGNbLzMbmxsxixMjhlZZGAAAMzMYmBAgZA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">备选 · 先知 M+/Delve</span>
+      <pre>CgQAAAAAAAAAAAAAAAAAAAAAAAAAAgBAAAAzMzsssNzMzMjZGjZMWMzCMgJYWYCMWwMDmtZGjmtlZmNzYWYxYmxwysMAAAwMzAgZGYwM</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">12.1 删了这些，别找按钮：</span><strong>云爆图腾、涌泉、原始之潮、先祖庇护图腾、土墙图腾都不在午夜天赋树里</strong>；顶尖天赋位是新的<strong>风暴溪流图腾</strong>（自然迅捷必触发，治疗之泉的强化版充能，尽快用掉别攒）。<strong>治疗涌动按钮也没了</strong>——单奶只有治疗波。</li>
+      <li><span class="tn">升腾 vs 治疗之潮（选择节点）：</span>S2 实战 M+ 选<strong>治疗之潮</strong>（顶级日志约 2 分钟一个，傻瓜好用）；团本练度高再玩升腾 ramp。</li>
+      <li><span class="tn">按副本换点：</span>战栗图腾 ⇄ 净化毒素图腾（多数毒本选后者，恐惧改打断解决）；净化术按副本必点（纳洛拉克/塞塔里斯/红玉法池的关键机制要偷）；升腾周带电容图腾。</li>
+      <li><span class="tn">酸雨：</span>治疗之雨/涌动图腾附带 AOE 伤害——占恢复萨总伤害 54.7%，白嫖的副本贡献。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>治疗循环</h2>
+
+    <h3>三条核心规则</h3>
+    <ul class="tools">
+      <li><span class="tn">选对目标：</span>激流永远给<strong>没有激流的人</strong>（一堆天赋按激流数量结算）；精通奖励奶血最低的人。</li>
+      <li><span class="tn">短 CD 转着用：</span>激流、治疗之泉、涌动图腾、自然迅捷——CD 就按，攒着就是浪费。</li>
+      <li><span class="tn">蓝量阀门：</span>治疗链贵、治疗波便宜——3 人以上掉血才读链，1–2 人用波；暴击回蓝（Resurgence）是主要回蓝来源，这也是堆暴击的原因。</li>
+    </ul>
+
+    <h3>大秘境治疗优先级（图腾大师）</h3>
+    <ol class="prio">
+      <li><strong>风暴溪流图腾</strong>触发了就用（别攒——占着治疗之泉的施放次数）</li>
+      <li><strong>激流</strong> CD 就按（铺给没有的人）</li>
+      <li><strong>自然迅捷</strong>转着用（下个治疗链/波瞬发；也是风暴溪流的稳定触发源）</li>
+      <li>维持 <strong>涌动图腾</strong>（25 秒一轮，@cursor 落在人堆）</li>
+      <li><strong>治疗之泉图腾</strong> CD 就丢</li>
+      <li><strong>治疗链</strong>（3人+）或 <strong>治疗波</strong>（1–2人）收尾</li>
+      <li>没人掉血：<strong>打输出</strong>（见下）</li>
+    </ol>
+
+    <h3>大团伤处理</h3>
+    <p><strong>简单版：</strong>丢<strong>治疗之潮图腾</strong>（10 秒脉冲，副本里人少每跳更肥）。<strong>预判版：</strong>大技能来临<strong>之前</strong>把<strong>灵魂链接图腾</strong>(@cursor)铺在人堆——10% 减伤+每秒血量重分配，它的价值全在提前量；它也是唯一的"救残血队友"手段（重分配瞬间拉平血线）。<strong>进阶版（升腾流）：</strong>攒 2 层潮汐涌动 → 解放生命+涌动图腾垫场 → 升腾 → 治疗之泉/风暴溪流全倒进去 → 治疗链连发（升腾期治疗波必暴、治疗链跳 3 次且衰减仅 10%，还净赚蓝）。</p>
+
+    <h3>输出填充（酸雨 + 四键）</h3>
+    <p>涌动图腾放下去酸雨就在自动打伤害（占你总伤 54.7%）。手动填充：<strong>烈焰震击</strong>挂 DOT（65% 覆盖率）→ <strong>熔岩爆发</strong>（对 DOT 目标必暴击，3.5 次/分是顶级治疗的真实数据）→ AOE <strong>闪电链</strong> / 单体<strong>闪电箭</strong>。恢复萨的 DPS 是 S 级评价的一部分，空闲 GCD 别站着看戏。</p>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">智力 <span class="gt">&gt;</span> 暴击 <span class="gt">&gt;</span> 急速 <span class="gt">&gt;</span> 全能 <span class="gt">&gt;</span> 精通</p>
+    <p>两系英雄天赋、团本/M+ 通用。暴击全场景最优（Resurgence 回蓝+White Water 215% 暴击治疗，零缺点）；急速在 M+/短战斗里蓝压小的时候增值，还吃 2 件套（更多更快的治疗之雨）。收益递减节点：暴击 1380 / 急速 1320 / 精通 1380 / 全能 1620 评级。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>推荐</th></tr>
+      <tr><td>武器附魔</td><td><strong>Acuity of the Ren'dorei</strong>（智力）</td></tr>
+      <tr><td>头部</td><td>Empowered Hex of Leeching</td></tr>
+      <tr><td>肩部</td><td>Silvermoon's Mending</td></tr>
+      <tr><td>胸甲</td><td>Mark of the Magister（上限蓝，和 Primordial Capacity/织线乘算）</td></tr>
+      <tr><td>腿部</td><td>Arcanoweave Spellthread</td></tr>
+      <tr><td>脚部</td><td>Shaladrassil's Roots</td></tr>
+      <tr><td>戒指</td><td>Eyes of the Eagle（实战主流：Nature's Fury）</td></tr>
+      <tr><td>加插槽</td><td>Miasmic Jewelbinder ×3（头/腕/腰）</td></tr>
+      <tr><td>宝石</td><td>大宝石：缺蓝选 <strong>Telluric Eversong Diamond</strong>（要求四色各一）/ 不缺蓝 Indecipherable（实战主流）+ Flawless Versatile Garnet 堆满；四色需求用 Deadly 系补</td></tr>
+      <tr><td>合剂</td><td><strong>Flask of the Shattered Sun</strong>（暴击）</td></tr>
+      <tr><td>爆发药水</td><td>暴击是第一副属性时 <strong>Potion of Recklessness</strong>（配升腾/大团伤窗口，还赚 Resurgence 蓝）；否则 Lightfused Mana Potion（蓝药）</td></tr>
+      <tr><td>治疗药水</td><td>Concentrated Silvermoon Health Potion</td></tr>
+      <tr><td>武器强化</td><td><strong>大地生命武器自带注能，不用任何武器油</strong>（和增强同规则）</td></tr>
+      <tr><td>增强符文 / 食物</td><td>Void-Touched Augment Rune；宴席 Silvermoon Parade / 个人 Royal Roast</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>的治疗三原则分配（治疗键全套 <code>[@mouseover,help,nodead][help][@player]</code> 模板）。施放频率取自 archon S2 顶级日志（国王安息地，+15~17，23 条，8/20–21）：激流 7.5 / 治疗链 5.9 / 治疗波 3.8 / 治疗之泉 2.5 / 解放生命 1.6 CPM；星界转移约 14 次/场、疾风图腾 13 次/场、灵魂链接 9 次/场。与增强/元素同键的功能键：` 土元素、E 风剪、X 净化系、V 电容图腾、7 星界转移、Z 幽魂之狼。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>恢复萨满</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>土元素</td><td>救场临时坦克</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>激流</td><td>7.5 CPM 全表第一；双充能别躺满</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>治疗之泉图腾（含风暴溪流）</td><td>2.5 CPM；触发了优先丢</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>涌动图腾（@cursor）</td><td>25 秒维持；酸雨伤害来源</td></tr>
+      <tr><td><kbd>4</kbd></td><td>群奶（终结对）</td><td>治疗链</td><td>5.9 CPM；3人+才读，注意蓝</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发（DPS填充）</td><td>烈焰震击</td><td>65% 覆盖；熔岩爆发的暴击开关</td></tr>
+      <tr><td><kbd>E</kbd></td><td>主打断 + 治疗整合</td><td>风剪 / 治疗波</td><td>三分支宏——全游戏唯一自带打断的治疗，30 秒 CD</td></tr>
+      <tr><td><kbd>R</kbd></td><td>单体大奶（终结对）</td><td>治疗波</td><td>3.8 CPM；午夜无治疗涌动，单奶就是它</td></tr>
+      <tr><td><kbd>Shift+E</kbd></td><td>应急一键</td><td>自然迅捷 + 治疗波 宏</td><td>瞬发大奶；自然迅捷也是风暴溪流触发源</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>[@player] 治疗波</td><td>兜底</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发</td><td>解放生命</td><td>1.6 CPM；强化下一个治疗</td></tr>
+      <tr><td><kbd>6</kbd></td><td>治疗大招</td><td>治疗之潮图腾 + 饰品宏</td><td>实战选它而非升腾（约 2 分钟一个）</td></tr>
+      <tr><td><kbd>Shift+6</kbd></td><td>团队大招（对外版本）</td><td>灵魂链接图腾（@cursor）</td><td>大技能<strong>之前</strong>铺——提前量就是全部价值</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>星界转移</td><td>约 14 次/场，转着用</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>—</td><td>恢复萨无长CD个人保命（先祖转生阵亡自起是被动底牌）</td></tr>
+      <tr><td><kbd>X</kbd></td><td>驱散</td><td>净化之魂</td><td>魔法+诅咒（毒交给净化毒素图腾）；Shift+X 净化术（偷怪BUFF，多个副本必带）</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制</td><td>电容图腾（@cursor）</td><td>12 次/场</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>单体控制/解控图腾</td><td>战栗 / 净化毒素图腾</td><td>按副本换（多数选净化毒素）</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>幽魂之狼</td><td>Ancestral Wolf Affinity：狼形态可直接丢图腾/风剪/净化</td></tr>
+      <tr><td><kbd>T</kbd></td><td>第二位移/群加速</td><td>疾风图腾（@cursor）</td><td>13 次/场；Shift+T 灵魂行走/疾风之息</td></tr>
+      <tr><td><kbd>G</kbd></td><td>弹性位</td><td>图腾转移</td><td>10 秒 CD，把所有图腾搬到目标位置——转场神技</td></tr>
+      <tr><td><kbd>Shift+R</kbd></td><td>移动施法</td><td>星灵行者的恩泽</td><td>13 次/场，边跑边读</td></tr>
+      <tr><td><kbd>Shift+1/2/3</kbd></td><td>输出填充层</td><td>熔岩爆发 / 闪电链 / 闪电箭</td><td>熔岩爆发 3.5 CPM 是顶级治疗的真实数据</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">治疗键通用模板（1/4/R 照此换技能名）</span>
+      <pre>#showtooltip
+/cast [@mouseover,help,nodead][help][@player] 激流</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">E · 打断/治疗三分支</span>
+      <pre>#showtooltip
+/cast [mod:ctrl,@player] 治疗波; [@mouseover,harm,nodead][harm] 风剪; [help,nodead] 治疗波</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">Shift+E · 应急一键（自然迅捷不占GCD）</span>
+      <pre>#showtooltip 治疗波
+/cast 自然迅捷
+/cast [@mouseover,help,nodead][help][@player] 治疗波</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">Shift+6 · 灵魂链接落地</span>
+      <pre>#showtooltip
+/cast [@cursor] 灵魂链接图腾</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <p class="note"><strong>图腾落点速记：</strong>可 @cursor 的——涌动、灵魂链接、电容、根基、疾风、治疗之雨；自落脚下的——治疗之泉、风暴溪流、治疗之潮、战栗、净化毒素。落错了别拔重放，<strong>G 图腾转移</strong>（10 秒 CD）一键全搬。</p>
+  </section>
+
+  <footer>
+    <p>数据来源：Wowhead 恢复萨满职业指南（Patch 12.1.0 / Midnight Season 2，2026-08-12~18 更新）；archon.gg 恢复萨大秘境版块与治疗榜（正式服 S2 数据，2026-08-18~22，97,376 条 / 循环 23 条顶级样本；治疗榜 S 级第一，95 分位分数 2955）。技能中文名以游戏内为准。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
