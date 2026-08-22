@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>鲜血死亡骑士 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--dk-lift); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a></p>
+    <h1>鲜血死亡骑士</h1>
+    <p class="sub">主推英雄天赋：血裔（San'layn，S2 大秘境实战 77.4%，团本 Best）；地下堡换死亡使者（Deathbringer，更简单更硬）。坦克，玩法是"符文换能量、能量换灵界打击"——你的血条就是资源条，自愈无解的不死堡垒。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服（2026-08-13~20 更新）</span>
+    <span class="pill">archon 数据：S2 正式服大秘境（8/18–22，144,799 条）</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#starter">第一小时</a>
+    <a href="#talents">天赋</a>
+    <a href="#rotation">输出循环</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="starter">
+    <h2>第一小时：最小技能集</h2>
+    <p>血DK 的本质一句话：<strong>符文攒能量，能量换灵界打击，白骨之盾别掉</strong>。两个英雄天赋的地基完全一样，木桩上按阶梯练：</p>
+    <h3>3 键版（前 20 分钟）</h3>
+    <ul class="tools">
+      <li><span class="tn">1 花符文：</span><strong>心脏打击</strong>有符文就按（回能量主力；血裔的血族打击触发同键变形，照按）；</li>
+      <li><span class="tn">R 花能量：</span>被打疼了、或能量超过 75 就按 <strong>灵界打击</strong>（回复过去 5 秒承伤的 25%，精通再转护盾）；</li>
+      <li><span class="tn">2 举盾：</span><strong>白骨之盾</strong>低于 5 层或快过期，按 <strong>髓殇</strong>补满。</li>
+    </ul>
+    <h3>6 键版（第一个晚上）</h3>
+    <ul class="tools">
+      <li><span class="tn">+Q 血液沸腾：</span>快满充能就按、有触发就按（挂血之疫病）；</li>
+      <li><span class="tn">+3 枯萎凋零：</span>有猩红天灾触发免费放，站在圈里打；</li>
+      <li><span class="tn">+6 符文刃舞：</span>90 秒 CD 就开（血裔的一切都围着它转）；</li>
+      <li><span class="tn">+7 反魔法护罩：</span>对面有施法怪就转着用（42% 血量的魔法盾，顶级玩家约 2 分钟一次）。</li>
+    </ul>
+    <p><strong>毕业标准</strong>：3 分钟木桩——白骨之盾覆盖不断层、能量从不打满溢出（75+ 必按灵界打击）、符文刃舞 CD 不空转、每次"预告大伤害"前后 2 秒内有灵界打击响应。达标后再读血裔的血女王节奏。</p>
+  </section>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p>Wowhead 8/20 更新的原话："纯单体两者并驾齐驱，<strong>只要有持续多目标或怪在符文刃舞窗口里活着，血裔就显著领先</strong>"——所以团本 Best 是血裔、M+ 双 Best 但实战 77.4% 选血裔。<strong>死亡使者</strong>的价值：即插即用、7.5% 全减伤、白骨之盾几乎免维护——<strong>Delve 唯一推荐</strong>（血裔在地下堡的非战斗环节体验糟糕），也是 M+ 求稳之选。</p>
+
+    <h3>导入码</h3>
+    <div class="codeblock">
+      <span class="lbl">archon S2 实战构建 · 血裔 M+（13% 使用率，最高 +16；备选构建冲到 +18）</span>
+      <pre>CoPAAAAAAAAAAAAAAAAAAAAAAwMzyMzMmxMzMMLjZmmZxYmZmxAAAAAGMzMzMjZmZMAYmZmZGAAADMwMW0YZDw2A2AMjBAAYmBwA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">Wowhead · 血裔 M+（Best）</span>
+      <pre>CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMmZmhZZmZmmZxYMmxAAAAAmxMzMzMDzYMAYMzMzAAAYgBmxiGLLgsMgNAzYmBAAmZghB</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">Wowhead · 血裔 团本（Best）</span>
+      <pre>CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMmZmhZZmZmmZxYMmxAAAAAmZmZmZmZYGjZAYMzMzAAAYgBmxiGLLgsMgNAzwAAAmZghB</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">Wowhead · 死亡使者 M+（Best，即插即用向）</span>
+      <pre>CoPAAAAAAAAAAAAAAAAAAAAAAwMzyMzMmxMzMMLzMz0MLGjxMGAAAAwMmZmZmZYGDAYmZmZGAAgxsNwAWC2GmADLAmxMAAMzAYYA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">Wowhead · 死亡使者 Delve（Best）</span>
+      <pre>CoPAAAAAAAAAAAAAAAAAAAAAAwYWmZmxMmZmhZZmZmmZxYmxMGAAAAwMzMzMzMDzYMAYMzMzAAAMmtBGwSwywEYYBghZAAMzAMYA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">血裔轴心：</span>Insatiable Blade 把符文刃舞缩到 <strong>90 秒</strong>并附送 5 层白骨之盾——刃舞期间刷"血女王精华"层数，窗口外靠灵界打击触发续层（每 20 秒至少一次，最多续 75 秒）。</li>
+      <li><span class="tn">死亡使者轴心：</span>收割者印记 45 秒一轮，爆炸后 2 次髓殇只花 1 符文并甩双镰刀（灭绝）——白骨之盾顺手就满。</li>
+      <li><span class="tn">顶级共识点（top-100 100%）：</span>心脏打击、髓殇、符文刃舞、炼狱（Purgatory 免死）、冰封之韧、致盲冰雨 99.5%。</li>
+      <li><span class="tn">午夜已删除，别找按钮：</span>白骨风暴、墓碑、灵魂收割、符文分流、鲜血分流全没了；旧的"鲜血饮者"变成了新版<strong>吞噬</strong>（30 秒 CD，吸收疫病剩余伤害的 75% 回血）。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>输出循环</h2>
+
+    <h3>三条核心规则</h3>
+    <ul class="tools">
+      <li><span class="tn">管好增益：</span>白骨之盾（护甲+能量减耗）5 层常驻、血之疫病 97% 覆盖——不用刻意绕路，循环顺手维护。</li>
+      <li><span class="tn">CD 就是循环：</span>符文刃舞和所有防御 CD 都是"面包和黄油"，转着用别攒。</li>
+      <li><span class="tn">资源就是自愈：</span>符文→能量→灵界打击，效率越高血越厚；75 能量以上必花，防溢出。</li>
+    </ul>
+
+    <h3>单体优先级（血裔）</h3>
+    <h4>血女王之赐（刃舞窗口）期间</h4>
+    <ol class="prio">
+      <li>需要回血或 75+ 能量：<strong>灵界打击</strong></li>
+      <li>维持 5 层 <strong>白骨之盾</strong></li>
+      <li>刃舞复制的血之疫病没挂在目标上：<strong>血液沸腾</strong></li>
+      <li>猩红天灾触发：<strong>枯萎凋零</strong></li>
+      <li><strong>血族打击</strong>填充（心脏打击同键变形）</li>
+      <li>符文用光了：<strong>血液沸腾</strong></li>
+    </ol>
+    <h4>窗口外</h4>
+    <ol class="prio">
+      <li>灵界打击 / 白骨之盾维护（同上，快过期按<strong>髓殇</strong>）</li>
+      <li>猩红天灾触发的 <strong>枯萎凋零</strong>（站进去）</li>
+      <li>沸点触发的 <strong>血液沸腾</strong></li>
+      <li><strong>血族打击</strong>可用就按（触发它=血女王层数续命）</li>
+      <li><strong>血液沸腾</strong>防充能溢出</li>
+      <li><strong>心脏打击</strong>填充</li>
+    </ol>
+    <p><strong>AOE：</strong>骨架不变——血液沸腾和枯萎凋零的优先级前提、灵界打击/白骨之盾的铁律都一样，怪多时血液沸腾和枯萎凋零永远优先于填充。<strong>死亡使者手法</strong>（Delve 用）：收割者印记 CD 就按 → 刃舞 → 血液沸腾 → 灭绝强化的髓殇甩出去 → 心脏打击填充，永远"先印记后刃舞"。</p>
+    <p><strong>开怪：</strong>死亡爱抚远程拉（顺手 +2 白骨之盾）→ 飞行途中预放枯萎凋零 → 符文刃舞 → 血液沸腾 → 灵界打击进循环。</p>
+
+    <h3>关键机制卡片（12.1 实测数值）</h3>
+    <ul class="tools">
+      <li><span class="tn">血族打击：</span>心脏打击的按键变形（触发时替换），刃舞期间大量触发——S2 日志 7.9 次/分，和心脏打击合计 19+ 次/分，是你手上最忙的键。</li>
+      <li><span class="tn">灭绝（死亡使者）：</span>收割者印记爆炸后，接下来 2 次<strong>髓殇</strong>只花 1 符文并召双镰刀（单体 1030% AP + 周围 469% AP）——强化的是髓殇按键，不占新键位。</li>
+      <li><span class="tn">符文刃舞：</span>占 GCD，血裔 90 秒 CD（Insatiable Blade），+30% 招架 12 秒；刃舞期按髓殇每把武器 +3 白骨、按血液沸腾每把武器补一份疫病。顶级日志 16 次/场 ≈ CD 就开。</li>
+      <li><span class="tn">死亡爱抚：</span>30 码、6 秒 CD、1 符文回 10 能量，挂疫病 +2 白骨之盾——远程拉怪顺手把盾续上。</li>
+      <li><span class="tn">心灵冰冻：</span>15 秒 CD；Coldthirst 让<strong>成功打断</strong>回 10 能量并返还 3 秒 CD（不是被动 12 秒）。</li>
+      <li><span class="tn">吞噬：</span>30 秒 CD，吸掉疫病剩余伤害的 75% 回血——大口回血的小按钮，转着用。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">血裔：力量 <span class="gt">&gt;</span> 急速 <span class="gt">&gt;</span> 暴击 <span class="gt">&gt;</span> 精通 <span class="gt">&gt;</span> 全能</p>
+    <p class="statline">死亡使者：力量 <span class="gt">&gt;</span> 暴击 <span class="gt">&gt;</span> 精通 <span class="gt">&gt;</span> 全能 <span class="gt">&gt;</span> 急速</p>
+    <p>暴击 1:1 转招架（还击）；死亡使者避开急速（收割者印记固定 45 秒）；血裔吃急速（更多符文=更多灵界打击=更多血女王触发）。<strong>全能压零小技巧</strong>：毒咒装备和鲁莽药水会扣全能但<strong>全能不会低于 0%</strong>——装备上全能越少，这些负面白吃；反过来把全能刚好堆成第一副属性，鲁莽药水就变成一瓶防御药水。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>推荐</th></tr>
+      <tr><td>武器符文（锐化）</td><td><strong>血之符文</strong>（Rune of Sanguination）——血裔全场景/死亡使者单体；死亡使者 10+ 目标 AOE 换堕落十字军之符文。<strong>不要用石壁石像鬼</strong>。</td></tr>
+      <tr><td>武器油</td><td><strong>Thalassian Phoenix Oil——和符文可以叠加</strong>（DK 特权，别浪费）</td></tr>
+      <tr><td>头部</td><td>Empowered Blessing of Speed</td></tr>
+      <tr><td>肩部</td><td>Akil'zon's Swiftness</td></tr>
+      <tr><td>胸甲</td><td>Mark of the Worldsoul</td></tr>
+      <tr><td>腿部</td><td>Forest Hunter's Armor Kit</td></tr>
+      <tr><td>脚部</td><td>Farstrider's Hunt</td></tr>
+      <tr><td>戒指</td><td>Nature's Fury（默认）；纯输出向换 Eyes of the Eagle</td></tr>
+      <tr><td>加插槽</td><td>Miasmic Jewelbinder ×3（头/腕/腰）</td></tr>
+      <tr><td>宝石</td><td>大宝石 <strong>Indecipherable Eversong Diamond</strong>；其余——血裔 <strong>Flawless Deadly Peridot</strong>（急速暴击）/ 死亡使者 <strong>Flawless Masterful Garnet</strong>（暴击精通）</td></tr>
+      <tr><td>合剂</td><td>Flask of the Blood Knights / Shattered Sun；<strong>求生换 Thalassian Resistance（减伤合剂）</strong></td></tr>
+      <tr><td>爆发药水</td><td>Potion of Recklessness（配合上面的全能压零技巧）</td></tr>
+      <tr><td>治疗药水</td><td>Concentrated Silvermoon Health Potion（组里有术士记得领糖）</td></tr>
+      <tr><td>增强符文 / 食物</td><td>Void-Touched Augment Rune；宴席 Blooming Feast（副属性）或 Harandar Celebration（主属性），sim 定</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>分配。施放频率取自 archon S2 正式服顶级日志（塞塔里斯神庙，+15~18，22 条，8/20–21，血裔构建）：灵界打击 14.2 / 心脏打击 11.4+血族打击 7.9（同键） / 血液沸腾 8.4 / 枯萎凋零 3.6 / 髓殇 2.5 / 死亡爱抚 1.3 CPM；防御使用量：吸血鬼之血约 34 次/场（转着按）、死亡行军 25 次/场、刃舞 16 次/场、AMS 16 次/场、血魔之握 6 次/场、冰封之韧 4 次/场。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>鲜血死亡骑士</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>黑暗命令</td><td>嘲讽；与骑士 ` 同语义</td></tr>
+      <tr><td><kbd>Shift+`</kbd></td><td>远程接敌</td><td>死亡爱抚</td><td>30 码拉怪+2 白骨之盾，1.3 CPM</td></tr>
+      <tr><td><kbd>G</kbd></td><td>仇恨转移（拉过来）</td><td>死亡之握</td><td>拉怪+软打断；白骨收集者顺手补盾</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>心脏打击（含血族打击）</td><td>11.4+7.9 CPM；血裔触发同键变形</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>髓殇（含灭绝强化）</td><td>白骨之盾维护；死亡使者的灭绝也在这个键上</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>枯萎凋零（@cursor）</td><td>3.6 CPM，猩红天灾免费放</td></tr>
+      <tr><td><kbd>4</kbd></td><td>高频④（高频防御）</td><td>吞噬</td><td>30 秒 CD 吸疫病回血，转着按</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发（范围优先）</td><td>血液沸腾</td><td>8.4 CPM，第一伤害来源之一</td></tr>
+      <tr><td><kbd>E</kbd></td><td>主打断</td><td>心灵冰冻</td><td>mouseover 宏；成功打断回 10 能量-3 秒 CD</td></tr>
+      <tr><td><kbd>R</kbd></td><td>资源终结技</td><td>灵界打击</td><td>14.2 CPM 全表第一；攻防一体的资源终点</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>死亡契约</td><td>50% 血急救（收割者印记会缩它 CD）</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发（45 秒轮）</td><td>收割者印记（死亡使者）</td><td>血裔此位空置</td></tr>
+      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>符文刃舞 + 饰品宏</td><td>血裔 90 秒 CD 就开（16 次/场）</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>反魔法护罩</td><td>42% 血量魔法盾、40 秒 CD（16 次/场）</td></tr>
+      <tr><td><kbd>Shift+7</kbd></td><td>第二短CD减伤</td><td>吸血鬼之血</td><td>34 次/场转着按；先 Shift+7 再 7，AMS 盾多 30%</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>冰封之韧</td><td>-30% 承伤+眩晕免疫（炼狱免死是被动兜底）</td></tr>
+      <tr><td><kbd>Shift+C</kbd></td><td>底牌对外版本</td><td>反魔法领域</td><td>团队魔法减伤（1.6 次/场）</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制</td><td>致盲冰雨</td><td>99.5% 选取率</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>群拉/单体控制</td><td>血魔之握</td><td>6 次/场，聚怪配枯萎凋零</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>死亡行军</td><td>25 次/场——比你想象的高频得多</td></tr>
+      <tr><td><kbd>T</kbd></td><td>第二位移/解控</td><td>巫妖之躯</td><td>恐惧/魅惑免疫+15% 吸血（5 次/场）</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">E · 打断（指向优先）</span>
+      <pre>#showtooltip
+/cast [@mouseover,harm,nodead][harm] 心灵冰冻</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">6 · 大爆发一键</span>
+      <pre>#showtooltip
+/use 13
+/use 14
+/cast 符文刃舞</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">3 · 枯萎凋零落地免画圈</span>
+      <pre>#showtooltip
+/cast [@cursor] 枯萎凋零</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">Shift+V · 血魔之握落地</span>
+      <pre>#showtooltip
+/cast [@cursor] 血魔之握</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <p class="note"><strong>防御连招速记：</strong>大魔法伤害来临 → <kbd>Shift+7</kbd> 吸血鬼之血 → <kbd>7</kbd> 反魔法护罩（吃 +30% 血量加成的盾）；物理连击 → <kbd>C</kbd> 冰封之韧；持续掉血 → <kbd>4</kbd> 吞噬 + <kbd>R</kbd> 灵界打击连按。DK 没有 [help] 治疗分支（无法奶队友），E 键是纯打断宏。</p>
+  </section>
+
+  <footer>
+    <p>数据来源：Wowhead 鲜血死亡骑士职业指南（Patch 12.1.0 / Midnight Season 2，2026-08-13~20 更新）；archon.gg 血DK大秘境版块（正式服 S2 数据，2026-08-18~22，天赋 144,799 条 / 循环 22 条顶级样本）。技能中文名以游戏内为准。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
