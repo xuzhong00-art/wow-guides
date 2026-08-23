@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>浩劫恶魔猎手 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--dh); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a></p>
+    <h1>浩劫恶魔猎手</h1>
+    <p class="sub">主推英雄天赋：邪能灼痕（Fel-Scarred，S2 大秘境实战 95.9%）。近战敏捷输出，核心是"献祭光环烧场 + 恶魔变形窗口爆发"——79% 的伤害都发生在变形状态里，自愈全靠被动吸血，机动性全职业顶级。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服（2026-08-17~22 更新）</span>
+    <span class="pill">archon 数据：S2 正式服大秘境（8/20–22，19,867 条）</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#starter">第一小时</a>
+    <a href="#talents">天赋</a>
+    <a href="#rotation">输出循环</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="starter">
+    <h2>第一小时：最小技能集</h2>
+    <p>浩劫的本质一句话：<strong>怒气攒了就花，献祭光环别囤，所有爆发挤进变形窗口</strong>。好消息是它没有资源生成按键（恶魔之刃是被动，普攻自动回怒）——你手上全是花怒气的技能。按阶梯练：</p>
+    <h3>3 键版（前 20 分钟）</h3>
+    <ul class="tools">
+      <li><span class="tn">1 烧场：</span><strong>献祭光环</strong>（2 充能）——<strong>全表第一伤害来源（24.8%）</strong>，绝不允许充能满着不用；</li>
+      <li><span class="tn">R 单体倾泻：</span>40 怒 <strong>混沌打击</strong>（变形期自动变"毁灭"，同键）；</li>
+      <li><span class="tn">4 群体倾泻：</span>35 怒 <strong>刀锋之舞</strong>（变形期自动变"死亡之扫"，CD 从 15 秒缩到 9 秒）。</li>
+    </ul>
+    <h3>6 键版（第一个晚上）</h3>
+    <ul class="tools">
+      <li><span class="tn">+5 眼棱：</span>CD 就按（20 秒一轮）——它自带 5 秒迷你变形，让 R/4 变成强化版；</li>
+      <li><span class="tn">+F 复仇撤退：</span><strong>这是输出技不是逃跑键</strong>——不占 GCD、20 秒 CD、必须在眼棱前一个 GCD 按（+5% 伤害 20 秒 +10% 暴击）；顶级玩家一场按 47 次；</li>
+      <li><span class="tn">+3 精华破碎：</span>CD 就按（本赛季套装强制）；</li>
+      <li><span class="tn">+6 恶魔变形：</span><strong>按之前先把献祭光环充能倒空、眼棱刀锋之舞打完</strong>（变形会重置它们）——按顺序打完再变身。</li>
+    </ul>
+    <p><strong>毕业标准</strong>：3 分钟木桩——献祭光环从不满充能、怒气不长时间打满、复仇撤退每次都接在眼棱前面、变形前的重置序列不出错。达标后再读 Demonsurge 爆发窗口的细节。</p>
+  </section>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p><strong>邪能灼痕（Fel-Scarred）</strong>：M+/Delve 的答案，实战占比 95.9%——献祭光环在天赋加持下变成 25% 的总伤害，变形还会强化眼棱和光环（变成"深渊凝视"和"吞噬之火"）。<strong>奥迪拉基掠夺者（Aldrachi Reaver）</strong>：模拟器上单体更强、团本可用，但 AOE"极差"；12.1 后它连单体的手法分支都没了（Thrill of the Fight 100% 覆盖）。日常打本闭眼邪能灼痕。</p>
+    <p class="note"><strong>数据分歧提醒：</strong>Wowhead 的导入码表把<strong>邪能灼痕</strong>标为团本 Best，但正文和循环页却写"团本推荐奥迪拉基掠夺者"（模拟单体更高）。两边都列在下面，团本按你的战斗类型选：混合小怪场景用邪能灼痕，纯单体用掠夺者。</p>
+
+    <h3>导入码 · 邪能灼痕</h3>
+    <div class="codeblock">
+      <span class="lbl">大秘境 M+ / Delve（Best，同一码）</span>
+      <pre>CEkAAAAAAAAAAAAAAAAAAAAAAYmZGzMz2MmZmxYmMmZAAAAAAAzixsNDzMwMWmZmZYmBzyALzmZMMLaaMzMmxGAAAwAAAAYmBDAAAAD</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">团本 Raid（Best，顺劈向）</span>
+      <pre>CEkAAAAAAAAAAAAAAAAAAAAAAYmZGzMzmxMzMmZmMmZAAAAAAAzyDMmtZYmBzMWmZMDzMGzyALziZMMbaaMzMG2AAAAAAAAYmBDAAAAD</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">archon S2 实战构建（49.7% 使用率，最高 +16）</span>
+      <pre>CEkAAAAAAAAAAAAAAAAAAAAAAYmZGzMz2MmZmxYmmxMDAAAAAAYWMmtBzMwMWmZmZYmBzyALzmZMMLMNmZGzYDAAAYAAAAMzgBAAAgB</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>导入码 · 奥迪拉基掠夺者</h3>
+    <div class="codeblock">
+      <span class="lbl">团本 Raid（单体向）</span>
+      <pre>CEkAAAAAAAAAAAAAAAAAAAAAAYgZmZ2MmZmxMzkxMDAAAAAAYWegxsNDzMz2MzYZmxMWmZYmlZ2mBDjlNmkxMjhFAAAAAAAwMDwAAAAwA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">大秘境 M+ / Delve（同一码）</span>
+      <pre>CEkAAAAAAAAAAAAAAAAAAAAAAYGMzMz2MmZmxYmMmZAAAAAAAzixsNDzMz2MzYZmxMMzwMLzsNDGGbbMJjZGzYBAAAAAAAMzAMAAAAM</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">Exergy（不是 Inertia）：</span>12.1 削弱 Inertia 后，<strong>8 个推荐构建里 7 个都选 Exergy</strong>——复仇撤退/狩猎给 +5% 伤害 20 秒。这就是复仇撤退变成输出键的原因。</li>
+      <li><span class="tn">走位困难的战斗：</span>有专门的 <strong>Fel-Scarred Low Mover</strong> 构建（去掉 Exergy 和 Tactical Retreat，复仇撤退退回纯位移键）——被机制逼着不能乱跳时用。</li>
+      <li><span class="tn">恶魔之刃是被动：</span>推荐构建全点，恶魔之咬不存在——<strong>浩劫没有主动的怒气生成键</strong>。</li>
+      <li><span class="tn">邪能灼痕核心三件套：</span>A Fire Inside（献祭光环多一充能、24 秒 CD）+ Flamebound（+2 码范围、+50% 爆伤）+ Ragefire（光环到期爆炸）——AOE 的地基。</li>
+      <li><span class="tn">ST↔AOE 换点损失巨大：</span>Wowhead 明确警告"用单体构建打 AOE 内容（或反之）会损失大量 DPS"——别偷懒不换。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>输出循环</h2>
+
+    <h3>三条核心规则</h3>
+    <ul class="tools">
+      <li><span class="tn">献祭光环不囤：</span>它是你 25% 的伤害，2 充能满了就是纯损失；AOE 时要站在怪堆里等它<strong>到期爆炸</strong>（Ragefire）。</li>
+      <li><span class="tn">变形前先清场：</span>恶魔变形会重置眼棱、刀锋之舞、献祭光环——<strong>先把这些打完/倒空再按变形</strong>，否则等于扔掉一轮 CD。</li>
+      <li><span class="tn">复仇撤退接眼棱：</span>两者都是 20 秒 CD，永远配对使用（撤退 → 一个 GCD 内接眼棱），Exergy 增伤和 Initiative 暴击才能覆盖爆发。</li>
+    </ul>
+
+    <h3>单体优先级（邪能灼痕）</h3>
+    <ol class="prio">
+      <li>变形前把<strong>献祭光环</strong>充能全部倒空</li>
+      <li><strong>恶魔变形</strong>（所有会被重置的技能都用完之后）</li>
+      <li><strong>狩猎</strong>（眼棱 CD 少于 10 秒时）</li>
+      <li><strong>复仇撤退</strong>（眼棱前一个 GCD 内）</li>
+      <li><strong>献祭光环</strong>（充能满时）</li>
+      <li>有 Demonsurge 的 <strong>死亡之扫</strong> → 有 Demonsurge 的 <strong>毁灭</strong></li>
+      <li><strong>眼棱</strong> → <strong>精华破碎</strong></li>
+      <li><strong>死亡之扫</strong> / <strong>刀锋之舞</strong></li>
+      <li>怒气 ≤100 时 <strong>献祭光环</strong> / <strong>邪能之刃</strong></li>
+      <li><strong>毁灭 / 混沌打击</strong></li>
+      <li>填充：<strong>投掷利刃</strong>或<strong>恶魔冲锋</strong></li>
+    </ol>
+    <p><strong>AOE 优先级</strong>与单体几乎相同，两点区别：献祭光环<strong>无条件</strong>优先（不看怒气）、填充只用投掷利刃。</p>
+
+    <h3>开手（邪能灼痕 · AOE）</h3>
+    <p>进场路上远程<strong>投掷利刃</strong> → <strong>献祭光环</strong>×3（拉满充能倒出去）→ 爆发药水+饰品 → <strong>眼棱</strong> → <strong>毁灭</strong> → <strong>狩猎</strong> → <strong>精华破碎</strong> → <strong>死亡之扫</strong>×2 → <strong>复仇撤退</strong>+<strong>恶魔变形</strong> → 死亡之扫 → 吞噬之火 → 毁灭 → 深渊凝视 → 进循环。</p>
+
+    <h3>关键机制卡片（12.1 实测数值）</h3>
+    <ul class="tools">
+      <li><span class="tn">四个按键变形：</span>变形期间 混沌打击→<strong>毁灭</strong>、刀锋之舞→<strong>死亡之扫</strong>；邪能灼痕还额外把 眼棱→<strong>深渊凝视</strong>、献祭光环→<strong>吞噬之火</strong>（各 +30% 伤害）。全是同键自动切换，不占新键位。</li>
+      <li><span class="tn">⚠ 恶魔变形绝对不能宏饰品：</span>因为变形会重置眼棱和刀锋之舞，<strong>你的爆发大部分发生在按变形之前</strong>——饰品和药水要单独按、提前按。</li>
+      <li><span class="tn">Demonic 被动：</span>每次眼棱都给 5 秒迷你变形，所以毁灭/死亡之扫大约每 20 秒就会出现在你的键位上一次。</li>
+      <li><span class="tn">复仇撤退：</span>不占 GCD、20 秒 CD（Tactical Retreat）、回 80 怒、触发 Exergy(+5% 伤害) 和 Initiative(+10% 暴击)。走位技巧：站在怪的一侧，<strong>穿过怪往回跳</strong>，保持在近战范围。</li>
+      <li><span class="tn">自愈全被动：</span>灵魂碎片走过去踩（回 20-30% 血）、吸血 20%（变形期）、火焰伤害 3% 转治疗——<strong>没有主动治疗键</strong>，靠输出维持血线。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">敏捷 <span class="gt">&gt;</span> 暴击 <span class="gt">&gt;</span> 精通 <span class="gt">&gt;</span> 急速 <span class="gt">&gt;</span> 全能</p>
+    <p>两系英雄天赋、团本 M+ 通用。暴击被 Know Your Enemy（暴伤 +80%）和 Critical Chaos（混沌打击返还率吃暴击）双重放大；精通加成所有混沌伤害并转移速。收益递减节点：暴击 1380 / 急速 1320 / 精通 1380 / 全能 1620 评级——实战中位数暴击 1155 正好卡在节点下方。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>Wowhead 推荐</th><th>archon S2 实战主流</th></tr>
+      <tr><td>双武器附魔</td><td>Jan'alai's Precision（<strong>主副手都上</strong>；也可主手 Jan'alai's + 副手 Arcane Mastery）</td><td>Acuity of the Ren'dorei（43.8% / 48.6%）</td></tr>
+      <tr><td>头部</td><td colspan="2">Empowered Rune of Avoidance（一致，55.8%）</td></tr>
+      <tr><td>肩部</td><td colspan="2">Amirdrassil's Grace（一致，59.4%）</td></tr>
+      <tr><td>胸甲</td><td colspan="2">Mark of the Worldsoul（一致，80%）</td></tr>
+      <tr><td>腿部</td><td colspan="2">Forest Hunter's Armor Kit（一致，73.5%）</td></tr>
+      <tr><td>脚部</td><td colspan="2">Lynx's Dexterity（一致，59%）</td></tr>
+      <tr><td>戒指</td><td colspan="2">Eyes of the Eagle（一致，77.8%）</td></tr>
+      <tr><td>加插槽</td><td colspan="2">Miasmic Jewelbinder ×3（头/腕/腰）</td></tr>
+      <tr><td>大宝石</td><td>Powerful Eversong Diamond</td><td>Indecipherable Eversong Diamond（62.3%）</td></tr>
+      <tr><td>其余宝石</td><td colspan="2">四色各插一颗，剩余全部 <strong>Flawless Masterful Garnet</strong>（实战 74.9%）</td></tr>
+      <tr><td>合剂</td><td colspan="2">Flask of the Shattered Sun（76.9%）；缺精通换 Flask of the Magisters</td></tr>
+      <tr><td>爆发药水</td><td colspan="2">Potion of Recklessness（59.6%）——<strong>单独按键，别宏进变形</strong></td></tr>
+      <tr><td>治疗药水</td><td colspan="2">Concentrated Silvermoon Health Potion</td></tr>
+      <tr><td>武器油</td><td colspan="2">Thalassian Phoenix Oil <strong>主副手都要涂</strong>（86.2%）</td></tr>
+      <tr><td>符文 / 食物</td><td colspan="2">Void-Touched Augment Rune；宴席 Hearty Harandar Celebration / 个人 Royal Roast</td></tr>
+      <tr><td>Omnium Folio 符文</td><td colspan="2">Unleashed Fire（85.5%）· Self-Mending（66.4%）· Critical Power（73.2%）· Overload（83.4%）</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>分配。施放频率取自 archon S2 正式服顶级日志（凶手巷，+14~16，20 条，8/20–21，邪能灼痕 95%）：混沌打击 8.3+毁灭 7.3（同键） / 死亡之扫 5.3+刀锋之舞 1.7（同键） / 邪能之刃 2.3 / 眼棱 1.7 / <strong>复仇撤退 1.7</strong> / 献祭光环 1.6 / 投掷利刃 1.4 / 恶魔冲锋 1.3 / 精华破碎 1.2 / 恶魔变形 0.4 CPM。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>浩劫恶魔猎手</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关（开战前定谁打）</td><td>禁锢</td><td>45 秒 CD，限 1 目标（恶魔/野兽/人形）——开打前减员</td></tr>
+      <tr><td><kbd>G</kbd></td><td>仇恨转移</td><td>折磨（嘲讽）</td><td>不占 GCD，8 秒 CD，30 码——救队友/拉散怪</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>献祭光环</td><td>1.6 CPM 但<strong>第一伤害来源 24.8%</strong>，2 充能绝不囤</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>邪能之刃</td><td>2.3 CPM；<strong>0.5 秒 GCD</strong> 的突进+回怒</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>精华破碎</td><td>1.2 CPM，套装强制 CD 就按（眼棱 4 秒内好则等一下）</td></tr>
+      <tr><td><kbd>4</kbd></td><td>AOE 终结技</td><td>刀锋之舞 / 死亡之扫</td><td>35 怒；变形期同键变形，CD 15→9 秒</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发（远程）</td><td>投掷利刃</td><td>1.4 CPM 远程起手/填充；掠夺者的"掠夺者利刃"也在这个键变形</td></tr>
+      <tr><td><kbd>E</kbd></td><td>主打断</td><td>破坏</td><td>15 秒 CD，<strong>不占 GCD</strong>，改良后 10 码；点了 Demon Muzzle 打断还给 -15% 法伤</td></tr>
+      <tr><td><kbd>R</kbd></td><td>单体终结技</td><td>混沌打击 / 毁灭</td><td>8.3+7.3 CPM，40 怒；变形期同键变形</td></tr>
+      <tr><td><kbd>F</kbd></td><td><strong>体系例外</strong>：爆发前摇</td><td>复仇撤退</td><td>浩劫无主动自愈，F 让给这个输出技——不占 GCD、47 次/场，<strong>按 F 立刻接 5</strong></td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发（20 秒轮）</td><td>眼棱 / 深渊凝视</td><td>1.7 CPM；自带 5 秒迷你变形</td></tr>
+      <tr><td><kbd>Shift+5</kbd></td><td>第二次级爆发</td><td>狩猎</td><td>邪能灼痕 CD 就按；掠夺者要先把手里的利刃扔掉</td></tr>
+      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>恶魔变形</td><td>⚠<strong>不要宏饰品药水</strong>——它们要提前单独按</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>模糊</td><td>-35% 承伤（Desperate Instincts），<strong>2 充能</strong>、1 分钟、不占 GCD</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>黑暗</td><td>3 分钟（Pitch Black）；<strong>M+ 里 30% 全避几率</strong>，是真团队大招</td></tr>
+      <tr><td><kbd>X</kbd></td><td>驱散/偷 BUFF</td><td>汲取魔法</td><td>10 秒 CD 偷怪增益</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制</td><td>混沌新星</td><td>45 秒；M+ 构建的 Focused Ire 让主目标多晕 2 秒</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>第二 AOE 控制</td><td>苦难之印（@cursor）</td><td>2 分钟，30 码落地，15 秒致盲</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>恶魔冲锋</td><td>2 充能——<strong>12.1 确认不是输出技</strong>（Inertia 不点），放心当位移用</td></tr>
+      <tr><td><kbd>T</kbd></td><td>侦察/功能</td><td>幽灵视觉</td><td>30 秒，看穿墙壁和隐形</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">E · 打断（指向优先，不占 GCD）</span>
+      <pre>#showtooltip
+/cast [@mouseover,harm,nodead][harm] 破坏</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">Shift+V · 苦难之印落地</span>
+      <pre>#showtooltip
+/cast [@cursor] 苦难之印</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">爆发药水+饰品（单独一个键，变形前提前按）</span>
+      <pre>#showtooltip
+/use 13
+/use 14
+/use 鲁莽药水</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <p class="note"><strong>两个体系例外说明：</strong>①<strong>F 键给了复仇撤退</strong>——浩劫的自愈全是被动（踩灵魂碎片+吸血），F 的"常规自愈"槽位天然空缺，正好让给这个 20 秒一轮、必须顺手的爆发前摇键；按键顺序固定为 <kbd>F</kbd>→<kbd>5</kbd>。②<strong>6 键不做饰品宏</strong>——这是全站唯一一个禁止在大爆发键宏饰品的专精，因为恶魔变形会重置眼棱/刀锋之舞，真正的爆发发生在按 6 之前。</p>
+  </section>
+
+  <footer>
+    <p>数据来源：Wowhead 浩劫恶魔猎手职业指南（Patch 12.1.0 / Midnight Season 2，2026-08-17~22 更新）；archon.gg 浩劫大秘境版块（正式服 S2 数据，2026-08-20~22，天赋 19,867 条 / 循环 20 条顶级样本）。已知分歧：Wowhead 导入码表标邪能灼痕团本 Best，正文却推荐掠夺者（模拟单体更高）；武器附魔与大宝石的 Wowhead 推荐与实战主流不同，两者都已列出。技能中文名以游戏内为准。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
