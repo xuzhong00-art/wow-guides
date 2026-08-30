@@ -13,9 +13,9 @@
   <header class="hero">
     <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a> · 同职业：<a href="disc-priest.html">戒律</a> · <a href="holy-priest.html">神圣</a></p>
     <h1>暗影牧师</h1>
-    <p class="sub">主推英雄天赋：执政官（Archon，全场景 Best，实战 61.9%）；+20 以上冲层换虚空编织者。远程 DOT 输出，核心是"双 DOT 铺场 → 攒疯狂值 → 疯狂之言倾泻"；被动伤害（幽灵+心灵联结+暗影爆裂）占总输出近一半。</p>
-    <span class="pill">Wowhead 数据：12.1 正式服（2026-08-12 更新）</span>
-    <span class="pill">archon 数据：S2 正式服大秘境（8/18–22，34,488 条）</span>
+    <p class="sub">主推英雄天赋：执政官（Archon，实战 60.8%）；虚空编织者已升为强力备选（39.1%，top-100 冲层热图 59.3% 仍是它）。远程 DOT 输出，核心是"双 DOT 铺场 → 攒疯狂值 → 疯狂之言倾泻"；被动伤害占总输出近一半。<strong>S2 四件套改玩法：虚空万弹成了 ~10 秒一发的常驻循环技（5.1 CPM）</strong>。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服 S2</span>
+    <span class="pill">archon 数据：S2 正式服大秘境 +7~+19（14 天，102,411 条）</span>
   </header>
 
   <nav class="toc">
@@ -39,18 +39,18 @@
     <h3>6 键版（第一个晚上）</h3>
     <ul class="tools">
       <li><span class="tn">+2 心灵鞭笞：</span>没别的可按才引导，<strong>有更高优先级立刻断掉</strong>（狂乱鞭笞触发同键）；</li>
+      <li><span class="tn">+4 虚空万弹：</span>S2 四件套下这是<strong>常驻循环技</strong>（~10 秒一发，10 箭+溅射+回 10 疯狂）——CD 好了就按；</li>
       <li><span class="tn">+5 光环：</span>接近 CD 就早点放（三波扩散要时间起势）；</li>
-      <li><span class="tn">+6 虚空形态：</span>2 分钟大爆发——<strong>按下去后这个键变成虚空万弹，连按 3 发</strong>（一发都别浪费）；</li>
-      <li><span class="tn">+4 暗言术：死亡：</span>目标 20% 血以下按，走位途中也拿它填（打不死人会反噬 5% 自己血量，注意）。</li>
+      <li><span class="tn">+6 虚空形态：</span>2 分钟大爆发，+20% 法伤 20 秒——变形期万弹照按不误（4 或 6 都响应）。</li>
     </ul>
-    <p><strong>毕业标准</strong>：3 分钟木桩——双 DOT 覆盖 90% 以上、疯狂之言覆盖 80%+（不溢出不干等）、心灵鞭笞每次都被高优先级即时打断、虚空形态的万弹充能全部按完。达标后再读执政官的光环窗口和 PI 对齐。</p>
+    <p><strong>毕业标准</strong>：3 分钟木桩——双 DOT 覆盖 90% 以上、疯狂之言覆盖 80%+（不溢出不干等）、心灵鞭笞每次都被高优先级即时打断、<strong>虚空万弹全程不空转</strong>（不是只在虚空形态里按）。达标后再读执政官的光环窗口和 PI 对齐。</p>
   </section>
 
   <section class="block" id="talents">
     <h2>天赋与选取逻辑</h2>
 
     <h3>英雄天赋怎么选</h3>
-    <p><strong>执政官（Archon）</strong>：Wowhead 四个场景全 Best（"所有满级内容的默认选择"），实战 61.9%——围绕光环和幽灵强化，节奏稳。<strong>虚空编织者（Voidweaver）</strong>：专门的 High M+ 构建给 +20 以上（archon top-100 冲层热图正是它）——虚空之潮开裂隙、心灵震爆变虚空冲击。日常执政官。</p>
+    <p><strong>执政官（Archon）</strong>：实战 60.8% 主流——围绕光环和幽灵强化，节奏稳。<strong>虚空编织者（Voidweaver）</strong>：S2 已升为强力备选（39.1%，top-100 冲层热图 59.3%）——虚空裂隙+虚空鱼雷玩窗口爆发，Wowhead 现给全场景四套码。上手先执政官，冲层/求上限换 VW。</p>
 
     <h3>导入码 · 执政官（全 Best）</h3>
     <div class="codeblock">
@@ -68,14 +68,20 @@
       <pre>CIQAAAAAAAAAAAAAAAAAAAAAAMMDDAAAAAAAAAAAAmZxMmZbmxMz2MGzw2MzYmZGbIzYxMNAzAMzmZY2MAkxYBAzMIjZmZMbMz2yAMTMA</pre>
       <button type="button" onclick="cp(this)">复制</button>
     </div>
+    <h3>导入码 · 虚空编织者（冲层/上限）</h3>
     <div class="codeblock">
-      <span class="lbl">archon S2 实战构建（22.9% 使用率，最高 +15）</span>
-      <pre>CIQAAAAAAAAAAAAAAAAAAAAAAMMDDAAAAAAAAAAAAmZxMmZbmxMzyMGzw2MzYmZGbIzYxMNAzAMzmZY2MAkxYBAzMgxMzMmNmZbZAmBDA</pre>
+      <span class="lbl">大秘境 M+ / Delve（同一码）</span>
+      <pre>CIQAAAAAAAAAAAAAAAAAAAAAAMMDDAAAAAAAAAAAAmZxMmZbmxMzyMzYG2mZGzMzYDZGLmpBYmZGAIAz2stAmNGAYkxMzMmNmBzMYmYA</pre>
       <button type="button" onclick="cp(this)">复制</button>
     </div>
     <div class="codeblock">
-      <span class="lbl">虚空编织者 · High M+（+20 以上专用）</span>
-      <pre>CIQAAAAAAAAAAAAAAAAAAAAAAMjZAAAAAAAAAAAAAzMLzMGbzMmZ2mZGDz2MzYmZGbIzYxMNAzMzAABY2mtFwsxAAjMmZmxsxMYmBzEDA</pre>
+      <span class="lbl">单体/团本</span>
+      <pre>CIQAAAAAAAAAAAAAAAAAAAAAAMMjZGAAAAAAAAAAAAegZxMmZbmBz2MzYG2mZGzMzYDZGLmpBYmZGAIAz2stAmNGAYkxMzMmtxMYmBzEDA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">团本顺劈</span>
+      <pre>CIQAAAAAAAAAAAAAAAAAAAAAAMMjZGAAAAAAAAAAAAMLmxMbzMMz2MzYG2mZGzMzYDZGLmpBYmZGAIAz2stAmNGAYkxMzMmtxMYmBzEDA</pre>
       <button type="button" onclick="cp(this)">复制</button>
     </div>
 
@@ -106,11 +112,10 @@
       <li><strong>虚空形态</strong> CD 就开 + <strong>能量灌注</strong></li>
       <li><strong>疯狂之言</strong>：没挂 / 快掉 / 疯狂快溢出时按</li>
       <li><strong>心灵震爆</strong> CD 就按</li>
+      <li><strong>虚空万弹</strong> CD 就按（S2 四件套常驻，~10 秒一发回 10 疯狂）</li>
       <li>疯狂之言在身上时引导<strong>狂乱鞭笞</strong>（心灵鞭笞强化版同键）</li>
-      <li>虚空形态期间补 <strong>疯狂之言</strong></li>
       <li>没有新目标要铺时 <strong>触手猛击</strong> 当填充</li>
       <li>目标 &lt;20%：<strong>暗言术：死亡</strong></li>
-      <li><strong>虚空万弹</strong>（虚空形态按键变形，充能全用完）</li>
       <li><strong>心灵鞭笞</strong>兜底（有更高优先级立刻断）</li>
     </ol>
     <p><strong>AOE：</strong>骨架同单体——区别是被动化的：触手猛击一键 6 个双 DOT、心灵联结把你打单体的伤害泼给全场——<strong>锁住一个主目标打就是 AOE</strong>，不用换目标。走位填充：触手猛击 / 暗言术：死亡 / 暗言术：痛。</p>
@@ -120,7 +125,7 @@
     <ul class="tools">
       <li><span class="tn">疯狂之言：</span>50 疯狂、瞬发、前置伤害+6 秒 DOT、回 30% 伤害的血、刷新时剩余伤害滚存——就是改名的噬灭疫病。</li>
       <li><span class="tn">触手猛击：</span>2 充能/15 秒、40 码、给 8 码内至多 6 目标挂吸血鬼之触（优先没有的）+6 疯狂——暗影坠饰的继任者。</li>
-      <li><span class="tn">虚空形态→虚空万弹：</span>虚空形态瞬发（2 分钟），+20% 法伤 20 秒，<strong>按键变形为虚空万弹×3 发</strong>（10 箭主目标+波及 10 码，每发回 10 疯狂）——价值全在万弹，别浪费任何一发。</li>
+      <li><span class="tn">虚空万弹（S2 四件套后）：</span>15 秒基础 CD 受急速缩减（实战 ~10 秒、5.1 CPM）、<strong>全程可用不再锁在虚空形态里</strong>——10 箭主目标+波及 10 码，每发回 10 疯狂。虚空形态（2 分钟瞬发，+20% 法伤 20 秒）现在是纯增伤窗口，万弹照常转。</li>
       <li><span class="tn">沉默：</span>基线技能、30 秒 CD、<strong>40 码</strong>——全游戏射程最长的打断，但 CD 长，和队友轮着踢。</li>
       <li><span class="tn">暗言术：死亡：</span>10 秒 CD，&lt;20% 大额斩杀；<strong>打不死会反噬自己 5% 血量</strong>；虚空编织者对护盾目标也有加成。</li>
     </ul>
@@ -156,23 +161,24 @@
 
   <section class="block" id="keybinds">
     <h2>键位设置</h2>
-    <p>按<a href="keybinds.html">统一键位体系</a>分配。施放频率取自 archon S2 正式服顶级日志（毒牙祭坛，+13~15，24 条，8/20–21，执政官 58%）：心灵鞭笞 8.5+狂乱 3.3 / 疯狂之言 7.6 / 心灵震爆 6.9 / 触手猛击 4.0 / 虚空万弹 2.4 / 暗言术：死亡 2.0 / 光环 0.9 / 吸血鬼之触硬读 0.9 CPM。与戒律同键的功能键：` 渐隐、X 驱散系、V 心灵尖啸、Z 天使羽毛、T 信仰之跃、G 安抚心灵。</p>
+    <p>按<a href="keybinds.html">统一键位体系</a>分配。施放频率取自 archon S2 顶级日志（毒牙祭坛，14 天顶级样本）：疯狂之言 8.4 / 心灵震爆 5.5 / 心灵鞭笞 5.5 / <strong>虚空万弹 5.1（四件套后翻倍，升入高频区）</strong> / 触手猛击 4.6 / 暗言术：痛手动 4.4 / 暗言术：死亡 1.7 / 虚空鱼雷 1.6（VW）CPM。<strong>键位变更（S2）</strong>：虚空万弹从 6 键变形升到 <strong>4 号独立键</strong>，暗死挪 Shift+4。与戒律/神圣同键的功能键：` 渐隐、X 驱散系、V 心灵尖啸、Z 天使羽毛、T 信仰之跃、G 安抚心灵。</p>
     <div class="tablewrap">
     <table>
       <tr><th>键</th><th>功能规则</th><th>暗影牧师</th><th>说明</th></tr>
       <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>渐隐</td><td>30 秒 CD 脱仇恨；幻影天赋顺手解减速</td></tr>
-      <tr><td><kbd>1</kbd></td><td>高频①</td><td>心灵震爆</td><td>6.9 CPM；暗影洞悉免费触发同键</td></tr>
-      <tr><td><kbd>2</kbd></td><td>高频②</td><td>心灵鞭笞（含狂乱鞭笞）</td><td>8.5+3.3 CPM 填充；随时准备打断引导</td></tr>
-      <tr><td><kbd>3</kbd></td><td>高频③</td><td>触手猛击</td><td>4.0 CPM，2 充能一键铺双 DOT</td></tr>
-      <tr><td><kbd>4</kbd></td><td>高频④（斩杀/走位填充）</td><td>暗言术：死亡</td><td>2.0 CPM；&lt;20% 大伤害，打不死反噬</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>心灵震爆</td><td>5.5 CPM；暗影洞悉免费触发同键</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>心灵鞭笞（含狂乱鞭笞）</td><td>5.5 CPM 填充；随时准备打断引导</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>触手猛击</td><td>4.6 CPM，2 充能一键铺双 DOT</td></tr>
+      <tr><td><kbd>4</kbd></td><td>高频④（AOE 终结位）</td><td>虚空万弹</td><td>5.1 CPM；S2 四件套常驻循环技，10 箭+溅射——从 6 键变形升独立键</td></tr>
+      <tr><td><kbd>Shift+4</kbd></td><td>斩杀/走位填充</td><td>暗言术：死亡</td><td>1.7 CPM；&lt;20% 大伤害，打不死反噬 5%</td></tr>
       <tr><td><kbd>Q</kbd></td><td>高频瞬发（远程 DOT）</td><td>暗言术：痛</td><td>手动补漏（Misery 下多数自动）；Shift+Q 硬读吸血鬼之触</td></tr>
       <tr><td><kbd>E</kbd></td><td>主打断</td><td>沉默</td><td>30 秒 CD、40 码全游戏最长——mouseover 宏</td></tr>
-      <tr><td><kbd>R</kbd></td><td>资源终结技</td><td>疯狂之言</td><td>7.6 CPM，50 疯狂倾泻（老噬灭疫病）</td></tr>
+      <tr><td><kbd>R</kbd></td><td>资源终结技</td><td>疯狂之言</td><td>8.4 CPM 全表第一，50 疯狂倾泻（老噬灭疫病）</td></tr>
       <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>[@player] 真言术：盾</td><td>Body and Soul 顺手 +40% 移速</td></tr>
       <tr><td><kbd>Shift+F</kbd></td><td>急救回血</td><td>绝望祷言</td><td>1.5 分钟</td></tr>
       <tr><td><kbd>5</kbd></td><td>次级爆发（1 分钟轮）</td><td>光环</td><td>三波扩散慢热，窗口内早放</td></tr>
       <tr><td><kbd>Shift+5</kbd></td><td>第二次级爆发</td><td>心灵之源 / 虚空之潮（VW）</td><td>按天赋选取</td></tr>
-      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>虚空形态 + 饰品宏</td><td>按下后<strong>连按=虚空万弹×3</strong>（按键变形）</td></tr>
+      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>虚空形态 + 饰品宏</td><td>纯增伤窗口（+20% 法伤 20 秒）；万弹已独立到 4 键</td></tr>
       <tr><td><kbd>Shift+6</kbd></td><td>对外增益</td><td>能量灌注</td><td>Twins：给队友自己也吃；与虚空形态对齐</td></tr>
       <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>吸血鬼拥抱</td><td>2 分钟群体回血（单体伤害的 40% 分给队友）</td></tr>
       <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>消散</td><td>75% 减伤 6 秒+回血，2 分钟</td></tr>
@@ -193,7 +199,7 @@
       <button type="button" onclick="cp(this)">复制</button>
     </div>
     <div class="codeblock macroblock">
-      <span class="lbl">6 · 大爆发一键（虚空形态变虚空万弹，连按即可）</span>
+      <span class="lbl">6 · 大爆发一键（虚空形态+饰品；万弹在 4 键独立转）</span>
       <pre>#showtooltip
 /use 13
 /use 14
@@ -215,7 +221,7 @@
   </section>
 
   <footer>
-    <p>数据来源：Wowhead 暗影牧师职业指南（Patch 12.1.0 / Midnight Season 2，2026-08-12 更新）；archon.gg 暗牧大秘境版块（正式服 S2 数据，2026-08-18~22，天赋 34,488 条 / 循环 24 条顶级样本）。技能中文名以游戏内为准（疯狂之言/触手猛击等新改动暂无通行译名处以英文机制说明为准）。</p>
+    <p>数据来源：Wowhead 暗影牧师职业指南（Patch 12.1 / Midnight Season 2）；archon.gg 暗牧大秘境版块（正式服 S2 数据，+7~+19 全副本 14 天 102,411 条 / 循环毒牙祭坛顶级样本）。技能中文名以游戏内为准（疯狂之言/触手猛击等新改动暂无通行译名处以英文机制说明为准）。本页 2026-08-30 刷新：S2 四件套虚空万弹机制与键位重裁。</p>
   </footer>
 </div>
 <script src="assets/app.js"></script>
