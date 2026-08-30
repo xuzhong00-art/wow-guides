@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>神圣牧师 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--priest); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a> · 同职业：<a href="disc-priest.html">戒律</a> · <a href="shadow-priest.html">暗影</a></p>
+    <h1>神圣牧师</h1>
+    <p class="sub">主推英雄天赋：<strong>神谕者（Oracle，M+ 实战 89.7%）</strong>；团本 Archon/Oracle 双修（Wowhead 两套 Best 并列）。直觉型治疗——核心是<strong>圣言循环</strong>：平时刷小奶技给圣言减 CD，圣言当"免费大招"转着放。牧师三专精里最好上手的一个。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服 S2（-pve-healer 版块）</span>
+    <span class="pill">archon 数据：S2 正式服大秘境 +7~+19（14 天，118,339 条）</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#starter">第一小时</a>
+    <a href="#talents">天赋</a>
+    <a href="#rotation">治疗循环</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="starter">
+    <h2>第一小时：最小技能集</h2>
+    <p>神牧的本质一句话：<strong>愈合祷言转着丢 + 快速治疗填充，圣言 CD 好了就砸</strong>。没有戒律的 ramp 负担，没有恢复萨的图腾管理——掉血→奶，就这么直白。</p>
+    <h3>3 键版（前 20 分钟）</h3>
+    <ul class="tools">
+      <li><span class="tn">1 愈合祷言：</span>CD 就丢（8.2 CPM 全谱第一——顶级神牧按得最多的键），自动弹 5 次奶伤员；</li>
+      <li><span class="tn">2 快速治疗：</span>有人掉血就读；每 2 发给圣言：静谧减 6 秒 CD——<strong>小奶是给大奶充电的</strong>；</li>
+      <li><span class="tn">R 圣言：静谧：</span>点名大奶（治疗占比 20%），CD 好了别攒着——它减 CD 靠你刷 2 键。</li>
+    </ul>
+    <h3>6 键版（第一个晚上）</h3>
+    <ul class="tools">
+      <li><span class="tn">+Q 神圣之火：</span>空闲必按（7.0 CPM、占输出 76%！）——M+ 治疗的及格线是"不奶人的时候打伤害"；</li>
+      <li><span class="tn">+3 惩击：</span>神圣之火 CD 中的输出填充，还能钓<strong>光明涌动</strong>（免费瞬发快奶）；</li>
+      <li><span class="tn">+6 升华：</span>掉血压力大时按——圣言 CD 狂减+施法减费，神牧的"进入超模模式"。</li>
+    </ul>
+    <p><strong>毕业标准</strong>：3 分钟实战——愈合祷言基本不空转、静谧 CD 不闲置超 5 秒、下地板期间神圣之火/惩击不停手、没人死于"我盯着满血队友发呆"。达标后再学 Halo 时机和圣言充能池管理。</p>
+  </section>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p><strong>神谕者（Oracle）</strong>：M+ 实战 89.7% 一边倒——多一层愈合祷言充能、Prompt Prognosis 点名奶更强，玩法是"祷言机枪"。<strong>执政官（Archon）</strong>：团本可选（M+ 仅 10.2%）——Halo 延长+受疗增益，配升华打"光环轰炸"窗口。日常打本无脑神谕者；进团想玩爆发窗口再练 Archon。</p>
+
+    <h3>导入码</h3>
+    <div class="codeblock">
+      <span class="lbl">执政官 Archon · 团本（Best）</span>
+      <pre>CEQAAAAAAAAAAAAAAAAAAAAAAwYAAAAAAAgZmlxMjZmZYmZYZGmBAAAwwsMDzMzMYGzAYmaAgZWMTmFDAMGsZmZ2A0MMjxwMz2yAMDMA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">执政官 Archon · 大秘境 M+</span>
+      <pre>CEQAAAAAAAAAAAAAAAAAAAAAAwYAAAAAAAMmxsMYMzMDzMDLzMzMAAAAGzsMDmZmBjZGDYmCAMzmZysZAgxgNzM2A0MmZMGmZ2WGgBMA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">执政官 Archon · Delve</span>
+      <pre>CEQAAAAAAAAAAAAAAAAAAAAAAwYAAAAAAAMmxsMmxMzYYmBLzMzMAAAAGmlZGzMzM2MmZMbLYmCAMziZysZAgxgNzM2A0wMMGMz2yAMgB</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">神谕者 Oracle · 团本（Best）</span>
+      <pre>CEQAAAAAAAAAAAAAAAAAAAAAAADAAAAAAYBmZWGzMmZMMDzsMzYGAAAAzYWmBzMzwMMDgZqBwMbYIMmlBYMwiZmZBQzYMGDzMAzMzAD</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">神谕者 Oracle · 大秘境 M+（Best，实战主流）</span>
+      <pre>CEQAAAAAAAAAAAAAAAAAAAAAAADAAAAAAgZmxsMmZMzYYGYZmZmBAAAwYmlZwMzM2mxMDgZKAmZDDhxsMAjBWMzMLAaGzMGDmBYmZAD</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">M+ 关键点位：</span><strong>Ultimate Serenity</strong>——静谧顺劈全队，让 Oracle 不点治疗祷言也有群奶（这就是为什么 M+ 顶级日志里圣化/治疗祷言 0 施放）；<strong>Unfolding Vision</strong>——愈合祷言层数不再整层过期，刷新维持不浪费（可叠 14 层，一发上 7 层，≤2 层浪费就值得补）。</li>
+      <li><span class="tn">12.1 机制三变：</span>①<strong>Piety 转被动</strong>——溢疗自动转移给别的伤员（精通与暴击联动更值钱）；②<strong>神圣赞美诗引导期自带守护天使</strong>——可以站在地板里硬读（M+ 治疗量还有加成）；③4pc：愈合祷言必附赠恢复——铺祷言=铺恢复。</li>
+      <li><span class="tn">副本换点：</span>毒/疾病本记得神牧纯净术<strong>不驱毒</strong>（只有魔法+疾病）——毒本靠队友或换驱散饰品，这是神牧 M+ 最大短板，选本时避开重毒周。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>治疗循环</h2>
+
+    <h3>三条核心规则</h3>
+    <ul class="tools">
+      <li><span class="tn">圣言不落地=亏：</span>静谧（和团本的圣化）是最强性价比技能，CD 好了尽快用；已知点名伤害可以攒一层，但<strong>永远别坐在 2 层充能上</strong>。</li>
+      <li><span class="tn">小奶为大奶充电：</span>快速治疗/治疗减静谧 CD，治疗祷言减圣化 CD——你的填充施法方向决定哪个圣言转得快，按需选择。</li>
+      <li><span class="tn">下地板期间打伤害：</span>神圣之火 CD 必按 + 惩击填充（顶级日志 76% 伤害来自神圣之火）——惩击还给你钓光明涌动（免费瞬发快奶，比硬读的还强）。</li>
+    </ul>
+
+    <h3>大秘境优先级（神谕者，archon 实战验证）</h3>
+    <ol class="prio">
+      <li><strong>愈合祷言</strong> CD 就丢——优先给需要直奶的人或身上没层数的人（8.2 CPM）</li>
+      <li><strong>Halo</strong> 频繁用——预判团伤前甩出去，顺便攒光明涌动</li>
+      <li><strong>圣言：静谧</strong> CD 就点名（Ultimate Serenity 会顺劈队友）</li>
+      <li><strong>升华</strong>频繁用——省蓝/重置圣言/空闲时当输出 CD</li>
+      <li><strong>快速治疗</strong>补漏——注意别让祝福叠层溢出（上限 2）</li>
+      <li>空闲：<strong>神圣之火</strong> CD 必按 &gt; <strong>惩击</strong>填充</li>
+    </ol>
+
+    <h3>团本手法（两套英雄天赋）</h3>
+    <p><strong>Oracle</strong>：不用治疗祷言——快速治疗为主体给静谧减 CD，愈合祷言机枪铺场，Dispersing Light 顺劈。升华开启前<strong>确保静谧至少 1 层充能</strong>（吃减费+增效）。<strong>Archon</strong>：升华+Halo 必须绑一起按（互相增益），Halo 提前于团伤起手，光环命中后队友 10 秒受疗增加——大 CD 窗口就是"升华+Halo+连放圣言"。</p>
+
+    <h3>大 CD 怎么用</h3>
+    <p><strong>神圣赞美诗</strong>（主团刷 CD）：12.1 起引导期自带守护天使——可以站在圈里硬读完，M+ 里治疗量还有加成，短 CD 大治疗放心轮转。<strong>守护天使</strong>：点名要死的人（坦克开无敌前的桥接），致死伤害触发 40% 血复活式救人。<strong>升华</strong>不是恐慌键——它是节奏器，掉血压力窗口或纯粹省蓝都值得按。</p>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">团本：智力 <span class="gt">&gt;</span> 暴击 <span class="gt">&gt;</span> 全能 <span class="gt">=</span> 精通 <span class="gt">&gt;</span> 急速</p>
+    <p class="statline">大秘境：智力 <span class="gt">&gt;</span> 全能 <span class="gt">&gt;</span> 暴击 <span class="gt">&gt;</span> 急速 <span class="gt">&gt;</span> 精通</p>
+    <p>两套英雄天赋同序。暴击与精通联动（暴击直奶→更大的回光 HoT）；M+ 全能前置是因为它<strong>兼加输出和减伤</strong>——精通不加伤害，赶时间的本里性价比骤降。archon 实战侧写（top 玩家实际配装）：暴击 864 &gt; 急速 822 &gt; 精通 721 &gt; 全能 245——与推荐序有出入，属于毕业装堆料结果，上手期按推荐序即可。收益递减节点：急速 1320 / 暴击 1380 / 精通 1380 / 全能 1620 评级。恢复的急速跳数节点已无意义（不满节点给部分跳）。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>推荐</th></tr>
+      <tr><td>武器附魔</td><td>Acuity of the Ren'dorei</td></tr>
+      <tr><td>头部</td><td>Empowered Hex of Leeching</td></tr>
+      <tr><td>肩部</td><td>Silvermoon's Mending</td></tr>
+      <tr><td>胸甲</td><td>Mark of the Worldsoul</td></tr>
+      <tr><td>腿部</td><td>Sunfire Silk Spellthread</td></tr>
+      <tr><td>脚部</td><td>Shaladrassil's Roots</td></tr>
+      <tr><td>戒指</td><td>Nature's Fury</td></tr>
+      <tr><td>宝石</td><td>大宝石 <strong>Indecipherable Eversong Diamond</strong>；其余 Flawless Versatile Garnet（全能）</td></tr>
+      <tr><td>合剂</td><td>Flask of the Shattered Sun</td></tr>
+      <tr><td>爆发药水</td><td>Potion of Recklessness / Light's Potential；M+ 还可带 <strong>Void-Shrouded Tincture</strong>（隐形跳怪）</td></tr>
+      <tr><td>治疗药水</td><td>Concentrated Silvermoon Health Potion</td></tr>
+      <tr><td>武器油 / 符文 / 食物</td><td>Thalassian Phoenix Oil；Void-Touched Augment Rune；宴席 Harandar Celebration / 个人 Royal Roast</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>的治疗三原则分配。施放频率取自 archon S2 顶级日志（红玉生命之池，14 天顶级样本）：愈合祷言 8.2 / 神圣之火 7.0 / 惩击 5.3 / 静谧 4.5 / 快速治疗 4.5 / 圣言：惩戒 2.4 / 神圣新星 0.8 / 神圣赞美诗 0.3 CPM。<strong>神牧无打断</strong>——E 键沿恢复德先例改点名应急奶。<strong>M+ 顶级日志里圣化/治疗祷言施放为 0</strong>（Oracle 构建群奶走祷言+静谧顺劈），4 键按体系降为弹性位。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>神圣牧师</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>渐隐</td><td>与戒律/暗牧三专精统一</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>愈合祷言</td><td>8.2 CPM 全谱第一；治疗第一来源 21.5%</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>快速治疗</td><td>4.5 CPM 单奶填充；每 2 发静谧 -6 秒</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>惩击</td><td>5.3 CPM 输出填充；钓光明涌动</td></tr>
+      <tr><td><kbd>4</kbd></td><td>弹性位（AOE 终结降档）</td><td>团本：圣言：圣化 / M+：神圣新星</td><td>M+ Oracle 无圣化（顶级日志 0 施放）——按体系降为第四高频</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发（远程 DoT）</td><td>神圣之火</td><td>7.0 CPM、76% 伤害占比——与月火/复仇者之盾同族</td></tr>
+      <tr><td><kbd>E</kbd></td><td>应急反应键</td><td>光明涌动快奶</td><td>神牧无打断，E=点名应急（涌动瞬发优先）；[ctrl]自疗</td></tr>
+      <tr><td><kbd>R</kbd></td><td>单体终结技</td><td>圣言：静谧</td><td>4.5 CPM 治疗 20%；Ultimate Serenity 带顺劈</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>[@player] 快速治疗</td><td>兜底</td></tr>
+      <tr><td><kbd>Shift+F</kbd></td><td>急救回血</td><td>绝望祷言</td><td>+25% 上限血并回满该值；与戒律同键同技能</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发</td><td>神圣赞美诗</td><td>12.1 自带守护天使可站地板硬读；M+ 有治疗加成</td></tr>
+      <tr><td><kbd>Shift+5</kbd></td><td>第二次级</td><td>圣言：惩戒</td><td>2.4 CPM；输出终结+失能控制两用</td></tr>
+      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>升华 + 饰品宏</td><td>圣言加速+减费；Archon 构建宏里连 Halo</td></tr>
+      <tr><td><kbd>Shift+6</kbd></td><td>团队大招</td><td>圣言：救赎（若点）</td><td>治疗大招位；未点则空置</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>渐隐（半透明影像）</td><td>与戒律同款语义：` 是仇恨、7 是减伤</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>[@player] 守护天使</td><td>致死伤害触发救命</td></tr>
+      <tr><td><kbd>Shift+C</kbd></td><td>底牌对外版本</td><td>守护天使（mouseover）</td><td>点名救人——治疗三原则 Shift=对外</td></tr>
+      <tr><td><kbd>X</kbd></td><td>驱散</td><td>纯净术</td><td>魔法+疾病；<strong>不驱毒</strong>（神牧 M+ 最大短板）</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制（"停手"键）</td><td>心灵尖啸</td><td>与戒律同键同技能</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>单体控制</td><td>心灵控制 / 摄魂魇</td><td>按副本选取</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>天使羽毛（@cursor）</td><td>3 充能；与戒律同键</td></tr>
+      <tr><td><kbd>T</kbd></td><td>对外位移</td><td>信仰之跃</td><td>拽队友出地板</td></tr>
+      <tr><td><kbd>G</kbd></td><td>弹性位</td><td>安抚心灵</td><td>跳怪（侦测半径 -10 码）；牧师三专精同键</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">1 · 愈合祷言（mouseover 治疗模板）</span>
+      <pre>#showtooltip
+/cast [@mouseover,help,nodead][help][@player] 愈合祷言</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">E · 应急三分支（自疗 / 点名快奶）</span>
+      <pre>#showtooltip 快速治疗
+/cast [mod:ctrl,@player] 快速治疗; [@mouseover,help,nodead][help][@player] 快速治疗</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">6 · 升华爆发包（Archon 构建版：先 Halo 后升华）</span>
+      <pre>#showtooltip 升华
+/use 13
+/use 14
+/cast 光环
+/cast 升华</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">Z · 天使羽毛（脚下直铺）</span>
+      <pre>#showtooltip 天使羽毛
+/cast [@player] 天使羽毛</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>数据来源：Wowhead 神圣牧师职业指南（Patch 12.1 / Midnight Season 2，-pve-healer 版块）；archon.gg 神牧大秘境版块（正式服 S2 数据，+7~+19 全副本 14 天 118,339 条 / 循环红玉生命之池顶级样本）。技能中文名以游戏内为准。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
