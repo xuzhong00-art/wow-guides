@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>神圣骑士 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--paladin); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a> · 同职业：<a href="ret-paladin.html">惩戒</a> · <a href="prot-paladin.html">防护</a></p>
+    <h1>神圣骑士</h1>
+    <p class="sub">主推英雄天赋：<strong>太阳先驱（Herald of the Sun，M+ 实战 74.8%）</strong>；Delve 换圣光铁匠。S2 人气第一的治疗（41.6 万条样本断层）。核心是<strong>圣能循环</strong>：神圣震击/审判攒圣能 → 荣耀圣言/黎明之光花掉——"治疗版的惩戒骑"，圣骑三专精肌肉记忆全通。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服 S2（-pve-healer 版块）</span>
+    <span class="pill">archon 数据：S2 正式服大秘境 +7~+19（14 天，415,904 条）</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#starter">第一小时</a>
+    <a href="#talents">天赋</a>
+    <a href="#rotation">治疗循环</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="starter">
+    <h2>第一小时：最小技能集</h2>
+    <p>奶骑的本质一句话：<strong>攒 5 点圣能就花掉，花在奶人还是打伤害由你选</strong>。开怪前记得把光明信标/信仰信标挂给远程队友（法师/猎人/鸟德优先）。</p>
+    <h3>3 键版（前 20 分钟）</h3>
+    <ul class="tools">
+      <li><span class="tn">1 神圣震击：</span>CD 就按——奶人/打怪双向，攒圣能+产<strong>圣光灌注</strong>（下一发快奶变强）；</li>
+      <li><span class="tn">3 圣光闪现：</span>有灌注触发就读它点名奶（8.2 CPM 全表第一——顶级奶骑按得最多的键）；</li>
+      <li><span class="tn">R 荣耀圣言：</span>攒满圣能就花——单体大奶，<strong>绝不让圣能溢出</strong>（5 点还按生成技=白扔）。</li>
+    </ul>
+    <h3>6 键版（第一个晚上）</h3>
+    <ul class="tools">
+      <li><span class="tn">+2 审判：</span>空闲就按——Righteous Judgment 天赋下每发铺一片奉献（伤害第二来源）；</li>
+      <li><span class="tn">+5 神圣钟鸣：</span>CD 就按——对友方=5 连神圣震击群奶，对怪=输出（短 CD 别攒，"攒着等雨天，雨天就来了"）；</li>
+      <li><span class="tn">+6 复仇之怒：</span>治疗压力大就开（30 秒长 buff）——Hand of Divinity 附赠 2 发瞬发圣光术。</li>
+    </ul>
+    <p><strong>毕业标准</strong>：3 分钟实战——圣能零溢出、灌注触发不浪费（有灌注先花再按震击）、钟鸣 CD 不闲置、没人死时你在打伤害（盾击/审判）。达标后再学美德信标窗口和圣光术蓝量管理。</p>
+  </section>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p><strong>太阳先驱（Herald of the Sun）</strong>：M+ 实战 74.8% 主流、团本推荐——黎明之光体系+HoT 强化，节奏顺。<strong>圣光铁匠（Lightsmith）</strong>：Delve 官方推荐（25.2% 的 M+ 玩家也在用）——圣盾壁垒/神圣武器双武装轮转，Laying Down Arms 送免费灌注，省蓝循环自成一体（S2 四件套下圣光术→灌注→更多圣光术滚雪球）。上手先太阳先驱。</p>
+
+    <h3>导入码 · 太阳先驱</h3>
+    <div class="codeblock">
+      <span class="lbl">M+ 美德信标（Recommended）</span>
+      <pre>CEEAAAAAAAAAAAAAAAAAAAAAAAAAALAwMAAD2GzMzMjZmZBmZYZsZmFjmYYMzMMmtMAMAsB2YZmZmlZbmZ2aAAAAWAmhNDMjZYGAAzMMjxoB</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">团本 美德信标（Recommended）</span>
+      <pre>CEEAAAAAAAAAAAAAAAAAAAAAAAAAALAwMAAw2MzMjZMzYxYmZYZwMLmpJGGzMDjZLDADYYDsxyMmZZ2mZmtGAAAgFAYzwYGzwMAAmZYGjRDA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">M+ 信仰信标（备选流派）</span>
+      <pre>CEEAAAAAAAAAAAAAAAAAAAAAAAAAALAwMAADWGzMzMjZmZBGDLzsZmFjmYYMzMMmtMAMAsB2YZmZmlZbmZ2aAAAAWAmhNDMjZwAAYmhZMGNA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <h3>导入码 · 圣光铁匠</h3>
+    <div class="codeblock">
+      <span class="lbl">Delve（Recommended）</span>
+      <pre>CEEAAAAAAAAAAAAAAAAAAAAAAAAAALAwMAADMmZmZGzMzixMmxyYzMLGNxwYMDjZLDADAbgNWmZGAEAwMz22ilZG2AzMsZgZYYAYmBgZMGNA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">M+ 美德信标</span>
+      <pre>CEEAAAAAAAAAAAAAAAAAAAAAAAAAAbAwMAAD2GwMzyMzsYMzMsY2MziZaihxMzwY2yAwAwGYjFzMAIAgZmllFbzMsxGmhNDMjZwAYmBgZMGNA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">美德 vs 信仰（流派选择）：</span>M+/团本主流都是<strong>美德信标</strong>（主动 AOE 群奶按钮）；信仰信标是"多一个常驻被动信标"的省心流派——美德强但要多管一个键。</li>
+      <li><span class="tn">信标机制三句话：</span>①奶别人时信标目标白吃转移（美德下每目标 10%）；②<strong>别把信标挂自己</strong>（殉道者之光：有盾时信标不奶你）；③别直奶信标目标（转移只算"奶别人"的量）——救命例外。</li>
+      <li><span class="tn">S2 四件套：</span>圣光术必产圣光灌注——圣光术从"蓝坑"升格为"灌注发生器"，没灌注没圣能时的兜底键。</li>
+      <li><span class="tn">奶骑是近战奶但不必贴身：</span>12.1 全套治疗可远程施放；精通（光明使者）按你或信标与目标的距离加成——信标挂远程组=远程也有精通覆盖。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>治疗循环</h2>
+
+    <h3>三条核心规则</h3>
+    <ul class="tools">
+      <li><span class="tn">圣能不溢出：</span>花圣能的技能是全谱最高性价比——5 点圣能还按生成技就是白扔资源。</li>
+      <li><span class="tn">CD 不留手：</span>钟鸣/翅膀尽量转满次数——"攒着等雨天，雨天就来了"（Wowhead 原话）。</li>
+      <li><span class="tn">灌注不浪费：</span>圣光灌注（震击暴击/圣光术产）先花再按震击——灌注版圣光闪现是最强点名奶。</li>
+    </ul>
+
+    <h3>治疗优先级（M+ 美德信标构建）</h3>
+    <ol class="prio">
+      <li>战前：<strong>光明信标+信仰信标</strong>挂远程队友、开虔诚光环</li>
+      <li>群伤来临：<strong>美德信标</strong>（接近 CD 就用）</li>
+      <li>5 圣能：立刻花（<strong>荣耀圣言</strong>单奶 / 大溢疗才换黎明之光）</li>
+      <li><strong>神圣钟鸣</strong>对友方（≤2 圣能时按，5 连震击）</li>
+      <li>花<strong>圣光灌注</strong>：圣光闪现点名（优先有信标的人——Moment of Compassion）</li>
+      <li><strong>神圣震击</strong> CD 就按</li>
+      <li>蓝够时<strong>圣光术</strong>补大缺口（四件套下顺便产灌注）</li>
+      <li>没治疗压力：<strong>盾击</strong>花圣能（回蓝 1.8%+伤害）、<strong>审判</strong>铺奉献</li>
+    </ol>
+    <p><strong>输出循环（治疗的及格线是空闲打伤害）：</strong>奉献保持 → 5 圣能盾击 → 钟鸣对怪 → 审判 → 震击对怪。顶级日志伤害榜：盾击 9.5 CPM 占 31%、奉献 20.6%、审判 6.5 CPM——<strong>奶骑打伤害的量顶半个 DPS</strong>。</p>
+
+    <h3>大 CD 怎么用</h3>
+    <p><strong>复仇之怒</strong>（Sanctified Wrath 下 30 秒）：治疗压力窗口就开，配 Hand of Divinity 两发瞬发圣光术。<strong>光环掌控</strong>（配 Ringing of the Heavens）：团伤落地后按（人已掉血时收益最大），团本里必须叠着美德信标用。<strong>圣盾术当治疗 CD 用</strong>：M+ 里 5 人少 1 人要奶 ≈ 全队 20% 减伤——大团伤前给自己开盾专心奶别人是高端操作。<strong>牺牲祝福</strong>：主力外减——伤害转给你，自己可以套圣盾免掉转移伤害。</p>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">智力 <span class="gt">&gt;</span> 精通 <span class="gt">&gt;</span> 急速 <span class="gt">=</span> 暴击 <span class="gt">&gt;</span> 全能</p>
+    <p>两系英雄天赋同序（Wowhead）。archon 实战侧写略有出入：急速 882 &gt; 精通 822 &gt; 暴击 672——官方指南也说"副属性都接近，别纠结，堆装等，暴击急速保持相近即可"。精通=光明使者（距离越近奶越多，信标目标也算圆心）。收益递减节点：急速 1320 / 暴击 1380 / 精通 1380 / 全能 1620 评级。<strong>装备与惩戒/防骑可共用板甲</strong>（都吃智力？不——惩戒/防骑是力量系；奶骑是圣骑里唯一的智力专精，<strong>武器和装备都不通用</strong>，别指望三修一套装）。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>推荐</th></tr>
+      <tr><td>武器附魔</td><td>Rite of the Hash'ey</td></tr>
+      <tr><td>肩部</td><td>Silvermoon's Mending</td></tr>
+      <tr><td>胸甲</td><td>Mark of the Magister</td></tr>
+      <tr><td>头部</td><td>Empowered Hex of Leeching</td></tr>
+      <tr><td>腿部</td><td>Arcanoweave Spellthread</td></tr>
+      <tr><td>脚部</td><td>Shaladrassil's Roots</td></tr>
+      <tr><td>戒指</td><td>Zul'jin's Mastery</td></tr>
+      <tr><td>宝石</td><td>大宝石 <strong>Telluric Eversong Diamond</strong>（回蓝版，微弱优于智力版）；凑齐红/蓝/绿各 1 后其余 Flawless Quick Amethyst（急速）</td></tr>
+      <tr><td>合剂</td><td>Flask of the Magisters</td></tr>
+      <tr><td>爆发药水</td><td>Potion of Recklessness；缺蓝换 <strong>Lightfused Mana Potion</strong></td></tr>
+      <tr><td>治疗药水</td><td>Concentrated Silvermoon Health Potion</td></tr>
+      <tr><td>武器油</td><td>太阳先驱：Thalassian Phoenix Oil；<strong>圣光铁匠：Rite of Sanctification（自带仪式替代油）</strong></td></tr>
+      <tr><td>符文 / 食物 / 饮料</td><td>Void-Touched Augment Rune；宴席 Amani Cornucopia / 个人 Hearty Royal Roast；<strong>回蓝饮料 Sanguithorn Tea 常备</strong>（治疗专属刚需）</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>的治疗三原则分配。施放频率取自 archon S2 顶级日志（毒牙祭坛，14 天顶级样本）：圣光闪现 8.2 / 荣耀圣言 6.8 / 神圣震击 4.7+4.7（奶/打合计 9.4） / 盾击 9.5 / 审判 6.5 / 圣光术 3.0 / 圣疗 0.1 CPM。<strong>与惩戒/防骑对齐的键</strong>：2=审判、6=翅膀、Shift+F=圣疗、V=眩目圣光、Shift+V=制裁之锤、Z=战马——三专精肌肉记忆全通。所有治疗键套 [@mouseover,help,nodead][help][@player] 模板。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>神圣骑士</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>（空置）</td><td>奶骑无仇恨技能；可放虔诚光环开关</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①（双向引擎）</td><td>神圣震击</td><td>9.4 CPM 合计；harm/help 双向宏——奶人打怪一个键</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>审判</td><td>6.5 CPM；与惩戒/防骑同键——Righteous Judgment 铺奉献</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>圣光闪现</td><td>8.2 CPM 全表第一；灌注触发后的点名奶</td></tr>
+      <tr><td><kbd>Shift+3</kbd></td><td>大奶兜底</td><td>圣光术</td><td>3.0 CPM；四件套必产灌注——没资源时的发生器</td></tr>
+      <tr><td><kbd>4</kbd></td><td>群奶终结</td><td>黎明之光</td><td>荣耀圣言大溢疗时才换——治疗版"神圣风暴"</td></tr>
+      <tr><td><kbd>Shift+4</kbd></td><td>群奶 CD（构建键）</td><td>美德信标</td><td>M+ 主动群奶按钮，接近 CD 就用</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发（构建自适应）</td><td>铁匠：圣盾壁垒/神圣武器 · 先驱：空置</td><td>0.9 CPM；≤2 圣能时按，覆盖旧 buff 立即产灌注</td></tr>
+      <tr><td><kbd>E</kbd></td><td>主打断</td><td>责难</td><td>与防骑同键；mouseover 宏</td></tr>
+      <tr><td><kbd>R</kbd></td><td>单体终结</td><td>荣耀圣言（永恒之火）</td><td>6.8 CPM；5 圣能立刻花，别管 HoT 覆盖谁</td></tr>
+      <tr><td><kbd>Shift+R</kbd></td><td>终结第三选择</td><td>盾击</td><td>9.5 CPM 伤害 31%；没治疗压力时的圣能出口+回蓝</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>[@player] 圣光闪现</td><td>兜底</td></tr>
+      <tr><td><kbd>Shift+F</kbd></td><td>急救大招</td><td>圣疗</td><td>与防骑同键同技能——满血拉人</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发</td><td>神圣钟鸣</td><td>双向：对友 5 连震击群奶 / 对怪输出；≤2 圣能按</td></tr>
+      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>复仇之怒 + 饰品宏</td><td>与惩戒/防骑同键；30 秒长窗口+2 发瞬发圣光术</td></tr>
+      <tr><td><kbd>Shift+6</kbd></td><td>团减大招</td><td>光环掌控</td><td>Ringing of the Heavens 下是治疗 CD——人掉血后按</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命</td><td>圣佑术</td><td>转着按</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>圣盾术</td><td>免疫；M+ 当"少奶一人"的治疗 CD 用</td></tr>
+      <tr><td><kbd>Shift+C</kbd></td><td>底牌对外版</td><td>保护祝福</td><td>物理免疫救人/解物理 DOT；掉仇恨慎给坦克</td></tr>
+      <tr><td><kbd>G</kbd></td><td>对外功能</td><td>牺牲祝福</td><td>主力外减——配圣盾免转移伤害</td></tr>
+      <tr><td><kbd>X</kbd></td><td>驱散</td><td>清洁术</td><td>魔法（+天赋中毒/疾病）</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制</td><td>眩目圣光</td><td>与惩戒/防骑同键</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>单体控制</td><td>制裁之锤</td><td>与惩戒/防骑同键</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>战马 / 圣佑之速</td><td>与惩戒/防骑同键</td></tr>
+      <tr><td><kbd>T</kbd></td><td>对外位移/加速</td><td>自由祝福</td><td>解减速定身</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">1 · 神圣震击双向（奶人/打怪一个键）</span>
+      <pre>#showtooltip
+/cast [@mouseover,help,nodead][help] 神圣震击; [@mouseover,harm,nodead][harm][] 神圣震击</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">5 · 神圣钟鸣双向（默认奶，Ctrl 打怪）</span>
+      <pre>#showtooltip
+/cast [mod:ctrl,@mouseover,harm,nodead][mod:ctrl,harm] 神圣钟鸣; [@mouseover,help,nodead][help][@player] 神圣钟鸣</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">6 · 大爆发一键（翅膀+饰品）</span>
+      <pre>#showtooltip
+/use 13
+/use 14
+/cast 复仇之怒</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">虔诚光环开关（进本必开）</span>
+      <pre>#showtooltip 虔诚光环
+/cast 虔诚光环</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>数据来源：Wowhead 神圣骑士职业指南（Patch 12.1 / Midnight Season 2，-pve-healer 版块）；archon.gg 奶骑大秘境版块（正式服 S2 数据，+7~+19 全副本 14 天 415,904 条 / 循环毒牙祭坛顶级样本）。技能中文名以游戏内为准。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
