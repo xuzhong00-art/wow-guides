@@ -101,3 +101,12 @@ ul.tools .tn { font-weight: 700; color: var(--accent, var(--ink)); }
 .card.soon { opacity: .55; pointer-events: none; }
 footer { margin-top: 72px; border-top: 1px solid var(--hairline); padding-top: 20px; font-size: 13.5px; color: var(--muted); }
 @media (max-width: 640px) { h1 { font-size: 30px; } }
+
+/* back-to-index link above footer */
+.backlink { margin-top: 56px; text-align: center; }
+.backlink a {
+  display: inline-block; padding: 10px 26px; border: 1px solid var(--hairline);
+  border-radius: 999px; text-decoration: none; font-size: 14.5px;
+  color: var(--muted); transition: color .15s, border-color .15s;
+}
+.backlink a:hover { color: var(--fg, #e8e6e3); border-color: var(--muted); }
