@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>兽王猎人 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--hunter, #abd473); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a></p>
+    <h1>兽王猎人</h1>
+    <p class="sub">主推英雄天赋：<strong>兽群领袖（Pack Leader，实战 98.7% 统治级）</strong>；黑暗游侠仅备选。远程敏捷输出，<strong>全职业唯一 100% 移动施法的 DPS</strong>——所有技能边跑边打。核心是"CD 好了就按 + 宠物永远咬对目标"，资源几乎全被动生成，上手门槛全游戏最低的输出之一。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服 S2</span>
+    <span class="pill">archon 数据：S2 正式服大秘境 +7~+19（14 天，298,840 条）</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#starter">第一小时</a>
+    <a href="#talents">天赋</a>
+    <a href="#rotation">输出循环</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="starter">
+    <h2>第一小时：最小技能集</h2>
+    <p>兽王的本质一句话：<strong>你不打怪，你的野兽打怪——你负责让它们永远在咬、咬对人</strong>。战前记得召唤宠物、给坦克挂误导。</p>
+    <h3>3 键版（前 20 分钟）</h3>
+    <ul class="tools">
+      <li><span class="tn">1 杀戮命令：</span>CD 就按（12.1 CPM 主动键第一）——宠物核心输出指令，别攒到 2 层充能；</li>
+      <li><span class="tn">Q 倒钩射击：</span>快 2 层充能就按——给宠物上狂乱 buff（90% 覆盖率是及格线）；</li>
+      <li><span class="tn">2 眼镜蛇射击：</span>没别的可按就按它（11.3 CPM 填充）。</li>
+    </ul>
+    <h3>6 键版（第一个晚上）</h3>
+    <ul class="tools">
+      <li><span class="tn">+4 狂野撕扯：</span>AOE 键——2 目标起按，激活<strong>兽群顺劈</strong>（顶级日志第一伤害来源）；</li>
+      <li><span class="tn">+6 狂野怒火：</span>大爆发（CD 就开）——期间狂潮！/凋零射击资源全吃满；</li>
+      <li><span class="tn">+5 放血：</span>次级爆发 DOT，跟着狂野怒火一起交。</li>
+    </ul>
+    <p><strong>毕业标准</strong>：3 分钟木桩——倒钩射击狂乱覆盖 90%+、杀戮命令从不满 2 层充能、狂野怒火每轮 CD 必开、AOE 场景兽群顺劈不断档。达标后再学自然盟友窗口对齐和宠物微操（Dash 换目标）。</p>
+  </section>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p><strong>兽群领袖（Pack Leader）</strong>：实战 98.7% 一边倒——豪嚎召唤野猪/熊/鹰轮番助阵，围绕自然盟友和套装的直观玩法。<strong>黑暗游侠（Dark Ranger）</strong>：黑暗之箭+哀嚎之箭体系，Wowhead 仍给全场景三套码但实战仅 1.3%——情怀选择。无脑兽群领袖。</p>
+
+    <h3>导入码 · 兽群领袖（全场景 Best）</h3>
+    <div class="codeblock">
+      <span class="lbl">大秘境 M+（Best）</span>
+      <pre>C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsBzwQDbAAYGPwMzsMzwMzMjZGMzYmhZGzMzYbmZYMDLDNDAAAAAAAAmHYMzAmZjAmFw2AwA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">团本（Best）</span>
+      <pre>C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwQDbAAYGGzsMzwMmZYYmxYmxMzYGzwMzYGzghmBAAAAMDAAAzMzMAzsRYYWAbDAD</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">Delve（Best）</span>
+      <pre>C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwQDbAAYGPwMzsMzwMzMjZGMzYmhZmZGzwMzwYmhx0MAAAAAAAAYMmBYmNCWmZBsNAM</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">宠物就是你的一半：</span>顶级日志里宠物普攻+兽群顺劈+狂野撕扯等宠物系伤害合计过半——<strong>宠物没在咬=你没在输出</strong>，走位换目标第一时间管宠物。</li>
+      <li><span class="tn">杀戮命令永不满层：</span>2 充能设计只是容错——快满就按，充能闲置就是伤害蒸发（与冰DK杀戮机器同理）。</li>
+      <li><span class="tn">倒钩别多目标铺：</span>AOE 时倒钩射击<strong>只打主目标</strong>（官方明确"不要 multi-dot"）——狂乱 buff 才是它的意义。</li>
+      <li><span class="tn">兽群领袖窗口感：</span>踩好站位再开狂潮！（宠物冲锋需要合理地形/高度差），怪快死或要跑位时稍延后爆发窗口。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>输出循环</h2>
+
+    <h3>三条核心规则</h3>
+    <ul class="tools">
+      <li><span class="tn">狂野怒火 CD 就开：</span>本专精围绕爆发窗口设计——窗口内狂潮！/凋零射击/哀嚎亡者的资源全部吃满。</li>
+      <li><span class="tn">杀戮命令最大化：</span>永不满 2 层、尽量在自然盟友 buff 下按、窗口内塞进最多次数。</li>
+      <li><span class="tn">管好宠物：</span>咬对目标、及时用 Dash 转场、需要时换攻击目标——宠物站桩打错怪是兽王最大暗亏。</li>
+    </ul>
+
+    <h3>单体优先级（兽群领袖）</h3>
+    <ol class="prio">
+      <li><strong>倒钩射击</strong>：狂野怒火 3 秒内可用 或 快满 2 层时</li>
+      <li><strong>狂野怒火</strong> CD 就开</li>
+      <li><strong>杀戮命令</strong>：有豪嚎 buff 或自然盟友时优先</li>
+      <li><strong>眼镜蛇射击</strong>：有眼镜蛇之牙 buff 时</li>
+      <li><strong>倒钩射击</strong></li>
+      <li><strong>眼镜蛇射击</strong>填充</li>
+    </ol>
+    <p><strong>AOE 换键规则：</strong>加一个键——<strong>狂野撕扯</strong>（2 目标起最高优先，激活兽群顺劈让宠物普攻溅射全场）；倒钩只打主目标不铺场。其余优先级不变——兽王的 AOE 就是"多按一个 4"。</p>
+    <p><strong>开手：</strong>战前猎人印记+误导给坦克 → 倒钩×2 → 药水饰品 → 狂野怒火（确认宠物已进战）→ 杀戮命令 → 眼镜蛇射击 → 进循环。</p>
+
+    <h3>关键机制卡片（12.1 实测数值）</h3>
+    <ul class="tools">
+      <li><span class="tn">兽群顺劈：</span>狂野撕扯激活，宠物普攻按比例溅射周围——<strong>顶级日志第一伤害来源（18.8%）</strong>，AOE 场景的命根子。</li>
+      <li><span class="tn">豪嚎（兽群领袖）：</span>周期性轮换召唤野猪冲锋/熊践踏/鹰击——被动排队，你的工作是让杀戮命令蹭到 buff 窗口。</li>
+      <li><span class="tn">狂潮！（Stampede!）：</span>狂野怒火期间触发的群兽冲锋（6.3% 伤害）——注意站位地形，高度差会吞伤害。</li>
+      <li><span class="tn">踏压（Stomp）：</span>倒钩射击附带的宠物践踏 AOE（24.4 CPM 被动跳）——倒钩覆盖率间接决定它。</li>
+      <li><span class="tn">反制射击：</span>主打断，24 秒 CD、40 码——远程打断永远的神。</li>
+      <li><span class="tn">威慑：</span>猎人招牌保命——偏斜所有攻击+减伤 30%，还能解大部分 DOT/DEBUFF，双充能天赋常点。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">武器伤害 <span class="gt">&gt;</span> 敏捷 <span class="gt">&gt;</span> 精通 <span class="gt">&gt;</span> 暴击 <span class="gt">&gt;</span> 急速 <span class="gt">&gt;</span> 全能</p>
+    <p>兽群领袖全场景同序（黑暗游侠单体暴击与精通互换）。<strong>武器伤害排最前</strong>是猎人特色——远程武器的档次直接乘进所有宠物技能，武器升级优先级压倒一切。<strong>archon top 5% 高层侧写</strong>（15,898 条，8/30）：精通 1220 &gt; 暴击 1081 &gt; 急速 352 &gt; 全能 228——与推荐序完全一致，精通暴击双堆、急速垫底。注意 AOE 下前两强与急速的差距进一步拉大；乌拉泰克装备自带大量暴击，有没有这套件会影响你的配比——毕业期务必自己 sim。收益递减节点：急速 1320 / 暴击 1380 / 精通 1380 / 全能 1620 评级。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>推荐</th></tr>
+      <tr><td>武器附魔</td><td>Rite of the Hash'ey</td></tr>
+      <tr><td>头部</td><td>Empowered Rune of Avoidance</td></tr>
+      <tr><td>肩部</td><td>Amirdrassil's Grace</td></tr>
+      <tr><td>胸甲</td><td>Mark of the Worldsoul</td></tr>
+      <tr><td>腿部</td><td>Forest Hunter's Armor Kit</td></tr>
+      <tr><td>脚部</td><td>Lynx's Dexterity</td></tr>
+      <tr><td>戒指</td><td>Eyes of the Eagle</td></tr>
+      <tr><td>宝石</td><td>大宝石 <strong>Powerful Eversong Diamond</strong>；红/蓝/绿/黄各 1 凑齐后，其余 Flawless Deadly Amethyst（暴击）或 Quick（急速）按 sim 定</td></tr>
+      <tr><td>合剂</td><td>Flask of the Magisters</td></tr>
+      <tr><td>爆发药水</td><td>团本 Light's Potential；<strong>M+ 专属：Liquid Luster</strong>；毕业低全能装换 Potion of Recklessness</td></tr>
+      <tr><td>治疗药水</td><td>Concentrated Silvermoon Health Potion</td></tr>
+      <tr><td>武器油 / 符文 / 食物</td><td>Thalassian Phoenix Oil；Void-Touched Augment Rune；宴席 Harandar Celebration / 个人 Royal Roast</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>分配。施放频率取自 archon S2 顶级日志（毒牙祭坛，14 天顶级样本）：杀戮命令 12.1 / 眼镜蛇射击 11.3 / 倒钩射击 8.0 CPM（踏压 24.4 为倒钩附带被动）。<strong>R/4 终结技对=眼镜蛇射击/狂野撕扯</strong>——体系里"眼镜蛇/多重射击"经典对的 12.1 版（多重射击已由狂野撕扯继任 AOE 激活位）。兽王独有键：` 误导→宠物（单刷嫁祸神技）、Shift+` 假死。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>兽王猎人</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>误导（@pet 优先）</td><td>组队给坦克/单刷给宠物——嫁祸体系标准位</td></tr>
+      <tr><td><kbd>Shift+`</kbd></td><td>紧急抽身</td><td>假死</td><td>清仇恨+骗读条——与贼消失/DK爱抚同位</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>杀戮命令</td><td>12.1 CPM 主动第一；永不满 2 层</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>眼镜蛇射击</td><td>11.3 CPM 填充；眼镜蛇之牙 buff 时优先级上升</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发</td><td>倒钩射击</td><td>8.0 CPM；狂乱 90% 覆盖是及格线；AOE 只打主目标</td></tr>
+      <tr><td><kbd>R</kbd></td><td>单体终结</td><td>杀戮射击</td><td>斩杀位（若点）——&lt;20% 大伤害</td></tr>
+      <tr><td><kbd>4</kbd></td><td>AOE 终结/激活</td><td>狂野撕扯</td><td>2 目标起按——激活兽群顺劈（第一伤害来源）</td></tr>
+      <tr><td><kbd>E</kbd></td><td>主打断</td><td>反制射击</td><td>24 秒 40 码；mouseover 宏</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>灭疗（Exhilaration）</td><td>回 30% 血+宠物血</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发</td><td>放血 Bloodshed</td><td>宠物撕咬 DOT，与 6 对齐交</td></tr>
+      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>狂野怒火 + 饰品宏</td><td>CD 就开；窗口内资源全吃</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>灵龟守护（若点）/ 生存专家</td><td>按天赋选取</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>威慑</td><td>偏斜+30% 减伤+解 DOT；双充能</td></tr>
+      <tr><td><kbd>Shift+C</kbd></td><td>第二底牌</td><td>威慑（第二充能）</td><td>连按同键即可，此位可空置</td></tr>
+      <tr><td><kbd>X</kbd></td><td>偷驱散</td><td>宁神射击</td><td>驱敌方增益（偷 buff 位标准技能）</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制</td><td>爆炸陷阱 / 冰冻陷阱（@cursor）</td><td>按副本选取</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>单体控制</td><td>恐吓（宠物眩晕）</td><td>需要宠物在场——兽王专属控制</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>逃脱 Disengage</td><td>后跳脱身；面向决定方向</td></tr>
+      <tr><td><kbd>T</kbd></td><td>群加速</td><td>灵豹守护 Aspect of the Cheetah</td><td>自加速；羽毛位的猎人版</td></tr>
+      <tr><td><kbd>G</kbd></td><td>宠物管理</td><td>宠物攻击/召回宏</td><td>兽王特色位——宠物指对目标是半条命</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">` · 误导（组队给坦克/焦点，单刷给宠物）</span>
+      <pre>#showtooltip
+/cast [@focus,help,nodead][@pet,exists] 误导</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">E · 反制射击（指向优先）</span>
+      <pre>#showtooltip
+/cast [@mouseover,harm,nodead][harm] 反制射击</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">6 · 大爆发一键（狂野怒火+饰品）</span>
+      <pre>#showtooltip
+/use 13
+/use 14
+/cast 狂野怒火</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">G · 宠物攻击/召回（一键双态）</span>
+      <pre>#showtooltip
+/petattack [harm,nodead]
+/petfollow [noharm][mod:shift]</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">V · 陷阱 @cursor（免选地）</span>
+      <pre>#showtooltip
+/cast [@cursor] 冰冻陷阱</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>数据来源：Wowhead 兽王猎人职业指南（Patch 12.1 / Midnight Season 2）；archon.gg 兽王大秘境版块（正式服 S2 数据，+7~+19 全副本 14 天 298,840 条 / top 5% 高层 15,898 条 / 循环毒牙祭坛顶级样本）。技能中文名以游戏内为准。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
