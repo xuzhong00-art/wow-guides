@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>踏风武僧 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--monk); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a> · 同职业：<a href="mw-monk.html">织雾</a></p>
+    <h1>踏风武僧</h1>
+    <p class="sub">主推英雄天赋：天神导体（Conduit of the Celestials，murlok top50 46/50）。近战敏捷输出，核心机制是<strong>「无重复」连击</strong>：同一技能连按两次不吃精通加成（Hit Combo/精通：连击）——踏风的爽点和难点都在于每个 GCD 都要换着按。12.1 大幅简化：能量管理和 buff 层数追踪基本删光，上手比以往任何版本都容易。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服（循环页 8/25、属性页 9/4 更新）</span>
+    <span class="pill">murlok 数据：全球 top 50 实时（2026-09-11 抓取）</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#starter">第一小时</a>
+    <a href="#talents">天赋</a>
+    <a href="#rotation">输出循环</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="starter">
+    <h2>第一小时：最小技能集</h2>
+    <p>踏风一句话：<strong>猛虎掌攒真气、踢技花真气、同一个键绝不连按两次</strong>。练级期怪血少，这三键就能杀穿：</p>
+    <h3>3 键版（前 20 分钟 / 练级通用）</h3>
+    <ul class="tools">
+      <li><span class="tn">1 攒气：</span><strong>猛虎掌</strong>（+2 真气，能量够就按）；</li>
+      <li><span class="tn">2 花气：</span><strong>幻灭踢</strong>（1 真气，最高频的消耗技）；</li>
+      <li><span class="tn">R 重踢：</span><strong>旭日东升踢</strong>（2 真气，CD 好了优先）。</li>
+    </ul>
+    <p>练级心法：1→2→1→R→2……交替按，体感像打节奏游戏。连按同一个键 = 丢精通加成，这个肌肉记忆从第一小时就要养。</p>
+    <h3>6 键版（第一个晚上）</h3>
+    <ul class="tools">
+      <li><span class="tn">+4 AOE：</span><strong>旋风脚</strong>（怪 3+ 或起舞·气之国度触发时替代幻灭踢）；</li>
+      <li><span class="tn">+5 怒雷破：</span>引导 4 秒的大伤害（Fists of Fury），CD 好了就丢进连击里；</li>
+      <li><span class="tn">+6 白虎：</span>大爆发——召唤白虎雪怒 + 饰品一键。</li>
+    </ul>
+    <p><strong>毕业标准</strong>：3 分钟木桩全程无连按（盯着精通 buff 不掉）、真气不溢出（5 气上限时别按猛虎掌）、怒雷破每个 CD 必吃满引导。达标后再读完整优先级。</p>
+  </section>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p><strong>天神导体</strong>：murlok top50 46/50 主流——围绕天神下凡的爆发窗口打循环加速。<strong>影踏</strong>（Shado-Pan，4/50）：少数派，平铺伤害流。新手直接天神导体。</p>
+
+    <h3>导入码</h3>
+    <div class="codeblock">
+      <span class="lbl">大秘境 M+（周常层数 / Delve 同码）</span>
+      <pre>C0QAAAAAAAAAAAAAAAAAAAAAAMzYAMGbzMz2MAAAAAAAAAAAALDzEmxywAmxwMzMDz2wMMLzEAwiZ2mZGzMzMAA2AgZZWamZmFAMwMDAswQMgB</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">大秘境 M+（冲层 High Keys / Delve 推荐同码）</span>
+      <pre>C0QAAAAAAAAAAAAAAAAAAAAAAMzYMgxYZmZ2mBAAAAAAAAAAAYZYEmhhBMjhZmZGmthZYWmJAgFmNmxMzMDAgFzsMLjJIAgZMAmBYsMYiZmZzA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">团本 单体（Recommended）</span>
+      <pre>C0QAAAAAAAAAAAAAAAAAAAAAAMzYw2MmhlZGbzAAAAAAAAAAAAsMMaGzwwAmxwMzMDz2wMMLzEAwiZ2mZYmZmBAwGAMLzSzMzsAgBmZAglBiB8B</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">团本 顺劈（Recommended）</span>
+      <pre>C0QAAAAAAAAAAAAAAAAAAAAAAMzYw2wMsNzYbGAAAAAAAAAAAglhRzYGGGwMGmZmZY2YmhZZmAAWMz2MzYMzMAA2AgZZWamZmFAMwMDAsMQMgB</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">无重复精通是宪法：</span>所有构建都围着「换键打」转——天赋点什么都不改变这条铁律。</li>
+      <li><span class="tn">周常 vs 冲层：</span>周常码更贴脸平铺；冲层码强化爆发窗口（配合天神下凡秒怪）。先用周常码。</li>
+      <li><span class="tn">12.1 简化红利：</span>能量溢出惩罚、多层 buff 追踪都删了——老攻略里的「宗师之诀窍层数管理」不用看。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>输出循环</h2>
+
+    <h3>三条核心规则</h3>
+    <ul class="tools">
+      <li><span class="tn">绝不连按：</span>每个 GCD 换一个键（精通：连击）——这是踏风的第一戒律。</li>
+      <li><span class="tn">真气经济：</span>低于 2 气按猛虎掌，5 气满时绝不按（溢出浪费）；能量快满也按猛虎掌泄能。</li>
+      <li><span class="tn">CD 技优先：</span>旭日东升踢 / 怒雷破 / 升龙霸好了就尽快编进连击（中间穿插填充键保持无重复）。</li>
+    </ul>
+
+    <h3>单体优先级（天神导体，Wowhead 8/25 版）</h3>
+    <ol class="prio">
+      <li><strong>猛虎掌</strong>：真气不足以放下一个踢技时（别让 CD 技干等）</li>
+      <li><strong>旭日东升踢</strong>：CD 好了优先编入</li>
+      <li><strong>风领主之击</strong>：配合 Unbroken Rhythm buff 按</li>
+      <li><strong>怒雷破</strong>：CD 好了引导（天神窗口内价值更高）</li>
+      <li><strong>升龙霸</strong>：（若点）旋风脚/怒雷破铺垫后接</li>
+      <li><strong>旋风脚</strong>：起舞·气之国度触发时（免费且必吃）</li>
+      <li><strong>幻灭踢</strong>：默认填充（2 气以下别贪）</li>
+      <li><strong>裂风腿</strong>（Slicing Winds）：远程/走位时的填充</li>
+    </ol>
+
+    <h3>AOE 优先级（3 目标起）</h3>
+    <ol class="prio">
+      <li>核心变化只有一条：<strong>旋风脚替代幻灭踢</strong>成为主填充</li>
+      <li>怒雷破 / 风领主之击本身就是扇形 AOE，位置站好朝向怪群</li>
+      <li>升龙霸（若点）在 AOE 里优先级提升</li>
+      <li>其余与单体同——依然无重复交替</li>
+    </ol>
+    <p><strong>M+ 开怪：</strong>开怪前 2 秒轻功贴脸 → 猛虎掌 → 旭日东升踢 → 白虎+饰品（6）→ 怒雷破 → 交替连击。天神导体的爆发都挂在白虎窗口里，别裸放怒雷破。</p>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">敏捷 <span class="gt">&gt;</span> 精通 <span class="gt">&gt;</span> 急速 <span class="gt">≈</span> 暴击 <span class="gt">&gt;</span> 全能</p>
+    <p>精通（连击）是天然第一副属性——你反正要无重复打，白吃的伤害乘区。急速暴击接近平权，按 sim 微调。收益递减节点：急速 1320 / 暴击 1380 / 精通 1380 / 全能 1620 评级。</p>
+    <p class="note"><strong>top 50 高层侧写（murlok 实时，2026-09-11）</strong>：精通 75%*（1115 评级）&gt; 急速 20%（859）&gt; 暴击 32%（818）&gt; 全能 2%——顶尖玩家精通拉满，急速评级投入略高于暴击（*精通百分比含基础系数）。英雄天赋 <strong>46/50 天神导体</strong>（影踏 4）。有趣：top 5 清一色<strong>暗夜精灵</strong>。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>推荐</th></tr>
+      <tr><td>武器附魔</td><td>Berserker's Rage（双持两把都上）</td></tr>
+      <tr><td>头部</td><td>Empowered Rune of Avoidance</td></tr>
+      <tr><td>肩部</td><td>Amirdrassil's Grace</td></tr>
+      <tr><td>胸甲</td><td>Mark of the Worldsoul</td></tr>
+      <tr><td>腿部</td><td>Forest Hunter's Armor Kit（护甲片）</td></tr>
+      <tr><td>脚部</td><td>Lynx's Dexterity</td></tr>
+      <tr><td>戒指</td><td>Eyes of the Eagle</td></tr>
+      <tr><td>加插槽</td><td>Miasmic Jewelbinder ×3（头/腕/腰）</td></tr>
+      <tr><td>装备美化（Embellishment，限2件）</td><td><strong>Arcanoweave Lining ×2</strong>（murlok top50 主流 74/100 件）</td></tr>
+      <tr><td>宝石</td><td>大宝石 <strong>Powerful Eversong Diamond</strong>（敏捷）；其余 Masterful Peridot 为主，四色需求各补一颗</td></tr>
+      <tr><td>合剂</td><td>Flask of the Magisters（精通）</td></tr>
+      <tr><td>爆发药水</td><td>Potion of Recklessness 或 Light's Potential（sim 定）</td></tr>
+      <tr><td>治疗药水</td><td>Concentrated Silvermoon Health Potion</td></tr>
+      <tr><td>武器油</td><td>Thalassian Phoenix Oil ×2</td></tr>
+      <tr><td>增强符文 / 食物</td><td>Void-Touched Augment Rune；宴席 Impossibly Royal Roast（敏捷食物优先）</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>分配。踏风初稿（待实战 CPM 校准）：</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>踏风武僧</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>挑衅</td><td>抢怪/救队友；武僧全专精自带嘲讽</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>猛虎掌</td><td>发电机，+2 真气</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>幻灭踢</td><td>1 气主填充</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>裂风腿 / 碎玉闪电</td><td>远程填充位</td></tr>
+      <tr><td><kbd>4</kbd></td><td>AOE 终结技</td><td>旋风脚</td><td>与 R 成对；起舞触发也按它</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发</td><td>风领主之击</td><td>扇形，40s CD 高频编入</td></tr>
+      <tr><td><kbd>E</kbd></td><td>主打断 + 治疗整合</td><td>分筋错骨 / 振奋</td><td>三分支宏；15s CD 稳定打断</td></tr>
+      <tr><td><kbd>R</kbd></td><td>单体终结技</td><td>旭日东升踢</td><td>2 气重踢，CD 优先</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>振奋</td><td>@player 瞬发（练级神技）</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发</td><td>怒雷破</td><td>4 秒引导，注意别断</td></tr>
+      <tr><td><kbd>Shift+5</kbd></td><td>第二次级爆发</td><td>升龙霸（若点）</td><td>Whirling Dragon Punch</td></tr>
+      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>白虎雪怒 + 饰品宏</td><td>天神导体核心窗口</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>触摸业力</td><td>90s，吸伤反弹</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>壮胆酒</td><td>2min，-20% 伤害</td></tr>
+      <tr><td><kbd>X</kbd></td><td>驱散</td><td>活血术</td><td>解毒/疾病</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制</td><td>平地摔</td><td>范围眩晕，M+ 神技</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>单体控制</td><td>麻痹</td><td>远程单控</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>赦令滚翔（滚）</td><td>2 充能</td></tr>
+      <tr><td><kbd>T</kbd></td><td>第二位移</td><td>轻功水上飘 / 翔龙在天</td><td>贴怪/赶路</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">E · 打断/治疗三分支</span>
+      <pre>#showtooltip
+/cast [mod:ctrl,@player] 振奋; [@mouseover,harm,nodead][harm] 分筋错骨; [help,nodead] 振奋</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">6 · 大爆发一键</span>
+      <pre>#showtooltip
+/use 13
+/use 14
+/cast 白虎雪怒</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <p class="note"><strong>踏风陷阱：</strong>①怒雷破引导期间移动会断（点了天赋可移动引导，确认构建再走位）；②触摸业力是「先吸伤后反弹」——预判大伤害提前按，不是掉血后的急救；③平地摔是你在 M+ 里最受欢迎的理由，别攒着不放。</p>
+  </section>
+
+    <div class="backlink"><a href="index.html">↩ 返回目录</a></div>
+  <footer>
+    <p>数据来源：Wowhead 踏风武僧职业指南（Patch 12.1.0 / Midnight Season 2，循环页 2026-08-25 / 属性页 2026-09-04 更新）；murlok.io 踏风 top 50 实时数据（2026-09-11 抓取，天神导体 46/50）。archon 9/11 遇人机验证未收录，S2 大刷新时补 CPM 校准键位。技能中文名以游戏内为准。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
