@@ -15,6 +15,7 @@
     <h1>踏风武僧</h1>
     <p class="sub">主推英雄天赋：天神导体（Conduit of the Celestials，murlok top50 46/50）。近战敏捷输出，核心机制是<strong>「无重复」连击</strong>：同一技能连按两次不吃精通加成（Hit Combo/精通：连击）——踏风的爽点和难点都在于每个 GCD 都要换着按。12.1 大幅简化：能量管理和 buff 层数追踪基本删光，上手比以往任何版本都容易。</p>
     <span class="pill">Wowhead 数据：12.1 正式服（循环页 8/25、属性页 9/4 更新）</span>
+    <span class="pill">archon 数据：S2 正式服大秘境 +7~+19（14 天，85,209 条，9/19 刷新）</span>
     <span class="pill">murlok 数据：全球 top 50 实时（2026-09-11 抓取）</span>
   </header>
 
@@ -50,7 +51,7 @@
     <h2>天赋与选取逻辑</h2>
 
     <h3>英雄天赋怎么选</h3>
-    <p><strong>天神导体</strong>：murlok top50 46/50 主流——围绕天神下凡的爆发窗口打循环加速。<strong>影踏</strong>（Shado-Pan，4/50）：少数派，平铺伤害流。新手直接天神导体。</p>
+    <p><strong>天神导体</strong>：murlok top50 46/50（92%）——围绕天神下凡的爆发窗口打循环加速。<strong>影踏</strong>（Shado-Pan）：平铺伤害流。<strong>注意分层分歧（9/19 archon）</strong>：全体档天神导体仅 56.8%、影踏 43.2% 几乎平分——但越往顶层天神导体越统治（top 50 达 92%）。这是全站唯一"大众和顶尖玩的不是一个英雄天赋"的专精：影踏容错更高、不吃窗口执行力，普通层随便玩；<strong>想上分照着顶尖抄，选天神导体</strong>。</p>
 
     <h3>导入码</h3>
     <div class="codeblock">
@@ -118,7 +119,7 @@
     <h2>属性优先级</h2>
     <p class="statline">敏捷 <span class="gt">&gt;</span> 急速 <span class="gt">≈</span> 暴击 <span class="gt">≈</span> 精通 <span class="gt">&gt;</span> 全能</p>
     <p>Wowhead 官方明确三系平权（差距小到拒绝排序），强烈建议 Raidbots 跑个人 sim。急速的收益点具体：回能量+缩怒雷破/旭日踢/升龙霸 CD；精通（连击）吃满的前提是你换键够勤。装备上精通天然偏多，附魔/宝石往缺的属性补（这就是武器附魔推急速的原因——配平，不是急速独大）。收益递减节点：急速 1320 / 暴击 1380 / 精通 1380 / 全能 1620 评级。</p>
-    <p class="note"><strong>top 50 高层侧写（murlok 实时，2026-09-11）</strong>：精通 75%*（1115 评级）&gt; 急速 20%（859）&gt; 暴击 32%（818）&gt; 全能 2%——顶尖玩家精通拉满，急速评级投入略高于暴击（*精通百分比含基础系数）。英雄天赋 <strong>46/50 天神导体</strong>（影踏 4）。有趣：top 5 清一色<strong>暗夜精灵</strong>。</p>
+    <p class="note"><strong>archon top 5% 高层侧写</strong>（4,521 条，9/19）：精通 1187 &gt; 急速 884 &gt; 暴击 786 &gt; 全能 159——推荐序（敏捷 &gt; 精通 &gt; 急速 &gt; 暴击）被顶层实战完全印证。<strong>top 50 侧写（murlok，9/11）</strong>：精通 1115 &gt; 急速 859 &gt; 暴击 818 &gt; 全能 2%——两源互证，精通断层第一（连击精通是踏风的命）。英雄天赋 46/50 天神导体（影踏 4）。有趣：top 5 清一色<strong>暗夜精灵</strong>。</p>
   </section>
 
   <section class="block" id="gear">
@@ -147,7 +148,7 @@
 
   <section class="block" id="keybinds">
     <h2>键位设置</h2>
-    <p>按<a href="keybinds.html">统一键位体系</a>分配。踏风初稿（待实战 CPM 校准）：</p>
+    <p>按<a href="keybinds.html">统一键位体系</a>分配。施放频率取自 archon S2 顶级日志（毒牙祭坛，14 天顶级样本，9/19 校准——初稿键位全部通过实战验证）：猛虎掌 10.0 / 旋风腿 8.6 / 旭日东升踢 6.0 / 怒雷破 5.9 / 幻灭踢 5.1 / 裂风腿 2.1 / 升龙霸 1.9 / 白虎+天神引导各 0.6 CPM。伤害构成：<strong>旋风腿 42.7% 断层第一 + 怒雷破 30.6% 第二——两技能占全伤害七成以上</strong>（AOE 本口径），"每 GCD 换着按"的连击链其实围着这两个轴转。</p>
     <div class="tablewrap">
     <table>
       <tr><th>键</th><th>功能规则</th><th>踏风武僧</th><th>说明</th></tr>
@@ -160,9 +161,10 @@
       <tr><td><kbd>E</kbd></td><td>主打断 + 治疗整合</td><td>分筋错骨 / 振奋</td><td>三分支宏；15s CD 稳定打断</td></tr>
       <tr><td><kbd>R</kbd></td><td>单体终结技</td><td>旭日东升踢</td><td>2 气重踢，CD 优先</td></tr>
       <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>振奋</td><td>@player 瞬发（练级神技）</td></tr>
-      <tr><td><kbd>5</kbd></td><td>次级爆发</td><td>怒雷破</td><td>4 秒引导，注意别断</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发</td><td>怒雷破</td><td>5.9 CPM 伤害占 30.6%——CD 就按的核心轴；4 秒引导注意别断</td></tr>
       <tr><td><kbd>Shift+5</kbd></td><td>第二次级爆发</td><td>升龙霸（若点）</td><td>Whirling Dragon Punch</td></tr>
       <tr><td><kbd>6</kbd></td><td>大爆发</td><td>白虎雪怒 + 饰品宏</td><td>天神导体核心窗口</td></tr>
+      <tr><td><kbd>Shift+6</kbd></td><td>第二大爆发</td><td>天神引导 Celestial Conduit</td><td>天神导体顶石引导大招（0.6 CPM 与白虎同频）——白虎窗口内接着按</td></tr>
       <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>触摸业力</td><td>90s，吸伤反弹</td></tr>
       <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>壮胆酒</td><td>2min，-20% 伤害</td></tr>
       <tr><td><kbd>X</kbd></td><td>驱散</td><td>活血术</td><td>解毒/疾病</td></tr>
@@ -193,7 +195,7 @@
 
     <div class="backlink"><a href="index.html">↩ 返回目录</a></div>
   <footer>
-    <p>数据来源：Wowhead 踏风武僧职业指南（Patch 12.1.0 / Midnight Season 2，循环页 2026-08-25 / 属性页 2026-09-04 更新）；murlok.io 踏风 top 50 实时数据（2026-09-11 抓取，天神导体 46/50）。archon 9/11 遇人机验证未收录，S2 大刷新时补 CPM 校准键位。技能中文名以游戏内为准。</p>
+    <p>数据来源：Wowhead 踏风武僧职业指南（Patch 12.1 / Midnight Season 2，循环页 2026-08-25 / 属性页 2026-09-04 更新）；archon.gg 踏风大秘境版块（正式服 S2 数据，+7~+19 全副本 14 天 85,209 条 / top 5% 高层 4,521 条 / 循环毒牙祭坛顶级样本，2026-09-19 刷新——CPM 校准完成，初稿键位全部验证通过）；murlok.io 踏风 top 50 实时数据（9/11，天神导体 46/50）。技能中文名以游戏内为准。</p>
   </footer>
 </div>
 <script src="assets/app.js"></script>
