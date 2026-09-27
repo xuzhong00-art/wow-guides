@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>酒仙武僧 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--monk); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a> · 同职业：<a href="ww-monk.html">踏风</a> · <a href="mw-monk.html">织雾</a></p>
+    <h1>酒仙武僧</h1>
+    <p class="sub">主推英雄天赋：和风大师（Master of Harmony，murlok top50 48/50）。敏捷皮甲坦克，全游戏唯一靠<strong>醉拳（Stagger）</strong>吃伤害的坦：受到的伤害只有一部分立刻扣血，其余进入「醉拳池」在 10 秒内慢慢流失——而<strong>活血酒（Purifying Brew）</strong>能把池子里的伤害直接清掉一半。所以酒仙的坦克逻辑不是「减伤」而是「先拖延、再清账」：Shuffle 不掉、酒不空转，就是一个好酒仙。</p>
+    <span class="pill">Wowhead 数据：12.1 正式服（循环/属性页 8/12、附魔页 8/25 更新）</span>
+    <span class="pill">murlok 数据：全球 top 50 实时（2026-09-27 抓取，评分 3709–3988）</span>
+    <span class="pill">archon 数据：本次未抓（S2 大刷新时补 CPM 校准）</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#starter">第一小时</a>
+    <a href="#talents">天赋</a>
+    <a href="#rotation">循环与酒</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="starter">
+    <h2>第一小时：最小技能集</h2>
+    <p>酒仙一句话：<strong>幻灭踢和酒桶砸击 CD 好了就按（这两个技能喂 Shuffle），多余能量倒进猛虎掌，被打疼了喝活血酒</strong>。三键就能开始坦 Delve / 低层：</p>
+    <h3>3 键版（前 20 分钟 / Delve 通用）</h3>
+    <ul class="tools">
+      <li><span class="tn">2 骨架：</span><strong>幻灭踢</strong>（CD 固定，好了就按——给 Shuffle 续命+触发 Blackout Combo）；</li>
+      <li><span class="tn">Q 主炮：</span><strong>酒桶砸击</strong>（2 充能、耗能量，酒仙的核心伤害+仇恨+Shuffle，同时给所有「酒」缩 3 秒 CD）；</li>
+      <li><span class="tn">R 清账：</span><strong>活血酒</strong>（2 充能，瞬间清掉醉拳池 50%——挨了一记重击就按，别攒到两充能）。</li>
+    </ul>
+    <p>练手心法：Q→2→1（猛虎掌泄能量）→Q→2……酒仙的节奏是幻灭踢的固定 CD 撑起来的，Wowhead 原话「围着幻灭踢的 CD 规划一切」。头顶那个绿/黄/红的醉拳 debuff 变红了不用慌——只要治疗在奶你，重度醉拳（红）是高层常态；真正致命的是 <strong>Shuffle 掉了</strong>：池子里的旧账还在，新伤害又全额进来。</p>
+    <h3>6 键版（第一个晚上）</h3>
+    <ul class="tools">
+      <li><span class="tn">+1 猛虎掌：</span>填充+泄能量，每次按给酒缩 1 秒 CD；点了 Blackout Combo 后它是「吃 buff」的键——幻灭踢后接猛虎掌；</li>
+      <li><span class="tn">+3 火焰之息：</span>扇形 AOE，开怪必按一次挂 Charred Passions buff，之后 CD 好了顺手按；</li>
+      <li><span class="tn">+F 天神注入：</span>Celestial Infusion——16 秒内吸收 30% 伤害的「平滑盾」（2 充能）。Wowhead 明确<strong>默认选它而不是天神酿</strong>：更好奶、更不容易出错；只有对付极端爆发伤害时再换 8 秒 100% 吸收的天神酿。</li>
+    </ul>
+    <p><strong>毕业标准</strong>：3 分钟木桩全程 Shuffle 不掉；活血酒从不同时闲置两充能；酒桶砸击从不因能量不够干等（能量留够 Q，猛虎掌只花多余的）；开怪第一件事是酒桶砸击（可以边跑边扔）。达标后再读完整优先级。</p>
+    <p class="note"><strong>装备通用性（与踏风/织雾）：</strong>三专精共用武僧套装和敏捷皮甲；但酒仙的副属性方向<strong>和踏风几乎相反</strong>（踏风堆精通/急速，酒仙要暴击/全能、明确回避急速）——同一件装备两边评价相反，共用时只能迁就一边。武器也不同：酒仙顶层 34/50 用双手长柄（Abyssal Broodfiend's Bardiche），踏风双持。</p>
+  </section>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p><strong>和风大师</strong>（Master of Harmony）：murlok top50 <strong>48/50（96%）</strong>——攒「Vivacious Vivification/Harmonic Surge」类的平衡值，围绕天神注入/天神酿的充能打输出与减伤。<strong>影踏</strong>（Shado-Pan）：仅 2/50，平铺流。和踏风那种「大众与顶尖分歧」不同，酒仙这里没有争议：<strong>直接和风大师</strong>。Wowhead 补充：两种英雄天赋的属性优先级完全一致，选错也不用重新配装。</p>
+
+    <h3>导入码</h3>
+    <div class="codeblock">
+      <span class="lbl">大秘境 M+（Best）</span>
+      <pre>CwQAAAAAAAAAAAAAAAAAAAAAAAAAAwMLbGDzwyM2MmZMAAAAAAALLgYmBmhBzgZmZGzsNMjZWGW2stNbzYWAAgNEAAgZbWamZmNG2AYmhpxAGAwA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">Delve / 开放世界（Best）</span>
+      <pre>CwQAAAAAAAAAAAAAAAAAAAAAAAAAAgZZzYGzwyM2MmZMAAAAAAALLgYmBmhBzgZmZGzsNMjZWGW2ssNbzYWAAglZZaZ2mZZAAgAYYDMzAmGDYAAD</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">团本 标准（Best）</span>
+      <pre>CwQAAAAAAAAAAAAAAAAAAAAAAAAAAgZbzYGPwYWM2mxMDAAAAAAALLYEmBmhxmZMmZmZMzywMmZZYZzy2sNMLAAwysMtMbzsMAAQAmhNwMDYaMAAgB</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">天神注入 vs 天神酿：</span>二选一节点。<strong>默认天神注入</strong>（30%×16 秒，配 Niuzao's Resolve）——伤害曲线平滑，治疗好奶；只在「一口大伤害」型 boss 换天神酿（100%×8 秒），此时也可考虑把 Niuzao's Resolve 换回振奋。</li>
+      <li><span class="tn">M+ 码 vs Delve 码：</span>骨架一样，Delve 码多拿自保/自愈（单人没治疗）；M+ 码偏群拉伤害与 Shuffle 稳定。Delve 别硬用 M+ 码。</li>
+      <li><span class="tn">Dampen Harm vs 散魔：</span>二选一。M+ 默认 Dampen Harm（物理魔法都管）；纯魔法伤害本可换散魔（Diffuse Magic）。</li>
+      <li><span class="tn">Detox / Pressure Points：</span>Wowhead 提醒进本前看一眼——需要驱散就点活血术，不需要就换伤害。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>循环与酒</h2>
+
+    <h3>四条核心规则（Wowhead 按重要性排序）</h3>
+    <ul class="tools">
+      <li><span class="tn">① 维持 Shuffle：</span>幻灭踢（+3 秒）和酒桶砸击（+5 秒）CD 好了必按，神鹤引项踢每次最多 +4 秒；buff 上限 15 秒。<strong>Shuffle 掉了 = 灾难</strong>，别为了任何输出技能拖延这两个键。</li>
+      <li><span class="tn">② 能量只为酒桶砸击留：</span>耗能量的只有酒桶砸击（火焰之息不耗）。猛虎掌/神鹤引项踢只花「多余」能量，保证 Q 好了能立刻按。</li>
+      <li><span class="tn">③ 记得喝酒：</span>活血酒、天神注入、壮胆酒都是「酒」，都吃酒桶砸击（-3 秒）/猛虎掌（-1 秒）的 CD 缩减——实际 CD 约为面板一半。</li>
+      <li><span class="tn">④ 大 CD 不攒：</span>黑牛砮皂和爆裂酒桶 CD 好了就用（爆裂酒桶最好先挂上疾风碧玉）。</li>
+    </ul>
+
+    <h3>单体/AOE 通用优先级（和风大师，Wowhead 8/12 版）</h3>
+    <p>酒仙的单体和 AOE 列表几乎一样（坦克通病）；每个 GCD 从上往下找第一个可用的按：</p>
+    <ol class="prio">
+      <li><strong>轮回之触</strong>：可斩杀时（血量条件满足）</li>
+      <li><strong>幻灭踢</strong>：CD 好了就按，触发 Blackout Combo</li>
+      <li><strong>天神注入/天神酿</strong>：<em>2 充能满时</em>为了输出消耗 1 充能（和风大师专属逻辑——酒也是伤害技能）</li>
+      <li><strong>黑牛砮皂</strong>：CD 好了就召</li>
+      <li><strong>猛虎掌</strong>：吃掉 Blackout Combo buff（幻灭踢后接它）</li>
+      <li><strong>Empty Barrel</strong>（Bring Me Another 触发）：有就消耗</li>
+      <li><strong>爆裂酒桶</strong>：CD 好了扔，疾风碧玉先挂上更好</li>
+      <li><strong>酒桶砸击</strong>：第二充能别压着（AOE 里价值更高）</li>
+      <li><strong>猛虎掌</strong>：没别的可按时的填充——<strong>AOE 里也是猛虎掌而不是神鹤引项踢</strong>（和风大师要靠它清层数，神鹤引项踢基本不按）</li>
+    </ol>
+    <p><strong>M+ 开怪序列：</strong>跑向怪群时<strong>酒桶砸击</strong>（可移动施放）→ 幻灭踢 → 火焰之息（挂 Charred Passions）→ 猛虎掌 → 爆裂酒桶 → 酒桶砸击 → 幻灭踢 → 黑牛砮皂 → 进入优先级。大拉时聚怪路上可以穿插一两次神鹤引项踢。和风大师的 Harmonic Surge 在多目标下分摊伤害，靠 Overwhelming Force 的<strong>直线</strong>顺劈补回——注意站位让直线穿过怪群。</p>
+
+    <h3>活血酒三原则</h3>
+    <ul class="tools">
+      <li><span class="tn">不闲置：</span>两个充能同时空着 = 白白浪费酒桶砸击给的 CD 缩减。</li>
+      <li><span class="tn">挨重击就喝：</span>吃到一口大伤害<strong>立刻</strong>喝——池子最满时清 50% 效果最大（Wowhead 算例：25,000 一击，1 秒后喝比 5 秒后喝多免 2,500 伤害）。</li>
+      <li><span class="tn">快满就喝：</span>第二充能快转好时把第一个用掉，哪怕只是中度/轻度醉拳——目的是永远留一个充能应付连续重击。</li>
+    </ul>
+    <p class="note"><strong>醉拳原理速记：</strong>醉拳分担比例 = Base/(Base+K)，Base = 1.13×敏捷×各修正（Shuffle ×3.43 是最大头，壮胆酒 ×1.5，High Tolerance ×1.1/1.2）；K 是副本常数（M+ 为 3,545.93）。Wowhead 算例：敏捷 1,700 但开着 Shuffle 的酒仙（63.5%）比敏捷 2,000 没开 Shuffle 的（41.8%）能多拖延两成多的物理伤害——<strong>Shuffle 比 300 敏捷值钱得多</strong>。魔法伤害只有物理数值的 58% 进池。治疗球（Gift of the Ox）不是随机：每承受 100% 最大生命值的原始伤害掉一颗，走过去踩。</p>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">物品等级 / 敏捷 / 护甲 / 耐力 <span class="gt">&gt;</span> 暴击 <span class="gt">≥</span> 全能 <span class="gt">≈</span> 精通 <span class="gt">&gt;</span> 急速</p>
+    <p>Wowhead 给了两套：<strong>防御向</strong>「全能 = 暴击 = 精通 &gt; 急速」，<strong>进攻向</strong>「暴击 &gt; 全能 = 精通 &gt; 急速」——两套都把急速垫底、都不在乎前三的顺序。Wowhead 原话：「先要更多属性，再要更好属性」——只要物品等级/敏捷/护甲更高就换，哪怕带急速；没有哪种副属性能让你「突然扛得住」某个机制。敏捷是命：同时加醉拳分担、治疗球/振奋回血、天神盾大小和所有伤害。耐力还有个武僧专属彩蛋：加轮回之触伤害。精通（灵活斗士）是叠层闪避。</p>
+    <p class="note"><strong>top 50 侧写（murlok，9/27）</strong>：暴击 1236（37%）&gt; 全能 803（15%）&gt; 精通 710（26%）&gt; 急速 193（5%）——顶层实际走的是<strong>进攻序</strong>：暴击断层第一，全能第二，急速被主动回避到 5%。次要属性吸血 4%（275 评级，头部附魔就是吸血）。*精通百分比高是基础系数所致，看评级投入。英雄天赋 48/50 和风大师（影踏 2）。种族：top 50 里 <strong>矮人 32 席</strong>（石像形态：清流血/中毒/疾病/魔法+减物理伤害，坦克神种族）、暗夜精灵 11、黑铁矮人 3；top 5 四个矮人一个兽人。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>推荐</th></tr>
+      <tr><td>武器附魔</td><td>Acuity of the Ren'dorei（Wowhead 推荐；murlok top50 却是 Rite of the Hash'ey 25 &gt; Acuity 15——顶层偏防御向，二者都可，双手武器只需一个）</td></tr>
+      <tr><td>头部</td><td>Empowered Hex of Leeching（吸血，45/50——坦克和 DPS 不同，不用 Avoidance）</td></tr>
+      <tr><td>肩部</td><td>Silvermoon's Mending（45/50）</td></tr>
+      <tr><td>胸甲</td><td>Mark of the Worldsoul（50/50）</td></tr>
+      <tr><td>腿部</td><td>Forest Hunter's Armor Kit（护甲片，49/50）</td></tr>
+      <tr><td>脚部</td><td>Shaladrassil's Roots（47/50，坦克专用）</td></tr>
+      <tr><td>戒指</td><td>Eyes of the Eagle ×2（暴击，84/100）</td></tr>
+      <tr><td>加插槽</td><td>Radiant Jewelbinder（大宝库获取；头/腕/腰各一）</td></tr>
+      <tr><td>装备美化（Embellishment，限2件）</td><td><strong>Loa Worshiper's Band（戒指，47/50）+ Stabilizing Gemstone Bandolier（35/50）</strong>——全站唯一不走 Arcanoweave 的专精（仅 10/100），别照搬踏风的美化</td></tr>
+      <tr><td>宝石</td><td>大宝石 <strong>Indecipherable Eversong Diamond</strong>（46/50，Wowhead 也明确别用其他变体）；其余 <strong>Flawless Versatile Garnet</strong>（全能，top50 用了 128 颗）为主，Deadly Lapis（暴击）次之——两者都合 Wowhead「全能或暴击」的说法</td></tr>
+      <tr><td>合剂</td><td>Flask of Thalassian Resistance（全能）；装备偏进攻时 Shattered Sun / Magisters 也可</td></tr>
+      <tr><td>爆发药水</td><td>Liquid Luster（叠层全能，团本/M+ 通用）；M+ 可选 Draught of Rampant Abandon（大量敏捷，但脚下会生沉默水坑）</td></tr>
+      <tr><td>治疗药水</td><td>Concentrated Silvermoon Health Potion（与术士治疗石不共 CD）</td></tr>
+      <tr><td>武器油</td><td>Thalassian Phoenix Oil（暴击+急速；双手只涂一把）</td></tr>
+      <tr><td>增强符文 / 食物</td><td>Void-Touched Augment Rune；宴席 (Hearty) Silvermoon Parade / Harandar Celebration；个人食物 Royal Roast（敏捷）</td></tr>
+    </table>
+    </div>
+    <p class="note"><strong>BiS 速览（murlok top50）：</strong>猴王套装 5 件（头/肩/胸/手/腿 42–47 席）；饰品 Tumor of the Swarm 29 / Voracious Heart of Ula'tek 26；戒指 Loa Worshiper's Band（制造）47 + Pilfered Precious Band 35；腕 Silvermoon Agent's Deflectors（制造）29；武器 Abyssal Broodfiend's Bardiche 34。制造件占三席（戒指/腕/脚），比 DPS 专精更依赖专业。</p>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>分配，坦克语义参照<a href="blood-dk.html">血DK</a>页（R = 资源终结技 → 酒仙的「资源」是醉拳池，终结技就是活血酒）。<strong>初稿（待实战 CPM 校准）</strong>：本次未抓 archon 施放频率，高频键顺序按 Wowhead 优先级推定，S2 大刷新时补校准。与踏风同键：1 猛虎掌 / 2 幻灭踢 / 4 神鹤引项踢 / E 打断 / V 平地摔 / Z 滚 / X 活血术 / ` 挑衅——切专精只需重学 Q/R/F/3/5/6/7 七个键。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>酒仙武僧</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>挑衅</td><td>与踏风/血DK ` 同语义</td></tr>
+      <tr><td><kbd>Shift+`</kbd></td><td>远程接敌</td><td>碎玉闪电</td><td>40 码引导拉怪；开怪时更常用的是边跑边扔酒桶砸击</td></tr>
+      <tr><td><kbd>G</kbd></td><td>仇恨转移（拉过来）</td><td>冲撞 Clash</td><td>⚪需天赋；你和目标互冲、落点范围眩晕——聚怪神技</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>猛虎掌</td><td>与踏风同键；填充+泄能量+酒 -1 秒；幻灭踢后接它吃 Blackout Combo</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>幻灭踢</td><td>与踏风同键；固定 CD 的骨架键，Shuffle +3 秒</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>火焰之息</td><td>不耗能量的扇形 AOE；开怪必按一次挂 Charred Passions</td></tr>
+      <tr><td><kbd>4</kbd></td><td>AOE 终结技</td><td>神鹤引项踢</td><td>与踏风同键；酒仙很少按——聚怪路上/Shuffle 告急时补 4 秒</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发（范围优先）</td><td>酒桶砸击</td><td>2 充能 8 秒；伤害/仇恨/Shuffle +5 秒/酒 -3 秒四合一，能量优先留给它</td></tr>
+      <tr><td><kbd>E</kbd></td><td>主打断 + 治疗整合</td><td>分筋错骨 / 振奋</td><td>与踏风同宏；15 秒 CD</td></tr>
+      <tr><td><kbd>R</kbd></td><td>资源终结技（高频防御）</td><td>活血酒</td><td>2 充能 20 秒（实际约 10 秒）；清醉拳池 50%，三原则见上</td></tr>
+      <tr><td><kbd>Shift+R</kbd></td><td>斩杀</td><td>轮回之触</td><td>优先级第一，可斩杀时先按</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈 / 平滑盾</td><td>天神注入 Celestial Infusion</td><td>2 充能；30%×16 秒吸收，2 充能满时当输出技能花掉一个；若选天神酿也在此键</td></tr>
+      <tr><td><kbd>Shift+F</kbd></td><td>第二自愈</td><td>振奋 Expel Harm</td><td>⚪需天赋：点了 Niuzao's Resolve 则此键空置（吸收替代回血）</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发</td><td>爆裂酒桶</td><td>60 秒 CD 就扔，落点致盲+范围伤害</td></tr>
+      <tr><td><kbd>Shift+5</kbd></td><td>第二次级爆发</td><td>疾风碧玉</td><td>⚪需天赋；扔爆裂酒桶前先挂上</td></tr>
+      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>黑牛砮皂 + 饰品宏</td><td>CD 好了就召；砮皂在场时火焰之息/酒桶砸击价值提升</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>Dampen Harm / 散魔</td><td>二选一天赋；大伤害前提前按</td></tr>
+      <tr><td><kbd>Shift+7</kbd></td><td>第二短CD减伤</td><td>禅悟冥想</td><td>引导 -60% 承伤，被近战打会断——躲远程大招/读条用</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>壮胆酒</td><td>+血量上限、-承伤、醉拳 ×1.5；本身也是「酒」吃 CD 缩减</td></tr>
+      <tr><td><kbd>X</kbd></td><td>驱散</td><td>活血术</td><td>与踏风同键；⚪需天赋 Detox</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制</td><td>平地摔</td><td>与踏风同键；范围眩晕</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>单体控制</td><td>麻痹</td><td>远程单控</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>赦令滚翔（滚）</td><td>与踏风同键；2 充能</td></tr>
+      <tr><td><kbd>T</kbd></td><td>第二位移</td><td>轻功水上飘 / 猛虎之欲</td><td>贴怪/解减速</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">E · 打断/治疗三分支（与踏风同）</span>
+      <pre>#showtooltip
+/cast [mod:ctrl,@player] 振奋; [@mouseover,harm,nodead][harm] 分筋错骨; [help,nodead] 振奋</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">6 · 大爆发一键</span>
+      <pre>#showtooltip
+/use 13
+/use 14
+/cast 黑牛砮皂</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">彩蛋 · 查当前目标的 K 值（醉拳公式用）</span>
+      <pre>/run local _, A = UnitArmor('player'); local r = PaperDollFrame_GetArmorReductionAgainstTarget(A) / 100; local K = (A-r*A)/r; print('K ~ ', K);</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <p class="note"><strong>酒仙陷阱：</strong>①Shuffle 掉了比重度醉拳危险十倍——宁可停输出也要按幻灭踢/酒桶砸击；②活血酒是「挨打之后马上清」，不是预判技能（预判用 7/C）；③天神注入 2 充能满时是输出技能，别当保命牌攒着；④禅悟冥想引导期间被近战打就断，别在怪堆里按；⑤治疗球是踩的，站桩坦克记得挪一步。</p>
+  </section>
+
+    <div class="backlink"><a href="index.html">↩ 返回目录</a></div>
+  <footer>
+    <p>数据来源：Wowhead 酒仙武僧职业指南（Patch 12.1 / Midnight Season 2，循环页与属性页 2026-08-12、附魔页 2026-08-25 更新；导入码取 Best 变体，2026-09-27 抓取）；murlok.io 酒仙 top 50 实时数据（2026-09-27，和风大师 48/50，评分 3709–3988）。archon.gg 本次未抓（人机验证常驻），键位表 CPM 为初稿推定，S2 大刷新时补校准。技能中文名以游戏内为准（Master of Harmony 译名以游戏内为准）。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
