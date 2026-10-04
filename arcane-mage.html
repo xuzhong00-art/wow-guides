@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>奥术法师 · 上手手册</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>body { --accent: var(--mage); }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Midnight 12.1 · Season 2 · <a href="index.html">返回目录</a> · 法师首页（火法/冰法待做）</p>
+    <h1>奥术法师</h1>
+    <p class="sub">主推英雄天赋：<strong>太阳之怒（Sunfury，实战 99.9%）</strong>——本季一家独大，法术投手（Spellslinger）高层样本为零。远程读条输出，核心是"<strong>清晰预兆 → 奥术飞弹攒齐射层 → 4 充能奥术弹幕倾泻</strong>"，再把 S2 新 Apex 技能 <strong>Prismatic Bolt</strong> 尽快打出去。手速要求是三系法师最低（实战 ~37 CPM），但对资源规划要求最高——"按键慢、脑子快"。<strong>S2 版本注意：法力本季不重要（Wowhead 原话），唤醒基本不用按。</strong></p>
+    <span class="pill">Wowhead 数据：循环 9/04 · 导入码 8/31 · 附魔 9/05 · 属性 8/12</span>
+    <span class="pill">archon 数据：S2 高层 M+ top 5%（14 天，22,863 条，10/04）</span>
+    <span class="pill">murlok top 50：10/04</span>
+  </header>
+
+  <nav class="toc">
+    <a href="#starter">第一小时</a>
+    <a href="#talents">天赋</a>
+    <a href="#rotation">输出循环</a>
+    <a href="#stats">属性</a>
+    <a href="#gear">附魔宝石</a>
+    <a href="#keybinds">键位设置</a>
+  </nav>
+
+  <section class="block" id="starter">
+    <h2>第一小时：先判断喜不喜欢，再决定建号</h2>
+    <p>奥法的本质一句话：<strong>攒齐射 → 4 充能弹幕 → 等 Prismatic Bolt 亮</strong>。它的手感很特别——实战每分钟按键只有 ~37 次（火法 55–65、冰法 40–48），飞弹要引导、奥冲要读条，但<strong>每一发弹幕打多少伤害全看你之前几秒的规划</strong>：齐射层够不够、充能满不满、Clearcasting 有没有浪费。喜欢"运营感"多于"连打感"的人会很爽；想要火法那种疯狂插火冲的手速快感就别选奥法。按阶梯试：</p>
+    <h3>3 键版（木桩前 20 分钟）</h3>
+    <ul class="tools">
+      <li><span class="tn">1 飞弹：</span><strong>奥术飞弹</strong>——只有 <strong>清晰预兆（Clearcasting）</strong> 亮了才能按，每一波飞弹给 1 层 <strong>奥术齐射（Arcane Salvo）</strong>，还回充能。亮了就按，永远别让它过期；</li>
+      <li><span class="tn">2 奥冲：</span><strong>奥术冲击</strong>——读条填充，攒奥术充能（上限 4）、钓清晰预兆。<strong>Prismatic Bolt 触发时会直接替换这个按钮</strong>（亮起 + 变色），同键按出去就是全专精最高单发伤害；</li>
+      <li><span class="tn">R 弹幕：</span><strong>奥术弹幕</strong>——瞬发，消耗全部充能和齐射层，充能越多越疼、顺劈越多。规矩：<strong>4 充能 + 12 层以上齐射再按</strong>（齐射 25 层硬上限必按）。</li>
+    </ul>
+    <h3>6 键版（第一个晚上）</h3>
+    <ul class="tools">
+      <li><span class="tn">+Q 宝珠：</span><strong>奥术宝珠</strong>——瞬发直线穿怪，没充能时按它快速起步，多目标优先；</li>
+      <li><span class="tn">+5 魔法师之触：</span>45 秒 CD，<strong>立刻给 4 充能</strong>，12 秒后把期间伤害的一部分再爆一次——弹幕或 Prismatic Bolt 飞在半空时按，CD 好了绝不多等几秒（会和奥术涌动错位）；</li>
+      <li><span class="tn">+6 奥术涌动：</span>1.5 分钟大爆发，+35% 法伤 15 秒 + 召出奥术凤凰；结束后进入 <strong>奥术之魂（Arcane Soul）</strong> 窗口——这段里<strong>弹幕优先级最高且保证清晰预兆</strong>，连按弹幕/飞弹倾泻；</li>
+      <li><span class="tn">+7 棱光屏障：</span>0.5 秒读条、30 秒 CD 的吸收盾——法师没有自愈，<strong>这就是你的常规保命键，CD 好了就刷</strong>（Merely a Setback 天赋让它附带 8 秒持续屏障效果）。</li>
+    </ul>
+    <p><strong>毕业标准</strong>（3 分钟木桩）：清晰预兆零过期；Prismatic Bolt 亮起后 1 个 GCD 内打出（它不叠层，压着就是白丢）；弹幕 100% 在 4 充能下按出；魔法师之触每 45 秒准点、奥术涌动每 1.5 分钟准点且<strong>两者在大爆发窗口重叠</strong>（"Big Burn"）；中间那次单独的触（"Miniburn"）不延迟。达标后再读太阳之怒的法火球体/流星机制。</p>
+  </section>
+
+  <section class="block" id="talents">
+    <h2>天赋与选取逻辑</h2>
+
+    <h3>英雄天赋怎么选</h3>
+    <p><strong>太阳之怒（Sunfury）</strong>：archon 高层 99.9%（22,863 条，10/04）、murlok top 50 全部 50 人——<strong>没有第二选项</strong>。S2 重做后它的伤害更多绑在流星碎片（Meteorite，实战 9.7% 伤害来源）和随机触发上，奥术涌动结束后的奥术之魂窗口是第二个爆发期；防御上 Merely a Setback 让棱光屏障带 8 秒持续效果，Wowhead 评价"奥法防御性最强的一季"。<strong>法术投手（Spellslinger）</strong>：Wowhead 自己写明"本季各方面都推荐 Sunfury"，Spellslinger 的宝珠流和飞弹流互相拉扯凑不出天赋点——本页不给码。</p>
+
+    <h3>导入码 · 太阳之怒（全 Best，Wowhead 8/31）</h3>
+    <div class="codeblock">
+      <span class="lbl">大秘境 M+ / Delve（同一码）</span>
+      <pre>C4DAAAAAAAAAAAAAAAAAAAAAAMzwYZmZmFMzQzMGAAAGAwMz0sssMDAEbAAsBzMDbWmxMLzYMzMzMswMzMzMAADAAwAMzAMAYYmZA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock">
+      <span class="lbl">团本（单体为主）</span>
+      <pre>C4DAAAAAAAAAAAAAAAAAAAAAAYGGLzMzswMDamZGAAAGAwMz0sssMDAEbAAAmZG2sMjZWmxYmZmZYhZMzMDAwAAAMAzMgZAwwMzA</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <p class="note">archon 高层最流行构建（36.8% 专精+英雄树组合，最高 +22）与 Wowhead M+ Best 码前 55 位完全一致，仅职业树末端几点不同——Wowhead 码可以放心用；差异集中在下面"分歧点"。</p>
+
+    <h3>选取逻辑速记</h3>
+    <ul class="tools">
+      <li><span class="tn">S2 大改，别找这些按钮：</span>Touch of the Archmage（旧 Apex）删了，换成 <strong>Prismatic Bolt</strong>（弹幕每消耗 1 层齐射 1% 概率触发，替换下一发奥冲，自带 4 充能 + 4 层齐射）；Nether Precision 删了（Midnight 前夕），飞弹本身伤害大涨；Arcane Harmony 改名 <strong>Arcane Salvo（奥术齐射）</strong>；法火球体上限 5→3。</li>
+      <li><span class="tn">套装（Primal Leywarden's Attire，8/18 削后）：</span>2 件 飞弹多 1 发 +5% 伤害；4 件 <strong>每波飞弹给下一发奥冲/Prismatic Bolt +3%（Cumulative Power，8 层 24% 上限）</strong>——这就是循环里"攒 8 层 Cumulative Power 再放 Prismatic Bolt"的来源。</li>
+      <li><span class="tn">archon 高层分歧点（10/04）：</span>Lessons in Debilitation 80% vs Explosive Potential 20%；Master of Time 70%；<strong>群体隐形 67%</strong>（M+ 跳怪，强烈建议点）；Mana Bomb 54% / Mana Confluence 51%；法术偷取 52% vs 解除诅咒 49%（按本周副本换）。</li>
+      <li><span class="tn">100% 必点里的功能键：</span>Ice Cold（替换寒冰屏障：70% 减伤、不占 GCD、<strong>能继续施法</strong>）、闪光术 Shimmer（读条中可用）、时光倒流、镜像 + Refractive Images（镜像期间 30% 伤害转为 8 秒缓释，酒仙醉拳式机制——镜像第一次成了奥法要按的键）、超新星 98%。</li>
+    </ul>
+  </section>
+
+  <section class="block" id="rotation">
+    <h2>输出循环</h2>
+
+    <h3>三条核心规则</h3>
+    <ul class="tools">
+      <li><span class="tn">弹幕永远 4 充能：</span>充能既加弹幕伤害也加顺劈目标数；没充能时宝珠/魔法师之触瞬间补满，别用奥冲慢慢读。</li>
+      <li><span class="tn">Prismatic Bolt 不压手：</span>它不叠层、伤害全专精第一——唯一比"立刻打"更高的优先级是先吃满 8 层 Cumulative Power（4 件套）。</li>
+      <li><span class="tn">CD 准点不等人：</span>奥术涌动 1.5 分钟 + 魔法师之触 45 秒 = 每个涌动配两次触。Miniburn 的触一旦延迟整条 CD 轴就错位。</li>
+    </ul>
+
+    <h3>单体优先级（太阳之怒，Wowhead 9/04 · Method 9/13 一致）</h3>
+    <ol class="prio">
+      <li><strong>奥术飞弹</strong>：有清晰预兆且齐射 &lt; 12 层</li>
+      <li><strong>奥术弹幕</strong>：奥术之魂窗口内（涌动结束后）</li>
+      <li><strong>Prismatic Bolt</strong>：Cumulative Power 已 8 层且不在奥术之魂里</li>
+      <li><strong>奥术弹幕</strong>：齐射 25 层；或有清晰预兆且齐射 ≥ 12 层（弹幕后 High Voltage 回充能）</li>
+      <li><strong>Prismatic Bolt</strong>：亮了就打</li>
+      <li><strong>奥术宝珠</strong>：没有充能时</li>
+      <li><strong>奥术冲击</strong>：填充/钓清晰预兆</li>
+      <li>没蓝时 <strong>奥术弹幕</strong>（本季几乎不会发生）</li>
+    </ol>
+    <p><strong>AOE：</strong>骨架同单体，只多两条——<strong>5 个以上目标且齐射 ≥ 12 层时，宝珠 CD 好了先弹幕再宝珠</strong>（Resonance 让弹幕每多一个目标伤害越高）；宝珠在多目标时直接提到第 6 条前。弹幕本身就是 AOE 终结技，<strong>锁住主目标打就是 AOE</strong>，不用换目标。走位填充：宝珠 / 弹幕（有充能就行）/ 奥术爆炸（贴身时）。</p>
+    <p><strong>开手：</strong>长于 15 秒的药水/饰品 → <strong>奥术涌动</strong>（可预读）→ <strong>时间扭曲</strong> → 短饰品 → <strong>奥术飞弹</strong>一次 → <strong>奥术弹幕</strong> → 弹幕在空中时 <strong>魔法师之触</strong> → 进循环。开手这发弹幕不需要 4 充能，目的只是尽快进入爆发。45 秒后触 CD 好，重复最后一步。</p>
+
+    <h3>关键机制卡片（S2 实测数值）</h3>
+    <ul class="tools">
+      <li><span class="tn">奥术充能 / 奥术齐射：</span>充能上限 4（奥冲、宝珠、触、Prismatic Bolt、High Voltage 下的飞弹产生；只有弹幕清空）；齐射是另一条资源：飞弹每波 +1、奥冲 +2、宝珠 +1、Prismatic Bolt +4，上限 25，弹幕消耗并按层数增伤——<strong>两条资源都满再按弹幕</strong>。</li>
+      <li><span class="tn">Prismatic Bolt：</span>弹幕每消耗 1 层齐射 1% 触发率（25 层≈25%），替换下一发奥冲；主目标大额 + 周围溅射（5 目标后衰减），自带 4 充能 + 4 齐射；<strong>实战伤害占比 20.9%，4.6 CPM</strong>。</li>
+      <li><span class="tn">奥术涌动（Sunfury 版）：</span>消耗身上的法火球体加进 15 秒增伤；召出奥术凤凰（自己会判断单体/AOE 放强化炎爆/流星/弹幕——"不重要，只是很酷"）；结束后给 <strong>奥术之魂 + Ashes of Inspiration</strong>，爆发窗口实际约 17–23 秒。</li>
+      <li><span class="tn">魔法师之触：</span>45 秒 CD、给 4 充能、12 秒后结算期间伤害的一部分——目标必须活过 12 秒，M+ 打最硬的那只；Aegwynn's Technique 让它附带一个清晰预兆。</li>
+      <li><span class="tn">法术反制：</span>24 秒 CD、40 码、瞬发——mouseover 宏。超新星（击飞）是 AOE 控制不是打断。</li>
+      <li><span class="tn">防御套：</span>棱光屏障 30 秒（Barrier Diffusion -5 秒）、时光倒流 1 分钟（第一下记录位置血量、第二下回去，也能当位移）、<strong>Ice Cold 3 分钟 70% 减伤可施法</strong>（Permafrost Bauble 2.5 分钟）、强效隐形 2 分钟脱仇恨 + 减伤、镜像 2 分钟（Refractive Images 30% 缓释 15 秒）。Method 原话："法师裸防最脆、但防御技能用好了全游戏顶级。"</li>
+    </ul>
+  </section>
+
+  <section class="block" id="stats">
+    <h2>属性优先级</h2>
+    <p class="statline">智力 <span class="gt">&gt;</span> 急速 <span class="gt">&gt;</span> 全能 <span class="gt">&gt;</span> 暴击 <span class="gt">&gt;</span> 精通</p>
+    <p>Wowhead（8/12）和 archon 实战同序。急速第一是因为 Prismatic Bolt 太强——急速=更多弹幕=更多触发，Wowhead 原话"S2 奥法急速永远强"。<strong>archon top 5% 高层侧写</strong>（22,863 条，10/04）：急速 1005 &gt; 全能 816 &gt; 暴击 785 &gt; 精通 361——精通被彻底放弃（它加充能效果和法力池，本季法力无关紧要）。<strong>murlok top 50 侧写</strong>：急速 27%（评级 +988）&gt; 暴击 24%（+770）&gt; 全能 13%（+696）&gt; 精通 30%（+524）<em>*精通百分比高是基础系数所致，看评级投入才是真实取向</em>。收益递减节点：急速 1320 / 暴击 1380 / 精通 1380 / 全能 1620 评级。装备取向：<strong>急速+全能 / 急速+暴击布甲都收，急速+精通的能换就换</strong>。</p>
+    <p class="note">Wowhead 属性页另给了一条 Spellslinger 序（智力 &gt; 急速 &gt; 精通 &gt; 暴击 &gt; 全能）——本季不玩它，忽略。</p>
+  </section>
+
+  <section class="block" id="gear">
+    <h2>附魔 · 宝石 · 消耗品</h2>
+    <p>Wowhead 推荐（9/05）与 murlok top 50 实穿有三处分歧，表里并列标注——<strong>实穿优先</strong>（top 50 是 4000+ 分的人在高层实际选择，Wowhead 偏 sim 单体）。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>部位/类型</th><th>推荐</th></tr>
+      <tr><td>武器附魔</td><td>Rite of the Hash'ey（top50 46/50，Wowhead 同）</td></tr>
+      <tr><td>头部</td><td>Empowered Rune of Avoidance（47/50）</td></tr>
+      <tr><td>肩部</td><td>实穿 <strong>Amirdrassil's Grace</strong>（47/50）；Wowhead 推 Silvermoon's Mending（3/50）</td></tr>
+      <tr><td>胸甲</td><td>Mark of the Worldsoul（50/50）</td></tr>
+      <tr><td>腿部</td><td>实穿 <strong>Sunfire Silk Spellthread</strong>（35/50）；Wowhead 推 Arcanoweave Spellthread（15/50）</td></tr>
+      <tr><td>脚部</td><td>实穿 <strong>Lynx's Dexterity</strong>（43/50）；Wowhead 推 Shaladrassil's Roots（4/50）</td></tr>
+      <tr><td>戒指</td><td>Eyes of the Eagle（95/100 枚）</td></tr>
+      <tr><td><strong>装备美化</strong>（限 2 件）</td><td><strong>Arcanoweave Lining</strong>（60/100）+ <strong>Hunter's Ritual Stone</strong>（36/100）——与多数远程专精同款组合</td></tr>
+      <tr><td>宝石</td><td>大宝石 <strong>Indecipherable Eversong Diamond</strong>（41/50；Wowhead 推 Powerful 版 9/50，自称"主属性版一样好"）；其余 <strong>Flawless Quick Lapis</strong>（急速，58）/ Flawless Versatile Peridot（全能，51）为主，暴击系补足各色 1 颗</td></tr>
+      <tr><td>饰品（archon 高层）</td><td><strong>Freightrunner's Flask 93.3%</strong> + <strong>Gebbo's Bottomless Bag 80.8%</strong>（后者 8/14 被削 29% 仍是标配）</td></tr>
+      <tr><td>合剂</td><td>Flask of the Blood Knights</td></tr>
+      <tr><td>爆发药水</td><td>Light's Potential（"永远用这个"）</td></tr>
+      <tr><td>治疗药水</td><td>Concentrated Silvermoon Health Potion</td></tr>
+      <tr><td>武器油 / 符文 / 食物</td><td>Thalassian Phoenix Oil；Void-Touched Augment Rune；宴席 Silvermoon Parade / 个人任意满级主属性食</td></tr>
+      <tr><td>种族（murlok top 50）</td><td><strong>矮人 40/50</strong>（石像形态解流血/毒/疾病/诅咒 + 10% 物理减伤，暴击伤害 +2%）；暗夜精灵 4、虚空精灵 3——联盟建号直接矮人</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="block" id="keybinds">
+    <h2>键位设置</h2>
+    <p>按<a href="keybinds.html">统一键位体系</a>分配。施放频率取自 archon S2 高层顶级日志（毒牙祭坛，10/04）：<strong>奥术飞弹 13.7 / 奥术弹幕 12.3 / Prismatic Bolt 4.6 / 奥术冲击 4.0</strong> / 宝珠 0.6 / 涌动 0.6 / 奥术爆炸 0.6 / 镜像 0.4 CPM；伤害来源：飞弹 29.5%、Prismatic Bolt 20.9%、弹幕 19.3%、流星碎片 9.7%、宝珠 7.8%、魔法师之触 6.1%、凤凰 3.8%。全程 ~37 CPM——键位少、功能键多，<strong>防御键（7 / Shift+7 / C / Shift+C / `）比输出键更需要练成肌肉记忆</strong>。无独立 AOE 终结技（弹幕本身顺劈），4 号降为备用位。</p>
+    <div class="tablewrap">
+    <table>
+      <tr><th>键</th><th>功能规则</th><th>奥术法师</th><th>说明</th></tr>
+      <tr><td><kbd>`</kbd></td><td>仇恨开关</td><td>强效隐形术</td><td>2 分钟；脱仇恨 + 隐形期间及后 3 秒减伤——也是第二底牌</td></tr>
+      <tr><td><kbd>1</kbd></td><td>高频①</td><td>奥术飞弹</td><td>13.7 CPM 全表第一；清晰预兆亮了才可按，每波 +1 齐射</td></tr>
+      <tr><td><kbd>2</kbd></td><td>高频②</td><td>奥术冲击 / <strong>Prismatic Bolt</strong>（同键替换）</td><td>4.0 + 4.6 CPM；Bolt 触发时按钮自动变成它，不用另设键</td></tr>
+      <tr><td><kbd>3</kbd></td><td>高频③</td><td>奥术爆炸</td><td>0.6 CPM；贴身 AOE 攒充能 / 走位填充，频率低但要有位置</td></tr>
+      <tr><td><kbd>4</kbd></td><td>AOE 终结位（降级备用）</td><td>唤醒</td><td>弹幕已是 AOE 终结；本季法力无关，唤醒几乎不按，占位即可</td></tr>
+      <tr><td><kbd>Q</kbd></td><td>高频瞬发（远程/范围）</td><td>奥术宝珠</td><td>0.6 CPM；瞬发穿透直线，没充能时的起步键，多目标提前</td></tr>
+      <tr><td><kbd>E</kbd></td><td>主打断</td><td>法术反制</td><td>24 秒、40 码——mouseover 宏</td></tr>
+      <tr><td><kbd>R</kbd></td><td>资源终结技</td><td>奥术弹幕</td><td>12.3 CPM；消耗充能+齐射，4 充能 / 12 层以上再按，奥术之魂窗口连按</td></tr>
+      <tr><td><kbd>F</kbd></td><td>常规自愈</td><td>治疗石 / 治疗药水宏</td><td>法师无自愈——盾在 7 键；F 放消耗品一键</td></tr>
+      <tr><td><kbd>5</kbd></td><td>次级爆发（45 秒轮）</td><td>魔法师之触</td><td>1.3 CPM；弹幕/Bolt 在空中时按，Miniburn 绝不延迟</td></tr>
+      <tr><td><kbd>6</kbd></td><td>大爆发</td><td>奥术涌动 + 饰品宏</td><td>1.5 分钟；可预读；结束后奥术之魂窗口连按 R/1</td></tr>
+      <tr><td><kbd>Shift+6</kbd></td><td>团队大招（对外）</td><td>时间扭曲</td><td>全队 +30% 急速 40 秒，10 分钟；开手紧跟涌动，M+ 和队伍商量</td></tr>
+      <tr><td><kbd>7</kbd></td><td>短CD保命（转着按）</td><td>棱光屏障</td><td>30 秒（Barrier Diffusion 25 秒）、0.5 秒读条；Merely a Setback 带 8 秒持续屏障——<strong>CD 好就刷</strong></td></tr>
+      <tr><td><kbd>Shift+7</kbd></td><td>第二短CD减伤</td><td>时光倒流</td><td>1 分钟；预判大伤害前按一下、挨完再按一下回血回位；也可当位移</td></tr>
+      <tr><td><kbd>C</kbd></td><td>长CD底牌</td><td>Ice Cold</td><td>3 分钟（Permafrost Bauble 2.5）；70% 减伤、不占 GCD、<strong>可继续输出</strong>——比寒冰屏障好用，100% 选取</td></tr>
+      <tr><td><kbd>Shift+C</kbd></td><td>第二底牌</td><td>镜像</td><td>2 分钟；Refractive Images 让 30% 伤害变 8 秒缓释，持续 15 秒——顺手分仇恨</td></tr>
+      <tr><td><kbd>X</kbd></td><td>驱散 / 偷取</td><td>[harm]法术偷取 / [help]解除诅咒 一键宏</td><td>两者是 52%/49% 的选择节点，按本周副本点哪个宏自动对应</td></tr>
+      <tr><td><kbd>V</kbd></td><td>AOE 控制</td><td>超新星</td><td>击飞+伤害，98% 选取；打断施法型小怪群</td></tr>
+      <tr><td><kbd>Shift+V</kbd></td><td>单体控制</td><td>变形术</td><td>读条；Shift+Q 备冰霜新星（AOE 定身）</td></tr>
+      <tr><td><kbd>Z</kbd></td><td>主位移</td><td>闪光术（Shimmer）</td><td>2 充能、<strong>读条中可用不打断施法</strong>——走位核心</td></tr>
+      <tr><td><kbd>T</kbd></td><td>第二位移 / 群加速</td><td>群体隐形</td><td>⚪需天赋（高层 67% 点）：全队跳怪；没点就放缓落术</td></tr>
+      <tr><td><kbd>G</kbd></td><td>弹性位</td><td>冰霜新星</td><td>AOE 定身，救场/卡位</td></tr>
+    </table>
+    </div>
+
+    <h3>配套宏</h3>
+    <div class="codeblock macroblock">
+      <span class="lbl">E · 打断（指向优先）</span>
+      <pre>#showtooltip
+/cast [@mouseover,harm,nodead][harm] 法术反制</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">6 · 大爆发一键（涌动+饰品）</span>
+      <pre>#showtooltip
+/use 13
+/use 14
+/cast 奥术涌动</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">X · 偷取/解诅咒一键（对敌偷 buff、对友解诅咒）</span>
+      <pre>#showtooltip
+/cast [@mouseover,harm,nodead][harm] 法术偷取; [@mouseover,help,nodead][help][@player] 解除诅咒</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">F · 治疗石优先、没石头吃药</span>
+      <pre>#showtooltip
+/use 治疗石
+/use Concentrated Silvermoon Health Potion</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+    <div class="codeblock macroblock">
+      <span class="lbl">Shift+V · 变形术（焦点优先，不切目标）</span>
+      <pre>#showtooltip
+/cast [@focus,harm,nodead][@mouseover,harm,nodead][harm] 变形术</pre>
+      <button type="button" onclick="cp(this)">复制</button>
+    </div>
+  </section>
+
+    <div class="backlink"><a href="index.html">↩ 返回目录</a></div>
+  <footer>
+    <p>数据来源：Wowhead 奥术法师职业指南（Patch 12.1 / Midnight Season 2；导入码页 2026-08-31、循环页 09-04、附魔页 09-05、属性页 08-12）；archon.gg 奥法大秘境高层版块（S2 正式服 top 5% 钥石，14 天 22,863 条，天赋/属性/饰品；循环 CPM 取毒牙祭坛顶级日志）；murlok.io 奥法 M+ top 50（10-04 实时：英雄天赋/美化/附魔实穿/种族）；Method 奥法循环页（09-13）交叉验证优先级；套装削弱数值取自 8/18 蓝帖。技能中文名以游戏内为准，S2 新增/改名技能（Prismatic Bolt、Arcane Salvo、Ice Cold 等）暂无通行译名处保留英文。本页 2026-10-04 新建。</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
